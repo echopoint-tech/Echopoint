@@ -3,4 +3,4 @@ Allow: /
 Disallow: /api/
 Disallow: /_next/
 
-Sitemap: https://echopoint.vercel.app/sitemap.xml
+Sitemap: https://echopoint-intsolutions.com/sitemap.xml
