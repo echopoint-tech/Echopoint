@@ -240,7 +240,7 @@ h1, h2, h3, h4 {
 /* Section snap — Nuclear Fix (Smoother) */
 html[data-snap="true"], 
 html[data-snap="true"] body {
-    scroll-snap-type: y proximity !important;
+    scroll-snap-type: y mandatory !important;
     scroll-behavior: smooth !important;
 }
 
@@ -277,8 +277,5 @@ html[data-snap="true"] #main-content > section#popular-services {
     html[data-snap="true"] #main-content > * {
         scroll-snap-align: none !important;
         scroll-snap-stop: normal !important;
-    }
-    html[data-snap="true"] #main-content > section.section {
-        min-height: auto !important;
     }
 }
