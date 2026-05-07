@@ -103,7 +103,7 @@ export default function ServiceDetailClient({ lang, slug }: ServiceDetailClientP
               <div className={styles.formCard}>
                 <h3>{t('pbi.common.formTitle')}</h3>
                 <p>{t('pbi.common.formDesc')} <strong dangerouslySetInnerHTML={{ __html: service.title }}></strong>.</p>
-                <ContactForm />
+                <ContactForm isCompact />
               </div>
             </div>
           </div>

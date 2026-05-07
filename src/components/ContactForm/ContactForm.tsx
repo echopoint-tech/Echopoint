@@ -89,7 +89,11 @@ const formLabels: Record<string, Record<string, string>> = {
   }
 };
 
-export default function ContactForm() {
+interface ContactFormProps {
+  isCompact?: boolean;
+}
+
+export default function ContactForm({ isCompact = false }: ContactFormProps) {
   const { lang } = useLanguage();
   const labels = formLabels[lang] || formLabels.ES;
 
@@ -149,7 +153,7 @@ export default function ContactForm() {
   };
 
   return (
-    <form className={styles.contactForm} id="main-contact-form" onSubmit={handleSubmit} noValidate>
+    <form className={`${styles.contactForm} ${isCompact ? styles.compact : ''}`} id="main-contact-form" onSubmit={handleSubmit} noValidate>
       <div className={styles.formGroup}>
         <label htmlFor="name">{labels.name}</label>
         <div className={styles.inputWrapper}>
@@ -203,7 +207,7 @@ export default function ContactForm() {
           <FontAwesomeIcon icon={faMessage} className={`${styles.fieldIcon} ${styles.areaIcon}`} />
           <textarea
             id="message"
-            rows={4}
+            rows={2}
             placeholder={labels.messagePh}
             required
             minLength={10}
