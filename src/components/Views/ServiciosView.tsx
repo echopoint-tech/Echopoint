@@ -47,26 +47,6 @@ function ServiciosContent() {
   const showConsulting = activeFilter === "all" || activeFilter === "consulting";
   const showAi = activeFilter === "all" || activeFilter === "ai";
 
-  // Re-trigger reveal animations when filter changes
-  useEffect(() => {
-    const elements = document.querySelectorAll('.reveal:not(.active)');
-    if (elements.length === 0) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    elements.forEach(el => observer.observe(el));
-    return () => observer.disconnect();
-  }, [activeFilter]);
 
   return (
     <>

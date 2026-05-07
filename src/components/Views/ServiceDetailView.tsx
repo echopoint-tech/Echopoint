@@ -38,14 +38,22 @@ interface ServiceDetailClientProps {
 export default function ServiceDetailClient({ lang, slug }: ServiceDetailClientProps) {
   const { t } = useLanguage();
 
-  const currentLang = lang.toUpperCase() as keyof typeof dictionaries;
-  const servicesData = (dictionaries[currentLang] as any).services;
-  const pbiData = (dictionaries[currentLang] as any).pbi;
-  
-  let service: any = Object.values(servicesData).find((s: any) => s && typeof s === 'object' && s.slug === slug);
-  if (!service) {
-    service = Object.values(pbiData).find((p: any) => p && typeof p === 'object' && p.slug === slug);
+  interface ServiceEntry {
+    slug: string; title: string; heroTitle: string; longDesc: string;
+    i1: string; i2: string; i3: string; i4: string; i5?: string;
   }
+
+  const currentLang = lang.toUpperCase() as keyof typeof dictionaries;
+  const dict = dictionaries[currentLang];
+  const servicesData = Object.values(dict.services) as unknown[];
+  const pbiData = Object.values(dict.pbi) as unknown[];
+
+  const findBySlug = (entries: unknown[]): ServiceEntry | undefined =>
+    entries.find((v): v is ServiceEntry =>
+      v !== null && typeof v === 'object' && 'slug' in v && (v as ServiceEntry).slug === slug
+    );
+
+  let service = findBySlug(servicesData) ?? findBySlug(pbiData);
 
   if (!service) {
     return null;

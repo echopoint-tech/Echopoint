@@ -72,9 +72,8 @@ export default function AnimationObserver() {
       scheduleRefresh();
     };
 
-    // MutationObserver catches dynamically added elements without polling
     const mutationObserver = new MutationObserver(scheduleRefresh);
-    mutationObserver.observe(document.body, { childList: true, subtree: true });
+    mutationObserver.observe(document.querySelector('main') ?? document.body, { childList: true, subtree: true });
 
     document.addEventListener('visibilitychange', handleVisibilityChange);
     window.addEventListener('pageshow', handlePageShow);
