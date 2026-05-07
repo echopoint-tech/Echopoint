@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AnimationObserver from "@/components/AnimationObserver";
@@ -31,7 +31,7 @@ import styles from "./Servicios.module.css";
 
 type CategoryFilter = "all" | "pbi" | "consulting" | "ai";
 
-export default function ServiciosPage() {
+function ServiciosContent() {
   const { t, lang } = useLanguage();
   const searchParams = useSearchParams();
   const catParam = searchParams.get('cat');
@@ -73,7 +73,7 @@ export default function ServiciosPage() {
       <AnimationObserver />
       <Navbar />
 
-      {/* ── Hero Banner (full-width, like Zoho) ── */}
+      {/* ── Hero Banner ── */}
       <section className={`${styles.svcHero} reveal`}>
         <h1 className="reveal-delay-1">{t('services.heroTitle')}</h1>
         <div className={`${styles.svcHeroLine} reveal-delay-2`}></div>
@@ -269,8 +269,15 @@ export default function ServiciosPage() {
 
       </main>
 
-
       <Footer />
     </>
+  );
+}
+
+export default function ServiciosPage() {
+  return (
+    <Suspense fallback={<div style={{ minHeight: "100vh" }}></div>}>
+      <ServiciosContent />
+    </Suspense>
   );
 }
