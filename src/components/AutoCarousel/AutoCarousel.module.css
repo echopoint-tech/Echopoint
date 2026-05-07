@@ -7,6 +7,7 @@
     display: flex;
     gap: 2rem;
     overflow-x: auto;
+    overflow-y: hidden;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     padding-top: 4.0rem;
@@ -15,6 +16,7 @@
     /* Pull cards up close to title */
     padding-bottom: 0;
     -webkit-overflow-scrolling: touch;
+    touch-action: pan-x;
     scrollbar-width: none;
     /* Firefox */
     -ms-overflow-style: none;
