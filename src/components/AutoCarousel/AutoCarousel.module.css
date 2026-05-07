@@ -9,11 +9,11 @@
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    padding-top: 4.5rem;
+    padding-top: 4.0rem;
     /* Space for the floating icon */
     margin-top: -2.5rem;
     /* Pull cards up close to title */
-    padding-bottom: 0rem;
+    padding-bottom: 0;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     /* Firefox */

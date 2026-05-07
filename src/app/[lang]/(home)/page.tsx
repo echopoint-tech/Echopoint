@@ -93,7 +93,13 @@ export default async function Home({
                     <div className={styles.servicePreviewIcon}>
                       <FontAwesomeIcon icon={icon} />
                     </div>
-                    <h3 dangerouslySetInnerHTML={{ __html: t(titleKey) }}></h3>
+                    <h3 dangerouslySetInnerHTML={{ 
+                      __html: t(titleKey).includes('<span') 
+                        ? t(titleKey) 
+                        : t(titleKey).split(' ').length > 1 
+                          ? t(titleKey).substring(0, t(titleKey).lastIndexOf(' ')) + ' <span class="text-accent">' + t(titleKey).split(' ').pop() + '</span>'
+                          : t(titleKey)
+                    }}></h3>
                     <p>{t(descKey)}</p>
                     <ul className={styles.servicePreviewBullets}>
                       {sKey === 'title' ? (
@@ -111,11 +117,10 @@ export default async function Home({
                       )}
                     </ul>
                     <Link 
-                      href={`${getLocalizedPath(lang, "/servicios")}#${anchor}`}
-                      title={t(`${section}.${sKey}.title`)} 
+                      href={`${getLocalizedPath(lang, "/servicios")}?cat=${sKey === 'title' ? 'pbi' : sKey === 'p6' ? 'ai' : 'consulting'}`}
                       className={styles.servicePreviewAction}
                     >
-                      {t(cta)} <FontAwesomeIcon icon={faArrowRight} />
+                      {t('popularServices.viewAll')} <FontAwesomeIcon icon={faArrowRight} />
                     </Link>
                   </div>
                 );

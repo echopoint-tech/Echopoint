@@ -7,6 +7,7 @@ import AnimationObserver from "@/components/AnimationObserver";
 import { useLanguage } from "@/context/LanguageContext";
 import { getLocalizedPath } from "@/i18n/routing";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBrain,
@@ -28,14 +29,23 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import styles from "./Servicios.module.css";
 
-type CategoryFilter = "all" | "pbi" | "consulting";
+type CategoryFilter = "all" | "pbi" | "consulting" | "ai";
 
 export default function ServiciosPage() {
   const { t, lang } = useLanguage();
+  const searchParams = useSearchParams();
+  const catParam = searchParams.get('cat');
   const [activeFilter, setActiveFilter] = useState<CategoryFilter>("all");
+
+  useEffect(() => {
+    if (catParam === 'pbi' || catParam === 'consulting' || catParam === 'ai') {
+      setActiveFilter(catParam as CategoryFilter);
+    }
+  }, [catParam]);
 
   const showPbi = activeFilter === "all" || activeFilter === "pbi";
   const showConsulting = activeFilter === "all" || activeFilter === "consulting";
+  const showAi = activeFilter === "all" || activeFilter === "ai";
 
   // Re-trigger reveal animations when filter changes
   useEffect(() => {
@@ -100,12 +110,22 @@ export default function ServiciosPage() {
                 </li>
                 <li>
                   <button
+                    className={`${styles.pbiCatItem} ${activeFilter === "ai" ? styles.pbiCatItemActive : ""}`}
+                    onClick={() => setActiveFilter("ai")}
+                    aria-pressed={activeFilter === "ai"}
+                  >
+                    <FontAwesomeIcon icon={faRobot} />
+                    {t('pbi.cat.ai')}
+                  </button>
+                </li>
+                <li>
+                  <button
                     className={`${styles.pbiCatItem} ${activeFilter === "consulting" ? styles.pbiCatItemActive : ""}`}
                     onClick={() => setActiveFilter("consulting")}
                     aria-pressed={activeFilter === "consulting"}
                   >
                     <FontAwesomeIcon icon={faBriefcase} />
-                    {t('services.title')}
+                    {t('services.navTitle')}
                   </button>
                 </li>
               </ul>
@@ -154,21 +174,52 @@ export default function ServiciosPage() {
                     <p>{t('pbi.p5.desc')}</p>
                     <Link href={getLocalizedPath(lang, `/servicios/${t('pbi.p5.slug')}`)} className={styles.pbiCta}>{t('pbi.cta')} <FontAwesomeIcon icon={faChevronRight} /></Link>
                   </div>
-                  <div className={styles.pbiCard}>
-                    <div className={`${styles.pbiIcon} ${styles.pbiIconAmber}`}><FontAwesomeIcon icon={faRobot} /></div>
+                </div>
+              </div>
+            )}
+
+            {/* Section: Inteligencia Artificial */}
+            {showAi && (
+              <div className={`${styles.pbiSectionBlock} reveal`} style={{marginTop: (showPbi) ? '3rem' : '0'}}>
+                <div className={styles.pbiSectionTitle}>
+                  <h2 dangerouslySetInnerHTML={{ __html: t('pbi.aiTitle') }}></h2>
+                  <p>{t('pbi.aiDesc')}</p>
+                </div>
+
+                <div className={styles.pbiGrid}>
+                  <div className={`${styles.pbiCard} reveal reveal-delay-1`}>
+                    <div className={`${styles.pbiIcon} ${styles.pbiIconBlue}`}><FontAwesomeIcon icon={faChartLine} /></div>
                     <h3>{t('pbi.p6.title')}</h3>
                     <p>{t('pbi.p6.desc')}</p>
                     <Link href={getLocalizedPath(lang, `/servicios/${t('pbi.p6.slug')}`)} className={styles.pbiCta}>{t('pbi.cta')} <FontAwesomeIcon icon={faChevronRight} /></Link>
+                  </div>
+                  <div className={`${styles.pbiCard} reveal reveal-delay-2`}>
+                    <div className={`${styles.pbiIcon} ${styles.pbiIconAmber}`}><FontAwesomeIcon icon={faRobot} /></div>
+                    <h3>{t('pbi.p7.title')}</h3>
+                    <p>{t('pbi.p7.desc')}</p>
+                    <Link href={getLocalizedPath(lang, `/servicios/${t('pbi.p7.slug')}`)} className={styles.pbiCta}>{t('pbi.cta')} <FontAwesomeIcon icon={faChevronRight} /></Link>
+                  </div>
+                  <div className={`${styles.pbiCard} reveal reveal-delay-3`}>
+                    <div className={styles.pbiIcon}><FontAwesomeIcon icon={faMagnifyingGlassChart} /></div>
+                    <h3>{t('pbi.p8.title')}</h3>
+                    <p>{t('pbi.p8.desc')}</p>
+                    <Link href={getLocalizedPath(lang, `/servicios/${t('pbi.p8.slug')}`)} className={styles.pbiCta}>{t('pbi.cta')} <FontAwesomeIcon icon={faChevronRight} /></Link>
+                  </div>
+                  <div className={`${styles.pbiCard} reveal reveal-delay-4`}>
+                    <div className={`${styles.pbiIcon} ${styles.pbiIconBlue}`}><FontAwesomeIcon icon={faBrain} /></div>
+                    <h3>{t('pbi.p9.title')}</h3>
+                    <p>{t('pbi.p9.desc')}</p>
+                    <Link href={getLocalizedPath(lang, `/servicios/${t('pbi.p9.slug')}`)} className={styles.pbiCta}>{t('pbi.cta')} <FontAwesomeIcon icon={faChevronRight} /></Link>
                   </div>
                 </div>
               </div>
             )}
 
-            {/* Section: Consulting Services */}
+            {/* Section: Estrategia de Crecimiento */}
             {showConsulting && (
-              <div className={`${styles.pbiSectionBlock} reveal`} style={{marginTop: showPbi ? '3rem' : '0'}}>
+              <div className={`${styles.pbiSectionBlock} reveal`} style={{marginTop: (showPbi || showAi) ? '3rem' : '0'}}>
                 <div className={styles.pbiSectionTitle}>
-                  <h2>{t('services.title')}</h2>
+                  <h2 dangerouslySetInnerHTML={{ __html: t('services.title') }}></h2>
                   <p>{t('services.desc')}</p>
                 </div>
 

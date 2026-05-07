@@ -11,7 +11,8 @@ export const dictionaries = {
     popularServices: {
       subtitle: "Consultoría Estratégica",
       title: "Soluciones Estratégicas",
-      cta: "Ver Todas las Soluciones"
+      cta: "Ver Todas las Soluciones",
+      viewAll: "Ver todos los servicios"
     },
     manifesto: {
       subtitle: "Impacto Demostrado",
@@ -58,7 +59,8 @@ export const dictionaries = {
       error: "Error. Intenta de nuevo."
     },
     services: {
-      title: "Servicios de Consultoría Estratégica",
+      title: 'Estrategia de <span class="text-accent">Crecimiento</span>',
+      navTitle: "Estrategia de Crecimiento",
       filterTitle: "Explorar Categorías",
       desc: "Plan integral de crecimiento empresarial con objetivos mensurables y KPIs definidos.",
       heroTitle: "Todas las herramientas que necesitas para impulsar tu empresa",
@@ -113,7 +115,9 @@ export const dictionaries = {
       desc: "Transforma la complejidad de tus datos en decisiones estratégicas claras. Centralizamos tu información en dashboards interactivos para que lideres con absoluta certeza.",
       cta: "Solicitar Demo",
       catTitle: "Soluciones",
-      cat: { all: "Todas las Soluciones", direction: "Dirección", finance: "Finanzas", sales: "Ventas", ops: "Operaciones", strategy: "Estrategia" },
+      cat: { all: "Todas las Soluciones", direction: "Dirección", finance: "Finanzas", sales: "Ventas", ops: "Operaciones", strategy: "Estrategia", ai: "Inteligencia Artificial" },
+      aiTitle: 'Inteligencia <span class="text-accent">Artificial</span>',
+      aiDesc: "Implementamos soluciones de IA generativa y modelos predictivos para automatizar procesos y mejorar la toma de decisiones.",
       p1: { 
         slug: "dashboards-ejecutivos",
         title: "Dashboards Ejecutivos", 
@@ -156,11 +160,35 @@ export const dictionaries = {
       },
       p6: { 
         slug: "analisis-predictivo",
-        title: "Inteligencia Artificial", 
-        desc: "Modelos de Machine Learning integrados.",
-        heroTitle: "Anticípate al futuro",
-        longDesc: "Deja de adivinar y comienza a predecir. Implementamos modelos estadísticos y de Machine Learning para anticipar el comportamiento del mercado y blindar tu negocio ante cualquier escenario.",
-        i1: "Pronóstico de demanda futura con precisión algorítmica.", i2: "Prevención temprana de fuga de clientes (Churn Rate).", i3: "Detección de anomalías en operaciones y finanzas.", i4: "Simulación predictiva de escenarios (What-if)."
+        title: "Modelos Predictivos", 
+        desc: "Machine Learning para previsión de demanda.",
+        heroTitle: "Anticipa el futuro del mercado",
+        longDesc: "Implementamos algoritmos de ML que analizan datos históricos para predecir tendencias de ventas y comportamiento del consumidor.",
+        i1: "Previsión de demanda estacional.", i2: "Detección temprana de churn.", i3: "Optimización de inventarios.", i4: "Modelado de escenarios 'what-if'."
+      },
+      p7: { 
+        slug: "agentes-ia-personalizados",
+        title: "Agentes de IA Generativa", 
+        desc: "Automatización de flujos con LLMs.",
+        heroTitle: "Tu propia IA experta en tu negocio",
+        longDesc: "Desarrollamos agentes inteligentes que conocen tus manuales, procesos y base de conocimientos para asistir a empleados o clientes.",
+        i1: "Asistentes de soporte 24/7.", i2: "Automatización de redacción técnica.", i3: "Búsqueda inteligente en documentos.", i4: "Integración vía API con tus sistemas."
+      },
+      p8: { 
+        slug: "vision-artificial",
+        title: "Visión Artificial", 
+        desc: "Reconocimiento de imágenes y objetos.",
+        heroTitle: "Tus sistemas, ahora con ojos",
+        longDesc: "Aplicamos modelos de computer vision para control de calidad, seguridad perimetral o análisis de tráfico en espacios físicos.",
+        i1: "Control de calidad automatizado.", i2: "Reconocimiento de patrones visuales.", i3: "Conteo de personas y vehículos.", i4: "Análisis de seguridad en tiempo real."
+      },
+      p9: { 
+        slug: "procesamiento-lenguaje-natural",
+        title: "Análisis de Voz y Texto", 
+        desc: "Extracción de insights en conversaciones.",
+        heroTitle: "Escucha lo que tus datos dicen",
+        longDesc: "Analizamos miles de llamadas y mensajes para extraer sentimientos, temas recurrentes y oportunidades de venta no detectadas.",
+        i1: "Análisis de sentimiento de clientes.", i2: "Transcripción y resumen automático.", i3: "Detección de intenciones de compra.", i4: "Dashboard de reputación de marca."
       },
       common: {
         featuresTitle: "Lo que incluye:",
@@ -218,7 +246,8 @@ export const dictionaries = {
     popularServices: {
       subtitle: "Strategic Consulting",
       title: "Strategic Solutions",
-      cta: "View All Solutions"
+      cta: "View All Solutions",
+      viewAll: "View all services"
     },
     manifesto: {
       subtitle: "Proven Impact",
@@ -265,7 +294,8 @@ export const dictionaries = {
       error: "Error. Please try again."
     },
     services: {
-      title: "Strategic Consulting Services",
+      title: 'Growth <span class="text-accent">Strategy</span>',
+      navTitle: "Growth Strategy",
       filterTitle: "Explore Categories",
       desc: "Comprehensive business growth plan with measurable objectives and defined KPIs.",
       heroTitle: "All the tools you need to drive your business forward",
@@ -320,7 +350,9 @@ export const dictionaries = {
       desc: "Transform your data into intelligent decisions with our custom dashboards and reports.",
       cta: "Request Demo",
       catTitle: "Solutions",
-      cat: { all: "All Solutions", direction: "Management", finance: "Finance", sales: "Sales", ops: "Operations", strategy: "Strategy" },
+      cat: { all: "All Solutions", direction: "Management", finance: "Finance", sales: "Sales", ops: "Operations", strategy: "Strategy", ai: "Artificial Intelligence" },
+      aiTitle: 'Artificial <span class="text-accent">Intelligence</span>',
+      aiDesc: "We implement generative AI solutions and predictive models to automate processes and improve decision-making.",
       p1: { 
         slug: "dashboards-ejecutivos",
         title: "Executive Dashboards", 
@@ -362,12 +394,36 @@ export const dictionaries = {
         i1: "Data governance and security.", i2: "DB cleaning and normalization.", i3: "Complex data modeling.", i4: "Internal team training."
       },
       p6: { 
-        slug: "analisis-predictivo",
-        title: "Artificial Intelligence", 
-        desc: "Integrated Machine Learning models.",
-        heroTitle: "Anticipate the future",
-        longDesc: "We use statistical models and Machine Learning integrated into Power BI to predict trends and behaviors.",
-        i1: "Future demand forecasting.", i2: "Churn analysis.", i3: "Anomaly detection.", i4: "What-if scenarios."
+        slug: "predictive-analytics",
+        title: "Predictive Models", 
+        desc: "Machine Learning for demand forecasting.",
+        heroTitle: "Anticipate market trends",
+        longDesc: "We implement ML algorithms that analyze historical data to predict sales trends and consumer behavior.",
+        i1: "Seasonal demand forecasting.", i2: "Early churn detection.", i3: "Inventory optimization.", i4: "What-if scenario modeling."
+      },
+      p7: { 
+        slug: "custom-ai-agents",
+        title: "Generative AI Agents", 
+        desc: "Workflow automation with LLMs.",
+        heroTitle: "Your own AI business expert",
+        longDesc: "We develop intelligent agents that know your manuals, processes, and knowledge base to assist employees or customers.",
+        i1: "24/7 support assistants.", i2: "Technical writing automation.", i3: "Intelligent document search.", i4: "API integration with your systems."
+      },
+      p8: { 
+        slug: "computer-vision",
+        title: "Computer Vision", 
+        desc: "Image and object recognition.",
+        heroTitle: "Your systems, now with eyes",
+        longDesc: "We apply computer vision models for quality control, perimeter security, or traffic analysis in physical spaces.",
+        i1: "Automated quality control.", i2: "Visual pattern recognition.", i3: "People and vehicle counting.", i4: "Real-time security analysis."
+      },
+      p9: { 
+        slug: "nlp-analytics",
+        title: "Voice & Text Analytics", 
+        desc: "Insight extraction from conversations.",
+        heroTitle: "Listen to what your data says",
+        longDesc: "We analyze thousands of calls and messages to extract sentiment, recurring themes, and undetected sales opportunities.",
+        i1: "Customer sentiment analysis.", i2: "Auto transcription & summary.", i3: "Purchase intent detection.", i4: "Brand reputation dashboard."
       },
       common: {
         featuresTitle: "What's included:",
@@ -425,7 +481,8 @@ export const dictionaries = {
     popularServices: {
       subtitle: "Conseil Stratégique",
       title: "Solutions Stratégiques",
-      cta: "Voir Toutes les Solutions"
+      cta: "Voir Toutes les Solutions",
+      viewAll: "Voir tous les services"
     },
     manifesto: {
       subtitle: "Impact Prouvé",
@@ -472,7 +529,8 @@ export const dictionaries = {
       error: "Erreur. Réessayez."
     },
     services: {
-      title: "Services de Conseil Stratégique",
+      title: 'Stratégie de <span class="text-accent">Croissance</span>',
+      navTitle: "Stratégie de Croissance",
       filterTitle: "Explorer les Catégories",
       desc: "Plan de croissance globale avec des objectifs mesurables et des indicateurs clés de performance définis.",
       heroTitle: "Tous les outils dont vous avez besoin pour propulser votre entreprise",
@@ -527,7 +585,9 @@ export const dictionaries = {
       desc: "Transformez vos données en décisions intelligentes grâce à nos tableaux de bord et rapports personnalisés.",
       cta: "Demander une Démo",
       catTitle: "Solutions",
-      cat: { all: "Toutes les Solutions", direction: "Direction", finance: "Finances", sales: "Ventes", ops: "Opérations", strategy: "Stratégie" },
+      cat: { all: "Toutes les Solutions", direction: "Direction", finance: "Finances", sales: "Ventes", ops: "Opérations", strategy: "Stratégie", ai: "Intelligence Artificielle" },
+      aiTitle: 'Intelligence <span class="text-accent">Artificielle</span>',
+      aiDesc: "Nous mettons en œuvre des solutions d'IA générative et des modèles prédictifs pour automatiser les processus et améliorer la prise de décision.",
       p1: { 
         slug: "dashboards-ejecutivos",
         title: "Tableaux de Bord Exécutifs", 
@@ -569,12 +629,36 @@ export const dictionaries = {
         i1: "Gouvernance et sécurité des données.", i2: "Nettoyage et normalisation des bases de données.", i3: "Modélisation de données complexes.", i4: "Formation des équipes internes."
       },
       p6: { 
-        slug: "analisis-predictivo",
-        title: "Intelligence Artificielle", 
-        desc: "Modèles de Machine Learning intégrés.",
-        heroTitle: "Anticipez l'avenir",
-        longDesc: "Nous utilisons des modèles statistiques et le Machine Learning intégrés à Power BI pour prédire les tendances et les comportements.",
-        i1: "Prévision de la demande future.", i2: "Analyse du taux de désabonnement (Churn).", i3: "Détection d'anomalies.", i4: "Scénarios What-if."
+        slug: "analyse-predictive",
+        title: "Modèles Prédictifs", 
+        desc: "Machine Learning pour la prévision de la demande.",
+        heroTitle: "Anticipez les tendances du marché",
+        longDesc: "Nous mettons en œuvre des algorithmes de ML qui analysent les données historiques pour prédire les tendances de vente et le comportement des consommateurs.",
+        i1: "Prévision de la demande saisonnière.", i2: "Détection précoce du churn.", i3: "Optimisation des stocks.", i4: "Modélisation de scénarios 'what-if'."
+      },
+      p7: { 
+        slug: "agents-ia-personnalises",
+        title: "Agents d'IA Générative", 
+        desc: "Automatisation des flux avec les LLMs.",
+        heroTitle: "Votre propre expert métier IA",
+        longDesc: "Nous développons des agents intelligents qui connaissent vos manuels, vos processus et votre base de connaissances pour assister vos employés ou vos clients.",
+        i1: "Assistants de support 24/7.", i2: "Automatisation de la rédaction technique.", i3: "Recherche intelligente de documents.", i4: "Intégration API avec vos systèmes."
+      },
+      p8: { 
+        slug: "vision-artificielle",
+        title: "Vision Artificielle", 
+        desc: "Reconnaissance d'images et d'objets.",
+        heroTitle: "Vos systèmes, maintenant avec des yeux",
+        longDesc: "Nous appliquons des modèles de vision par ordinateur pour le contrôle de la qualité, la sécurité périmétrique ou l'analyse du trafic dans les espaces physiques.",
+        i1: "Contrôle qualité automatisé.", i2: "Reconnaissance de motifs visuels.", i3: "Comptage de personnes et de véhicules.", i4: "Analyse de sécurité en tiempo réel."
+      },
+      p9: { 
+        slug: "analyse-nlp",
+        title: "Analyse Vocale et Textuelle", 
+        desc: "Extraction d'insights à partir des conversations.",
+        heroTitle: "Écoutez ce que disent vos données",
+        longDesc: "Nous analysons des milliers d'appels et de messages para extraer les sentiments, les thèmes récurrents et les opportunités de vente non détectées.",
+        i1: "Analyse du sentiment client.", i2: "Transcription et résumé automatiques.", i3: "Détection d'intention d'achat.", i4: "Tableau de bord de réputation de marque."
       },
       common: {
         featuresTitle: "Ce qui est inclus :",
@@ -633,7 +717,8 @@ export const dictionaries = {
     popularServices: {
       subtitle: "Consultoria Estratégica",
       title: "Soluções Estratégicas",
-      cta: "Ver Todas as Soluções"
+      cta: "Ver Todas as Soluções",
+      viewAll: "Ver todos os serviços"
     },
     manifesto: {
       subtitle: "Impacto Comprovado",
@@ -680,7 +765,8 @@ export const dictionaries = {
       error: "Erro. Tente novamente."
     },
     services: {
-      title: "Serviços de Consultoria Estratégica",
+      title: 'Estratégia de <span class="text-accent">Crescimento</span>',
+      navTitle: "Estratégia de Crescimento",
       filterTitle: "Explorar Categorias",
       desc: "Plano abrangente de crescimento dos negócios com objetivos mensuráveis e KPIs definidos.",
       heroTitle: "Todas as ferramentas que você precisa para impulsionar sua empresa",
@@ -735,7 +821,9 @@ export const dictionaries = {
       desc: "Transforme seus dados em decisões inteligentes com nossos dashboards e relatórios personalizados.",
       cta: "Solicitar Demo",
       catTitle: "Soluções",
-      cat: { all: "Todas as Soluções", direction: "Direção", finance: "Finanças", sales: "Vendas", ops: "Operações", strategy: "Estratégia" },
+      cat: { all: "Todas as Soluções", direction: "Direção", finance: "Finanças", sales: "Vendas", ops: "Operações", strategy: "Estratégia", ai: "Inteligência Artificial" },
+      aiTitle: 'Inteligência <span class="text-accent">Artificial</span>',
+      aiDesc: "Implementamos soluções de IA generativa e modelos preditivos para automatizar processos e melhorar a tomada de decisões.",
       p1: { 
         slug: "dashboards-ejecutivos",
         title: "Dashboards Executivos", 
@@ -777,13 +865,38 @@ export const dictionaries = {
         i1: "Governança e segurança de dados.", i2: "Limpeza e normalização de bancos de dados.", i3: "Modelagem de dados complexa.", i4: "Treinamento de equipe interna."
       },
       p6: { 
-        slug: "analisis-predictivo",
-        title: "Inteligência Artificial", 
-        desc: "Modelos de Machine Learning integrados.",
-        heroTitle: "Antecipe o futuro",
-        longDesc: "Utilizamos modelos estatísticos e Machine Learning integrados no Power BI para prever tendências e comportamentos.",
-        i1: "Previsão de demanda futura.", i2: "Análise de churn.", i3: "Detecção de anomalias.", i4: "Cenários What-if."
+        slug: "analise-preditiva",
+        title: "Modelos Preditivos", 
+        desc: "Machine Learning para previsão de demanda.",
+        heroTitle: "Antecipe o futuro do mercado",
+        longDesc: "Implementamos algoritmos de ML que analisam dados históricos para prever tendências de vendas e comportamento do consumidor.",
+        i1: "Previsão de demanda sazonal.", i2: "Deteção precoce de churn.", i3: "Otimização de estoques.", i4: "Modelagem de cenários 'what-if'."
       },
+      p7: { 
+        slug: "agentes-ia-personalizados",
+        title: "Agentes de IA Generativa", 
+        desc: "Automatização de fluxos com LLMs.",
+        heroTitle: "Sua própria IA especialista no seu negócio",
+        longDesc: "Desenvolvemos agentes inteligentes que conhecem seus manuais, processos e base de conhecimento para auxiliar funcionários ou clientes.",
+        i1: "Assistentes de suporte 24/7.", i2: "Automatização de redação técnica.", i3: "Busca inteligente em documentos.", i4: "Integração via API com seus sistemas."
+      },
+      p8: { 
+        slug: "visao-computacional",
+        title: "Visão Computacional", 
+        desc: "Reconhecimento de imagens e objetos.",
+        heroTitle: "Seus sistemas, agora com olhos",
+        longDesc: "Aplicamos modelos de visão computacional para controle de qualidade, segurança perimetral ou análise de tráfego em espaços físicos.",
+        i1: "Controle de qualidade automatizado.", i2: "Reconhecimento de padrões visuais.", i3: "Contagem de pessoas e veículos.", i4: "Análise de segurança em tempo real."
+      },
+      p9: { 
+        slug: "analise-nlp",
+        title: "Análise de Voz e Texto", 
+        desc: "Extração de insights em conversas.",
+        heroTitle: "Ouça o que seus dados dizem",
+        longDesc: "Analisamos milhares de chamadas e mensagens para extrair sentimentos, temas recorrentes e oportunidades de venda não detetadas.",
+        i1: "Análise de sentimento de clientes.", i2: "Transcrição e resumo automático.", i3: "Deteção de intenções de compra.", i4: "Dashboard de reputação de marca."
+      },
+
       common: {
         featuresTitle: "O que está incluído:",
         formTitle: "Comece hoje mesmo",

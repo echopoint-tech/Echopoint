@@ -84,7 +84,7 @@ export default function ServiceDetailClient({ lang, slug }: ServiceDetailClientP
                 <FontAwesomeIcon icon={faArrowLeft} /> {t('nav.backToServices')}
               </Link>
               <span className="subtitle">{service.title}</span>
-              <h1>{service.heroTitle}</h1>
+              <h1 dangerouslySetInnerHTML={{ __html: service.heroTitle }}></h1>
               <p className={styles.longDesc}>{service.longDesc}</p>
               
               <div className={styles.svcFeaturesList}>
@@ -102,7 +102,7 @@ export default function ServiceDetailClient({ lang, slug }: ServiceDetailClientP
             <div className={styles.svcHeroForm}>
               <div className={styles.formCard}>
                 <h3>{t('pbi.common.formTitle')}</h3>
-                <p>{t('pbi.common.formDesc')} <strong>{service.title}</strong>.</p>
+                <p>{t('pbi.common.formDesc')} <strong dangerouslySetInnerHTML={{ __html: service.title }}></strong>.</p>
                 <ContactForm />
               </div>
             </div>
