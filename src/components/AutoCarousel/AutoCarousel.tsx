@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, ReactNode, Children } from "react";
+import { useEffect, useRef, ReactNode, Children, useState } from "react";
 import styles from "./AutoCarousel.module.css";
 
 interface AutoCarouselProps {
@@ -10,8 +10,10 @@ interface AutoCarouselProps {
 
 export default function AutoCarousel({ children, className, intervalMs = 5000 }: AutoCarouselProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-  const scrollNext = () => {
+  const scrollNext = (isManual = false) => {
+    if (isManual) setIsAutoPlaying(false);
     if (scrollRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
       if (scrollLeft + clientWidth >= scrollWidth - 10) {
@@ -23,6 +25,7 @@ export default function AutoCarousel({ children, className, intervalMs = 5000 }:
   };
 
   const scrollPrev = () => {
+    setIsAutoPlaying(false);
     if (scrollRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
       if (scrollLeft <= 10) {
@@ -34,9 +37,10 @@ export default function AutoCarousel({ children, className, intervalMs = 5000 }:
   };
 
   useEffect(() => {
-    const interval = setInterval(scrollNext, intervalMs);
+    if (!isAutoPlaying) return;
+    const interval = setInterval(() => scrollNext(false), intervalMs);
     return () => clearInterval(interval);
-  }, [intervalMs]);
+  }, [intervalMs, isAutoPlaying]);
 
   return (
     <div className={`${styles.carouselWrapper} ${className || ""}`}>
@@ -50,7 +54,12 @@ export default function AutoCarousel({ children, className, intervalMs = 5000 }:
         </svg>
       </button>
 
-      <div ref={scrollRef} className={styles.carouselContainer}>
+      <div 
+        ref={scrollRef} 
+        className={styles.carouselContainer}
+        onTouchStart={() => setIsAutoPlaying(false)}
+        onMouseDown={() => setIsAutoPlaying(false)}
+      >
         {Children.map(children, (child) => (
           <div className={styles.carouselItem}>
             {child}
@@ -60,7 +69,7 @@ export default function AutoCarousel({ children, className, intervalMs = 5000 }:
 
       <button 
         className={`${styles.arrowButton} ${styles.arrowRight}`} 
-        onClick={scrollNext}
+        onClick={() => scrollNext(true)}
         aria-label="Siguiente"
       >
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

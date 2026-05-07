@@ -87,12 +87,7 @@
 }
 
 @media (max-width: 768px) {
-    /* En móviles se ajustan para no cortar */
-    .arrowLeft { left: -0.2rem; }
-    .arrowRight { right: -0.2rem; }
-    
     .arrowButton {
-        width: 36px;
-        height: 36px;
+        display: none;
     }
 }
