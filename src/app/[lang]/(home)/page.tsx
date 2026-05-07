@@ -76,31 +76,42 @@ export default async function Home({
         {/* Popular Services Section */}
         <section id="popular-services" className={`section ${styles.popularServicesSection}`}>
           <div className="container">
-            <div className="section-header reveal" style={{ marginBottom: '2.5rem' }}>
+            <div className="section-header reveal" style={{ marginBottom: '0' }}>
               <span className="subtitle">{t('popularServices.subtitle')}</span>
               <h2>{t('popularServices.title')}</h2>
             </div>
             <AutoCarousel className={styles.servicesPreviewGrid}>
               {([
-                { sKey: 'p1', section: 'pbi', icon: faGaugeHigh, cta: 'pbi.cta' },
-                { sKey: 'p6', section: 'pbi', icon: faBrain, cta: 'pbi.cta' },
-                { sKey: 's1', section: 'services', icon: faChartLine, cta: 'services.cta' },
-              ] as const).map(({ sKey, section, icon, cta }, i) => {
-                const slug = t(`${section}.${sKey}.slug`);
+                { sKey: 'title', section: 'pbi', icon: faGaugeHigh, cta: 'pbi.cta', anchor: 'power-bi' },
+                { sKey: 'p6', section: 'pbi', icon: faBrain, cta: 'pbi.cta', anchor: 'ia' },
+                { sKey: 's1', section: 'services', icon: faChartLine, cta: 'services.cta', anchor: 'estrategia' },
+              ] as const).map(({ sKey, section, icon, cta, anchor }, i) => {
+                const titleKey = sKey === 'title' ? `${section}.${sKey}` : `${section}.${sKey}.title`;
+                const descKey = sKey === 'title' ? `${section}.desc` : `${section}.${sKey}.longDesc`;
                 return (
                   <div key={sKey} className={`${styles.servicePreviewCard} reveal reveal-delay-${i + 1}`}>
                     <div className={styles.servicePreviewIcon}>
                       <FontAwesomeIcon icon={icon} />
                     </div>
-                    <h3>{t(`${section}.${sKey}.title`)}</h3>
-                    <p>{t(`${section}.${sKey}.longDesc`)}</p>
+                    <h3 dangerouslySetInnerHTML={{ __html: t(titleKey) }}></h3>
+                    <p>{t(descKey)}</p>
                     <ul className={styles.servicePreviewBullets}>
-                      <li><span className={styles.bulletIcon}><FontAwesomeIcon icon={faCheckCircle} /></span>{t(`${section}.${sKey}.i1`)}</li>
-                      <li><span className={styles.bulletIcon}><FontAwesomeIcon icon={faCheckCircle} /></span>{t(`${section}.${sKey}.i2`)}</li>
-                      <li><span className={styles.bulletIcon}><FontAwesomeIcon icon={faCheckCircle} /></span>{t(`${section}.${sKey}.i3`)}</li>
+                      {sKey === 'title' ? (
+                        <>
+                          <li><span className={styles.bulletIcon}><FontAwesomeIcon icon={faCheckCircle} /></span>{t('pbi.p1.title')}</li>
+                          <li><span className={styles.bulletIcon}><FontAwesomeIcon icon={faCheckCircle} /></span>{t('pbi.p2.title')}</li>
+                          <li><span className={styles.bulletIcon}><FontAwesomeIcon icon={faCheckCircle} /></span>{t('pbi.p3.title')}</li>
+                        </>
+                      ) : (
+                        <>
+                          <li><span className={styles.bulletIcon}><FontAwesomeIcon icon={faCheckCircle} /></span>{t(`${section}.${sKey}.i1`)}</li>
+                          <li><span className={styles.bulletIcon}><FontAwesomeIcon icon={faCheckCircle} /></span>{t(`${section}.${sKey}.i2`)}</li>
+                          <li><span className={styles.bulletIcon}><FontAwesomeIcon icon={faCheckCircle} /></span>{t(`${section}.${sKey}.i3`)}</li>
+                        </>
+                      )}
                     </ul>
                     <Link 
-                      href={getLocalizedPath(lang, `/servicios/${slug}`)} 
+                      href={`${getLocalizedPath(lang, "/servicios")}#${anchor}`}
                       title={t(`${section}.${sKey}.title`)} 
                       className={styles.servicePreviewAction}
                     >
@@ -110,7 +121,7 @@ export default async function Home({
                 );
               })}
             </AutoCarousel>
-            <div style={{textAlign: 'center', marginTop: '0.5rem'}}>
+            <div className={styles.popularServicesCta}>
               <Button href={getLocalizedPath(lang, "/servicios")} title={t('popularServices.cta')} variant="primary">{t('popularServices.cta')}</Button>
             </div>
           </div>

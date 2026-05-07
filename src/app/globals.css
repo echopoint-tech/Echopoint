@@ -266,7 +266,7 @@ html[data-snap="true"] #main-content > section.section {
 
 /* Specific centering for Popular Services section only */
 html[data-snap="true"] #main-content > section#popular-services {
-    padding: 0 !important;
+    padding: 2.5rem 0 !important;
 }
 
 @media (max-width: 767px) {

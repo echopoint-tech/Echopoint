@@ -9,15 +9,21 @@
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    padding-top: 1rem; /* Previene que se corte la tarjeta arriba al hacer hover */
-    padding-bottom: 0;
+    padding-top: 4.5rem;
+    /* Space for the floating icon */
+    margin-top: -2.5rem;
+    /* Pull cards up close to title */
+    padding-bottom: 0rem;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE/Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE/Edge */
 }
 
 .carouselContainer::-webkit-scrollbar {
-    display: none; /* Safari/Chrome */
+    display: none;
+    /* Safari/Chrome */
 }
 
 @media (min-width: 768px) {
@@ -35,7 +41,7 @@
     align-items: stretch;
 }
 
-.carouselItem > * {
+.carouselItem>* {
     width: 100%;
     /* Removido max-width para que se alinee con los márgenes de la página */
     margin: 0 auto;
@@ -43,7 +49,8 @@
 
 .arrowButton {
     position: absolute;
-    top: calc(50% + 0.5rem); /* compensar la diferencia (padding-top 1rem, padding-bottom 0) */
+    top: calc(50% + 0.5rem);
+    /* compensar la diferencia (padding-top 1rem, padding-bottom 0) */
     transform: translateY(-50%);
     width: 48px;
     height: 48px;
@@ -75,15 +82,27 @@
 }
 
 @media (min-width: 768px) {
+
     /* En tablets las flechas se asoman un poco hacia afuera */
-    .arrowLeft { left: -1.5rem; }
-    .arrowRight { right: -1.5rem; }
+    .arrowLeft {
+        left: -1.5rem;
+    }
+
+    .arrowRight {
+        right: -1.5rem;
+    }
 }
 
 @media (min-width: 1280px) {
+
     /* En pantallas grandes (donde hay espacio exterior), las sacamos completamente de la tarjeta */
-    .arrowLeft { left: -4rem; }
-    .arrowRight { right: -4rem; }
+    .arrowLeft {
+        left: -4rem;
+    }
+
+    .arrowRight {
+        right: -4rem;
+    }
 }
 
 @media (max-width: 768px) {

@@ -10,8 +10,8 @@ export const dictionaries = {
     trust: "Impulsando el crecimiento de líderes globales:",
     popularServices: {
       subtitle: "Consultoría Estratégica",
-      title: "Nuestros Servicios Más Populares",
-      cta: "Ver Todos los Servicios"
+      title: "Soluciones Estratégicas",
+      cta: "Ver Todas las Soluciones"
     },
     manifesto: {
       subtitle: "Impacto Demostrado",
@@ -68,8 +68,8 @@ export const dictionaries = {
         slug: "estrategia-crecimiento",
         title: "Estrategia de Crecimiento", 
         heroTitle: "Escala tu empresa al siguiente nivel",
-        longDesc: "Diseñamos hojas de ruta accionables basadas en datos para expandir tu cuota de mercado y optimizar tu rentabilidad.",
-        i1: "Análisis Porter Five Forces y SWOT cuantitativo.", i2: "Investigación de mercados emergentes y gaps de producto.", i3: "Planes de expansión con proyecciones financieras a 5 años.", i4: "Estrategias de entrada y localización.", i5: "Validación de propuesta de valor y testing A/B." 
+        longDesc: "Diseñamos hojas de ruta accionables basadas en datos duros. Identificamos oportunidades ocultas para expandir tu cuota de mercado, superar a la competencia y escalar tu rentabilidad con seguridad.",
+        i1: "Análisis competitivo y auditoría de mercado exhaustiva.", i2: "Identificación de nichos rentables y gaps de producto.", i3: "Planes de expansión con proyecciones financieras a 5 años.", i4: "Estrategias de entrada y localización.", i5: "Validación de propuesta de valor y testing A/B." 
       },
       s2: { 
         slug: "desarrollo-alianzas",
@@ -110,7 +110,7 @@ export const dictionaries = {
     pbi: {
       subtitle: "Producto Destacado",
       title: 'Soluciones con <span class="text-accent">Power BI</span>',
-      desc: "Transforma tus datos en decisiones inteligentes con nuestros dashboards y reportes personalizados.",
+      desc: "Transforma la complejidad de tus datos en decisiones estratégicas claras. Centralizamos tu información en dashboards interactivos para que lideres con absoluta certeza.",
       cta: "Solicitar Demo",
       catTitle: "Soluciones",
       cat: { all: "Todas las Soluciones", direction: "Dirección", finance: "Finanzas", sales: "Ventas", ops: "Operaciones", strategy: "Estrategia" },
@@ -156,11 +156,11 @@ export const dictionaries = {
       },
       p6: { 
         slug: "analisis-predictivo",
-        title: "Análisis Predictivo", 
+        title: "Inteligencia Artificial", 
         desc: "Modelos de Machine Learning integrados.",
         heroTitle: "Anticípate al futuro",
-        longDesc: "Utilizamos modelos estadísticos y Machine Learning integrados en Power BI para predecir tendencias y comportamientos.",
-        i1: "Pronóstico de demanda futura.", i2: "Análisis de fuga de clientes (Churn).", i3: "Detección de anomalías.", i4: "Escenarios What-if."
+        longDesc: "Deja de adivinar y comienza a predecir. Implementamos modelos estadísticos y de Machine Learning para anticipar el comportamiento del mercado y blindar tu negocio ante cualquier escenario.",
+        i1: "Pronóstico de demanda futura con precisión algorítmica.", i2: "Prevención temprana de fuga de clientes (Churn Rate).", i3: "Detección de anomalías en operaciones y finanzas.", i4: "Simulación predictiva de escenarios (What-if)."
       },
       common: {
         featuresTitle: "Lo que incluye:",
@@ -217,8 +217,8 @@ export const dictionaries = {
     trust: "Driving growth for global leaders:",
     popularServices: {
       subtitle: "Strategic Consulting",
-      title: "Our Most Popular Services",
-      cta: "View All Services"
+      title: "Strategic Solutions",
+      cta: "View All Solutions"
     },
     manifesto: {
       subtitle: "Proven Impact",
@@ -363,7 +363,7 @@ export const dictionaries = {
       },
       p6: { 
         slug: "analisis-predictivo",
-        title: "Predictive Analysis", 
+        title: "Artificial Intelligence", 
         desc: "Integrated Machine Learning models.",
         heroTitle: "Anticipate the future",
         longDesc: "We use statistical models and Machine Learning integrated into Power BI to predict trends and behaviors.",
@@ -424,8 +424,8 @@ export const dictionaries = {
     trust: "Stimuler la croissance des leaders mondiaux :",
     popularServices: {
       subtitle: "Conseil Stratégique",
-      title: "Nos Services les Plus Populaires",
-      cta: "Voir Tous les Services"
+      title: "Solutions Stratégiques",
+      cta: "Voir Toutes les Solutions"
     },
     manifesto: {
       subtitle: "Impact Prouvé",
@@ -570,7 +570,7 @@ export const dictionaries = {
       },
       p6: { 
         slug: "analisis-predictivo",
-        title: "Analyse Prédictive", 
+        title: "Intelligence Artificielle", 
         desc: "Modèles de Machine Learning intégrés.",
         heroTitle: "Anticipez l'avenir",
         longDesc: "Nous utilisons des modèles statistiques et le Machine Learning intégrés à Power BI pour prédire les tendances et les comportements.",
@@ -632,8 +632,8 @@ export const dictionaries = {
     trust: "Impulsionando o crescimento de líderes globais:",
     popularServices: {
       subtitle: "Consultoria Estratégica",
-      title: "Os Nossos Serviços Mais Populares",
-      cta: "Ver Todos os Serviços"
+      title: "Soluções Estratégicas",
+      cta: "Ver Todas as Soluções"
     },
     manifesto: {
       subtitle: "Impacto Comprovado",
@@ -778,7 +778,7 @@ export const dictionaries = {
       },
       p6: { 
         slug: "analisis-predictivo",
-        title: "Análise Preditiva", 
+        title: "Inteligência Artificial", 
         desc: "Modelos de Machine Learning integrados.",
         heroTitle: "Antecipe o futuro",
         longDesc: "Utilizamos modelos estatísticos e Machine Learning integrados no Power BI para prever tendências e comportamentos.",
