@@ -49,6 +49,7 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  output: "export",
   devIndicators: false,
   images: {
     unoptimized: true, // Requerido para Cloudflare Pages en plan gratuito
@@ -67,14 +68,6 @@ const nextConfig: NextConfig = {
       "@fortawesome/fontawesome-svg-core",
     ],
     cssChunking: false,
-  },
-  async headers() {
-    return [
-      {
-        source: "/(.*)",
-        headers: securityHeaders,
-      },
-    ];
   },
 };
 

@@ -23,6 +23,10 @@ const spaceGrotesk = Space_Grotesk({
   display: "swap",
 });
 
+export function generateStaticParams() {
+  return [{ lang: "es" }, { lang: "en" }, { lang: "fr" }, { lang: "pt" }];
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
   const baseUrl = "https://echopoint.vercel.app";

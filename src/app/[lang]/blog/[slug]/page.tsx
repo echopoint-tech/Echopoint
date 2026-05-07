@@ -29,9 +29,16 @@ function createTranslator(dictionary: Record<string, any>) {
 }
 
 export async function generateStaticParams() {
-  return blogPosts.map((post) => ({
-    slug: post.slug,
-  }));
+  const langs = ["es", "en", "fr", "pt"];
+  const params = [];
+  
+  for (const lang of langs) {
+    for (const post of blogPosts) {
+      params.push({ lang, slug: post.slug });
+    }
+  }
+  
+  return params;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
