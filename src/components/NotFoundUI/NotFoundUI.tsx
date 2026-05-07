@@ -8,21 +8,35 @@ export default function NotFoundUI({ lang = "es" }: { lang?: string }) {
   const content = {
     es: { 
       title: "No podemos encontrar la página que buscas.", 
-      visit: "Visitar echopointmx.com",
+      visit: "Visitar inicio",
       copyright: "© 2026, Echopoint AI. Todos los derechos reservados.",
       terms: "Términos de Servicio",
       privacy: "Política de Privacidad"
     },
     en: { 
       title: "We can't seem to find the page you are looking for.", 
-      visit: "Visit echopointmx.com",
+      visit: "Visit homepage",
       copyright: "© 2026, Echopoint AI. All Rights Reserved.",
       terms: "Terms of Service",
       privacy: "Privacy Policy"
+    },
+    fr: { 
+      title: "Nous ne parvenons pas à trouver la page que vous recherchez.", 
+      visit: "Visiter l'accueil",
+      copyright: "© 2026, Echopoint AI. Tous droits réservés.",
+      terms: "Conditions d'Utilisation",
+      privacy: "Politique de Confidentialité"
+    },
+    pt: { 
+      title: "Não conseguimos encontrar a página que você está procurando.", 
+      visit: "Visitar o início",
+      copyright: "© 2026, Echopoint AI. Todos os direitos reservados.",
+      terms: "Termos de Serviço",
+      privacy: "Política de Privacidade"
     }
   }[lang.toLowerCase()] || { 
     title: "No podemos encontrar la página que buscas.", 
-    visit: "Visitar echopointmx.com",
+    visit: "Visitar inicio",
     copyright: "© 2026, Echopoint AI. Todos los derechos reservados.",
     terms: "Términos de Servicio",
     privacy: "Política de Privacidad"

@@ -28,7 +28,7 @@ import AnimationObserver from "@/components/AnimationObserver";
 import ContactForm from "@/components/ContactForm";
 import { useLanguage } from "@/context/LanguageContext";
 import { dictionaries } from "@/i18n/dictionaries";
-import styles from "./ServiceDetail.module.css";
+import styles from "./ServiceDetailView.module.css";
 
 interface ServiceDetailClientProps {
   lang: string;

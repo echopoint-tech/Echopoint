@@ -1,7 +1,7 @@
 import NosotrosView from "@/components/Views/NosotrosView";
 
 export async function generateStaticParams() {
-  return [{ lang: "es" }];
+  return [{ lang: "en" }];
 }
 
 export default function Page() {

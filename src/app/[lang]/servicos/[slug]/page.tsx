@@ -2,8 +2,8 @@ import ServiceDetailView from "@/components/Views/ServiceDetailView";
 import { dictionaries } from "@/i18n/dictionaries";
 
 export async function generateStaticParams() {
-  const lang = "es";
-  const dict = dictionaries.ES;
+  const lang = "pt";
+  const dict = dictionaries.PT;
   const slugs = [
     ...Object.values(dict.services).map((s: any) => s?.slug),
     ...Object.values(dict.pbi).map((p: any) => p?.slug)
