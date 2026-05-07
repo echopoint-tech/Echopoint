@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, ReactNode, Children, useState } from "react";
+import { useEffect, useRef, ReactNode, Children, useState, useCallback } from "react";
 import styles from "./AutoCarousel.module.css";
 
 interface AutoCarouselProps {
@@ -11,7 +11,8 @@ interface AutoCarouselProps {
 export default function AutoCarousel({ children, className, intervalMs = 5000 }: AutoCarouselProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-  const [showHint, setShowHint] = useState(true);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const count = Children.count(children);
 
   const scrollNext = (isManual = false) => {
     if (isManual) setIsAutoPlaying(false);
@@ -37,6 +38,20 @@ export default function AutoCarousel({ children, className, intervalMs = 5000 }:
     }
   };
 
+  const handleScroll = useCallback(() => {
+    if (scrollRef.current) {
+      const { scrollLeft, clientWidth } = scrollRef.current;
+      setActiveIndex(Math.round(scrollLeft / clientWidth));
+    }
+  }, []);
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    el.addEventListener("scroll", handleScroll, { passive: true });
+    return () => el.removeEventListener("scroll", handleScroll);
+  }, [handleScroll]);
+
   useEffect(() => {
     if (!isAutoPlaying) return;
     const interval = setInterval(() => scrollNext(false), intervalMs);
@@ -45,8 +60,8 @@ export default function AutoCarousel({ children, className, intervalMs = 5000 }:
 
   return (
     <div className={`${styles.carouselWrapper} ${className || ""}`}>
-      <button 
-        className={`${styles.arrowButton} ${styles.arrowLeft}`} 
+      <button
+        className={`${styles.arrowButton} ${styles.arrowLeft}`}
         onClick={scrollPrev}
         aria-label="Anterior"
       >
@@ -58,8 +73,8 @@ export default function AutoCarousel({ children, className, intervalMs = 5000 }:
       <div
         ref={scrollRef}
         className={styles.carouselContainer}
-        onTouchStart={() => { setIsAutoPlaying(false); setShowHint(false); }}
-        onMouseDown={() => { setIsAutoPlaying(false); setShowHint(false); }}
+        onTouchStart={() => setIsAutoPlaying(false)}
+        onMouseDown={() => setIsAutoPlaying(false)}
       >
         {Children.map(children, (child) => (
           <div className={styles.carouselItem}>
@@ -68,20 +83,17 @@ export default function AutoCarousel({ children, className, intervalMs = 5000 }:
         ))}
       </div>
 
-      {showHint && (
-        <div className={styles.swipeHint} aria-hidden="true">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M15 18l-6-6 6-6" />
-          </svg>
-          <span>desliza</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M9 18l6-6-6-6" />
-          </svg>
-        </div>
-      )}
+      <div className={styles.dots} aria-hidden="true">
+        {Array.from({ length: count }).map((_, i) => (
+          <span
+            key={i}
+            className={`${styles.dot} ${i === activeIndex ? styles.dotActive : ""}`}
+          />
+        ))}
+      </div>
 
       <button
-        className={`${styles.arrowButton} ${styles.arrowRight}`} 
+        className={`${styles.arrowButton} ${styles.arrowRight}`}
         onClick={() => scrollNext(true)}
         aria-label="Siguiente"
       >
