@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { Resend } from "resend";
 import { contactSchema } from "@/lib/validations/contact";
 
 // In-memory rate limiter: max 5 requests per 60 s per IP
@@ -52,18 +53,22 @@ export async function POST(request: Request) {
 
   const { name, email, subject, message } = result.data;
 
-  // ─── Connect your email service here ───────────────────────────────────────
-  // Resend example:
-  //   const resend = new Resend(process.env.RESEND_API_KEY);
-  //   await resend.emails.send({
-  //     from: "noreply@echopointmx.com",
-  //     to: "contacto@echopointmx.com",
-  //     subject: `[Web Contact] ${subject}`,
-  //     html: `<p><strong>Name:</strong> ${name}</p>
-  //            <p><strong>Email:</strong> ${email}</p>
-  //            <p><strong>Message:</strong> ${message}</p>`,
-  //   });
-  // ───────────────────────────────────────────────────────────────────────────
+  const resend = new Resend(process.env.RESEND_API_KEY);
+  const { error } = await resend.emails.send({
+    from: "noreply@echopoint-intsolutions.com",
+    to: "contacto@echopointmx.com",
+    replyTo: email,
+    subject: `[Web Contact] ${subject}`,
+    html: `<p><strong>Nombre:</strong> ${name}</p>
+           <p><strong>Email:</strong> ${email}</p>
+           <p><strong>Asunto:</strong> ${subject}</p>
+           <p><strong>Mensaje:</strong></p>
+           <p>${message}</p>`,
+  });
+
+  if (error) {
+    return NextResponse.json({ error: "Failed to send email." }, { status: 500 });
+  }
 
   return NextResponse.json(
     { success: true, message: "Form submitted successfully." },
