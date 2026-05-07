@@ -144,7 +144,7 @@ export default async function Home({
               </div>
               <div className={`${styles.manifestoImageContainer} reveal reveal-delay-2`}>
                 <Image
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=75"
                   alt="Visualización de datos e inteligencia artificial impulsando el crecimiento empresarial"
                   title="Visualización de datos e inteligencia artificial impulsando el crecimiento empresarial"
                   className={styles.responsiveImage}
