@@ -144,8 +144,10 @@ const data: BlogPostData[] = [
 export const blogPosts: BlogPost[] = data;
 
 export function getBlogPosts(lang: string): BlogPost[] {
-  const key = lang.toLowerCase() as keyof PostTranslations;
-  if (key === "es") return data;
+  const normalizedLang = lang.toLowerCase();
+  if (normalizedLang === "es") return data;
+
+  const key = normalizedLang as keyof PostTranslations;
   return data.map(({ translations, ...post }) => ({
     ...post,
     ...(translations[key] ?? {}),
