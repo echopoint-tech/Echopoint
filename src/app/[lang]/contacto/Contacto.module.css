@@ -1,0 +1,95 @@
+.contactMain {
+    padding-top: 8rem;
+    padding-bottom: 6rem;
+}
+
+.contactGrid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 4rem;
+    margin-top: 4rem;
+    align-items: start;
+}
+
+.contactInfo h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.contactInfo p {
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+.infoList {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.infoItem {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-glass);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+
+
+
+.iconWrapper {
+    width: 48px;
+    height: 48px;
+    background: rgba(6, 182, 212, 0.1);
+    color: var(--tech-cyan);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.infoText h3 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--tech-cyan);
+    margin-bottom: 0.5rem;
+}
+
+.infoText a, .infoText span {
+    font-size: 1rem;
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+.infoText a:hover {
+    color: var(--tech-cyan);
+}
+
+.faqSection {
+    background: rgba(15, 23, 42, 0.3);
+    border-top: 1px solid var(--border-glass);
+}
+
+@media (max-width: 992px) {
+    .contactGrid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contactMain {
+        padding-top: 6rem;
+    }
+    
+    .infoItem:hover {
+        transform: none;
+    }
+}

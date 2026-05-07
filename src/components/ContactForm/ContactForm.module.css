@@ -1,0 +1,135 @@
+.contactForm {
+    width: 100%;
+    background: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 24px;
+    padding: 2.5rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.formGroup {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 0.6rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    opacity: 0.9;
+    padding-left: 0.5rem;
+}
+
+.inputWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.fieldIcon {
+    position: absolute;
+    left: 1.25rem;
+    color: var(--tech-cyan);
+    font-size: 1rem;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.areaIcon {
+    top: 1.2rem;
+}
+
+.formGroup input,
+.formGroup textarea {
+    width: 100%;
+    padding: 1rem 1.25rem 1rem 3.2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    color: var(--text-primary);
+    font-family: var(--font-main);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 0.95rem;
+}
+
+.formGroup input::placeholder,
+.formGroup textarea::placeholder {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--tech-cyan);
+    box-shadow: 0 0 0 4px rgba(6, 182, 212, 0.1);
+}
+
+.formGroup input:focus + .fieldIcon,
+.formGroup textarea:focus + .fieldIcon {
+    opacity: 1;
+}
+
+
+.errorMsg {
+    display: none;
+    color: var(--error-red);
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+    padding-left: 0.5rem;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-10px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Custom validation classes applied by JS */
+.invalid input,
+.invalid textarea {
+    border-color: var(--error-red) !important;
+}
+
+.invalid .errorMsg {
+    display: block;
+}
+
+.formStatus {
+    margin-top: 1.5rem;
+    padding: 1.25rem;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    animation: fadeIn 0.4s ease-out;
+    font-size: 0.9rem;
+}
+
+.successMessage {
+    background: rgba(34, 197, 94, 0.1);
+    color: var(--success-green);
+    border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.errorMessage {
+    background: rgba(239, 68, 68, 0.1);
+    color: var(--error-red);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .contactForm {
+        padding: 1.5rem;
+    }
+}

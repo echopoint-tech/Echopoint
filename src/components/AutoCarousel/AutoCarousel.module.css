@@ -1,0 +1,98 @@
+.carouselWrapper {
+    position: relative;
+    width: 100%;
+}
+
+.carouselContainer {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding-top: 1rem; /* Previene que se corte la tarjeta arriba al hacer hover */
+    padding-bottom: 0;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+}
+
+.carouselContainer::-webkit-scrollbar {
+    display: none; /* Safari/Chrome */
+}
+
+@media (min-width: 768px) {
+    .carouselContainer {
+        gap: 3rem;
+    }
+}
+
+.carouselItem {
+    min-width: 100%;
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.carouselItem > * {
+    width: 100%;
+    /* Removido max-width para que se alinee con los márgenes de la página */
+    margin: 0 auto;
+}
+
+.arrowButton {
+    position: absolute;
+    top: calc(50% + 0.5rem); /* compensar la diferencia (padding-top 1rem, padding-bottom 0) */
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(8px);
+}
+
+.arrowButton:hover {
+    background: var(--tech-cyan, #06b6d4);
+    border-color: var(--tech-cyan, #06b6d4);
+    transform: translateY(-50%) scale(1.05);
+}
+
+.arrowLeft {
+    left: -0.5rem;
+}
+
+.arrowRight {
+    right: -0.5rem;
+}
+
+@media (min-width: 768px) {
+    /* En tablets las flechas se asoman un poco hacia afuera */
+    .arrowLeft { left: -1.5rem; }
+    .arrowRight { right: -1.5rem; }
+}
+
+@media (min-width: 1280px) {
+    /* En pantallas grandes (donde hay espacio exterior), las sacamos completamente de la tarjeta */
+    .arrowLeft { left: -4rem; }
+    .arrowRight { right: -4rem; }
+}
+
+@media (max-width: 768px) {
+    /* En móviles se ajustan para no cortar */
+    .arrowLeft { left: -0.2rem; }
+    .arrowRight { right: -0.2rem; }
+    
+    .arrowButton {
+        width: 36px;
+        height: 36px;
+    }
+}

@@ -1,0 +1,245 @@
+.svcHeroDetail {
+    min-height: auto;
+    display: flex;
+    align-items: center;
+    padding: 95px 0 10px;
+    background: linear-gradient(135deg, rgba(6, 182, 212, 0.15) 0%, rgba(var(--human-blue-rgb), 0.08) 50%, rgba(10, 10, 10, 0) 100%);
+    border-bottom: 1px solid var(--border-glass);
+    position: relative;
+}
+
+.backLink {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    margin-bottom: 2rem;
+    transition: var(--transition-fast);
+    font-weight: 500;
+    width: fit-content;
+}
+
+.backLink i {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.backLink:hover {
+    color: var(--tech-cyan);
+}
+
+.backLink:hover i {
+    transform: translateX(-5px);
+}
+
+.svcHeroGrid {
+    display: grid;
+    grid-template-columns: 1fr 450px;
+    gap: 4rem;
+    align-items: center;
+    width: 100%;
+}
+
+.svcHeroText h1 {
+    font-size: 2.5rem;
+    line-height: 1.1;
+    margin: 0.4rem 0 0.8rem;
+    font-weight: 800;
+}
+
+.svcHeroText .longDesc {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.svcFeaturesList h3 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--tech-cyan);
+    margin-bottom: 1rem;
+}
+
+.svcFeaturesList ul {
+    list-style: none;
+    padding: 0;
+}
+
+.svcFeaturesList li {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0.6rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.svcFeaturesList i,
+.svcFeaturesList svg {
+    color: var(--tech-cyan);
+    font-size: 0.9rem;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(6, 182, 212, 0.1);
+    border-radius: 6px;
+    padding: 4px;
+}
+
+.svcHeroForm .formCard {
+    background: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 1.8rem 2rem;
+    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.6);
+}
+
+.svcHeroForm h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.3rem;
+}
+
+.svcHeroForm p {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 1024px) {
+    .svcHeroGrid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .svcHeroText {
+        text-align: center;
+    }
+
+    .svcFeaturesList li {
+        justify-content: center;
+    }
+}
+
+.servicesGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+    .servicesGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .servicesGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.serviceCard {
+    background: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 2.5rem;
+    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    cursor: default;
+}
+
+.serviceCard.noClick {
+    cursor: default;
+}
+
+.serviceCard.noClick:hover {
+    transform: none;
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: none;
+}
+
+.serviceCard.noClick:hover .iconBox {
+    transform: none;
+    background: rgba(6, 182, 212, 0.1);
+}
+
+.serviceCard:hover {
+    border-color: rgba(6, 182, 212, 0.2);
+}
+
+.serviceCard .iconBox {
+    width: 60px;
+    height: 60px;
+    background: rgba(6, 182, 212, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: var(--tech-cyan);
+    font-size: 1.8rem;
+    transition: var(--transition-fast);
+}
+
+.serviceCard:hover .iconBox {
+    background: rgba(6, 182, 212, 0.2);
+    color: var(--tech-cyan);
+    transform: scale(1.05);
+}
+
+.serviceCard h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.serviceList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.serviceList li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.serviceList li::before {
+    content: "•";
+    color: var(--tech-cyan);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.serviceCard:nth-child(2n) .iconBox {
+    color: var(--human-blue);
+    background: rgba(var(--human-blue-rgb), 0.1);
+}
+
+.serviceCard:nth-child(2n) .serviceList li::before {
+    color: var(--human-blue);
+}
+
+.whySection {
+    padding-top: 2rem !important;
+}
