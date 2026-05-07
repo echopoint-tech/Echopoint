@@ -11,6 +11,7 @@ interface AutoCarouselProps {
 export default function AutoCarousel({ children, className, intervalMs = 5000 }: AutoCarouselProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [showHint, setShowHint] = useState(true);
 
   const scrollNext = (isManual = false) => {
     if (isManual) setIsAutoPlaying(false);
@@ -54,11 +55,11 @@ export default function AutoCarousel({ children, className, intervalMs = 5000 }:
         </svg>
       </button>
 
-      <div 
-        ref={scrollRef} 
+      <div
+        ref={scrollRef}
         className={styles.carouselContainer}
-        onTouchStart={() => setIsAutoPlaying(false)}
-        onMouseDown={() => setIsAutoPlaying(false)}
+        onTouchStart={() => { setIsAutoPlaying(false); setShowHint(false); }}
+        onMouseDown={() => { setIsAutoPlaying(false); setShowHint(false); }}
       >
         {Children.map(children, (child) => (
           <div className={styles.carouselItem}>
@@ -67,7 +68,19 @@ export default function AutoCarousel({ children, className, intervalMs = 5000 }:
         ))}
       </div>
 
-      <button 
+      {showHint && (
+        <div className={styles.swipeHint} aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+          <span>desliza</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M9 18l6-6-6-6" />
+          </svg>
+        </div>
+      )}
+
+      <button
         className={`${styles.arrowButton} ${styles.arrowRight}`} 
         onClick={() => scrollNext(true)}
         aria-label="Siguiente"

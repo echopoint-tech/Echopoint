@@ -107,6 +107,16 @@
     }
 }
 
+@keyframes swipePulse {
+    0%, 100% { transform: translateX(0); opacity: 0.7; }
+    40% { transform: translateX(-6px); opacity: 1; }
+    60% { transform: translateX(6px); opacity: 1; }
+}
+
+.swipeHint {
+    display: none;
+}
+
 @media (max-width: 768px) {
     .arrowButton {
         display: none;
@@ -116,5 +126,18 @@
     }
     .carouselItem {
         scroll-snap-align: none;
+    }
+    .swipeHint {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.4rem;
+        margin-top: 0.75rem;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 0.75rem;
+        letter-spacing: 0.05em;
+        animation: swipePulse 1.8s ease-in-out infinite;
+        pointer-events: none;
+        user-select: none;
     }
 }
