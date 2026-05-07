@@ -1,6 +1,8 @@
 import { MetadataRoute } from 'next';
 import { blogPosts } from '@/lib/content/posts';
 
+export const dynamic = 'force-static';
+
 const SITE_UPDATED = new Date('2026-03-15');
 
 const BLOG_DATE_MAP: Record<string, number> = {
