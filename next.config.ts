@@ -22,7 +22,7 @@ const securityHeaders = [
   {
     // Disable browser features not used by the app
     key: "Permissions-Policy",
-    value: "camera=(), microphone=(), geolocation=(), interest-cohort=()",
+    value: "camera=(), microphone=(), geolocation=()",
   },
   {
     // Only sent over HTTPS; 2-year max-age

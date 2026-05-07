@@ -10,6 +10,7 @@ const montserrat = Montserrat({
   weight: ["300", "400", "500", "600", "700"],
   variable: "--font-main",
   display: "swap",
+  preload: false,
 });
 
 const spaceGrotesk = Space_Grotesk({
@@ -17,6 +18,7 @@ const spaceGrotesk = Space_Grotesk({
   weight: ["300", "400", "500", "600", "700"],
   variable: "--font-display",
   display: "swap",
+  preload: false,
 });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
