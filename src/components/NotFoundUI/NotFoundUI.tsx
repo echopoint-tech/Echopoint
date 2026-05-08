@@ -45,9 +45,6 @@ export default function NotFoundUI({ lang = "es" }: { lang?: string }) {
   return (
     <LanguageProvider initialLang={lang as any}>
       {/* CSS para Ocultar el Chat solo en esta página */}
-      <style precedence="default" href="hide-chatbot-style" dangerouslySetInnerHTML={{ __html: `
-        [class*="chatbot"], #chatbot-container, .chat-widget { display: none !important; }
-      `}} />
 
       <div style={{
         height: "100vh",

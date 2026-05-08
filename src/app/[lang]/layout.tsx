@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { LanguageProvider, type Language } from "@/context/LanguageContext";
 import { getDictionary } from "@/i18n/dictionaries";
-import ChatbotReveal from "@/components/Chatbot/ChatbotReveal";
 import ScrollToTop from "@/components/ScrollToTop/ScrollToTop";
 import LangSetter from "@/components/LangSetter/LangSetter";
 
@@ -150,7 +149,6 @@ export default async function LangLayout({
           Skip to content
         </a>
         {children}
-        <ChatbotReveal />
       </LanguageProvider>
     </>
   );

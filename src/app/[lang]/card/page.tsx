@@ -35,11 +35,6 @@ export default async function VCardV2Page({ params }: Props) {
 
   return (
     <main className={styles.container}>
-      {/* Ocultar Chatbot */}
-      <style precedence="default" href="hide-chat-card-v2" dangerouslySetInnerHTML={{
-        __html: `
-        [class*="chatbot"], #chatbot-container, .chat-widget { display: none !important; }
-      `}} />
 
       {/* Fondo Animado Neural */}
       <div className={styles.canvasWrapper}>
