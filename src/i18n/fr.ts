@@ -1,236 +1,321 @@
 export const FR = {
-  nav: { services: "Services", about: "À Propos", blog: "Blog", contact: "Connecter", backToServices: "Retour aux services" },
-  hero: {
-    subtitle: "Évolution Stratégique",
-    title: 'Conseil en Entreprise : <br/><span class="highlight-gradient">Analyse, Stratégie & Croissance</span>',
-    desc: "Un service professionnel qui aide les organisations à analyser leurs processus, à identifier les opportunités d'amélioration et à développer des stratégies favorisant la croissance, l'efficacité et la compétitivité.",
-    btn: { discover: "Découvrir le Potentiel", demo: "Réserver une Démo" }
+  "nav": {
+    "services": "Services",
+    "about": "Nous",
+    "blog": "Blog",
+    "contact": "Se connecter",
+    "backToServices": "Retour aux services"
   },
-  trust: "Stimuler la croissance des leaders mondiaux :",
-  popularServices: {
-    subtitle: "Conseil Stratégique",
-    title: "Solutions Stratégiques",
-    cta: "Voir Toutes les Solutions",
-    viewAll: "Voir tous les services"
-  },
-  manifesto: {
-    subtitle: "Impact Prouvé",
-    title: 'La Croissance ne se Prédit pas, <br/><span class="text-accent">Elle se Conçoit</span>',
-    desc: "Découvrez comment notre intervention de conseil transforme les métriques clés. De l'augmentation exponentielle des revenus à l'optimisation des processus opérationnels, portés par la synergie entre le talent humain et l'intelligence artificielle.",
-    legal: "*Les données présentées sont anonymes et conformes à nos politiques de confidentialité. Approuvé par l'équipe juridique."
-  },
-  reviews: {
-    title: "Voix du Leadership",
-    desc: "Des partenaires stratégiques qui ont transformé leurs industries avec Echopoint.",
-    rating: "4.9/5 basé sur des consultations auditées",
-    verified: "Partenaire Vérifié",
-    cta: "Lire les Études de Cas",
-    r1: { date: "Il y a 2 semaines", text: '"La profondeur de l\'analyse prédictive d\'Echopoint nous a permis d\'identifier un marché de niche au Brésil que nous avions négligé. Le ROI au premier trimestre a dépassé nos attentes les plus optimistes."' },
-    r2: { date: "Il y a 1 mois", text: '"La mise en œuvre de leur stratégie d\'expansion internationale s\'est déroulée en douceur. Leur équipe a non seulement livré un plan, mais a été à nos côtés dans l\'exécution opérationnelle jour après jour."' },
-    r3: { date: "Il y a 3 semaines", text: '"La fusion de l\'IA avec le conseil traditionnel est l\'avenir. Echopoint nous a aidés à automatiser la qualification des prospects, libérant notre équipe de vente pour conclure des contrats de grande valeur."' },
-  },
-  insights: {
-    subtitle: "Pensée Expert",
-    title: "Insights Stratégiques",
-    desc: "Tendances et analyses pour mener le changement.",
-    cta: "Voir Tous les Articles",
-    readMore: "Lire l'Article",
-    search: "Rechercher des articles...",
-    noResults: "Aucun article trouvé correspondant à votre recherche.",
-    pageSubtitle: "Leadership d'Opinion",
-    pageDesc: "Tendances, analyses et stratégies pour diriger la croissance B2B à l'ère numérique.",
-    backToBlog: "Retour au Blog",
-    minRead: "min de lecture",
-    readArticle: "Lire l'article",
-    filterAll: "Tous",
-    nextArticle: "Article Suivant",
-    comingSoon: "Contenu complet de l'article bientôt...",
-    authorBio: "Stratège B2B Senior avec plus de 15 ans d'expérience dans la direction de transformations digitales et d'expansions de marchés.",
-    categories: { estrategia: "Stratégie", tecnologia: "Technologie", ventas: "Ventes", expansion: "Expansion" }
-  },
-  footer: { rights: "Tous droits réservés.", desc: "Transformer l'avenir B2B en fusionnant l'intelligence artificielle et la créativité humaine.", nav: "Navigation", contact: "Contact", follow: "Suivez-nous", privacy: "Politique de Confidentialité", terms: "Conditions d'Utilisation" },
-  magnet: {
-    title: "Télécharger le Rapport 2024",
-    desc: 'Obtenez notre guide exclusif : "Synergie Humain-IA : La Nouvelle Norme des Ventes B2B".',
-    placeholder: "Votre email professionnel",
-    btn: "Télécharger Maintenant",
-    success: "Envoyé avec succès ! Vérifiez votre email.",
-    error: "Erreur. Réessayez."
-  },
-  services: {
-    title: 'Stratégie de <span class="text-accent">Croissance</span>',
-    navTitle: "Stratégie de Croissance",
-    filterTitle: "Explorer les Catégories",
-    desc: "Plan de croissance globale avec des objectifs mesurables et des indicateurs clés de performance définis.",
-    heroTitle: "Tous les outils dont vous avez besoin pour propulser votre entreprise",
-    heroDesc: "Conseil stratégique, analytique avancée et solutions d'IA sous un même toit.",
-    cta: "Planifier une Consultation",
-    s1: { 
-      slug: "estrategia-crecimiento",
-      title: "Stratégie de Croissance", 
-      heroTitle: "Faites passer votre entreprise au niveau supérieur",
-      longDesc: "Nous concevons des feuilles de route exploitables, basées sur des données, pour accroître votre part de marché et optimiser votre rentabilité.",
-      i1: "Analyse des cinq forces de Porter et SWOT quantitatif.", i2: "Recherche sur les marchés émergents et les lacunes en matière de produits.", i3: "Plans d'expansion avec projections financières sur 5 ans.", i4: "Stratégies d'entrée et de localisation.", i5: "Validation de la proposition de valeur et tests A/B." 
-    },
-    s2: { 
-      slug: "desarrollo-alianzas",
-      title: "Développement d'Alliances", 
-      heroTitle: "Construisez des écosystèmes pour le succès",
-      longDesc: "Nous identifions et négocions des partenariats stratégiques qui multiplient vos capacités et votre portée commerciale.",
-      i1: "Recherche systématique de partenaires avec matrice de notation.", i2: "Structuration de Joint Ventures et mécanismes de sortie.", i3: "Négociation d'accords stratégiques.", i4: "Représentation commerciale avec KPI mensuels." 
-    },
-    s3: { 
-      slug: "generacion-ventas",
-      title: "Génération de Ventes", 
-      heroTitle: "Accélérez votre pipeline commercial",
-      longDesc: "Nous mettons en œuvre des méthodologies de prospection B2B performantes pour conclure des comptes Enterprise de manière récurrente.",
-      i1: "Prospection B2B segmentée.", i2: "Notation MQL-SQL avec les critères BANT.", i3: "Ouverture de comptes Enterprise et comités C-level.", i4: "Clôture des ventes stratégiques." 
-    },
-    s4: { 
-      slug: "expansion-internacional",
-      title: "Expansion Internationale", 
-      heroTitle: "Votre porte d'entrée vers les marchés mondiaux",
-      longDesc: "Nous réduisons le risque d'internationalisation grâce à des études de faisabilité approfondies et des équipes de lancement locales dédiées.",
-      i1: "Études de faisabilité PESTEL.", i2: "Adaptation du modèle économique et conformité locale.", i3: "Diligence raisonnable des partenaires locaux et des distributeurs.", i4: "Plan de lancement de 90 jours avec une équipe dédiée." 
-    },
-    s5: { 
-      slug: "nouveaux-productos",
-      title: "Nouveaux Produits", 
-      heroTitle: "L'innovation validée par le marché",
-      longDesc: "Du concept au lancement : nous validons vos idées avec des méthodologies agiles pour assurer le succès commercial.",
-      i1: "Validation avec Design Thinking et MVP.", i2: "Recherche de la demande et des tendances.", i3: "Stratégie Go-To-Market et segmentation de la clientèle.", i4: "Tarification stratégique et capture des surplus." 
-    },
-    s6: { 
-      slug: "inteligencia-comercial",
-      title: "Intelligence Commerciale", 
-      heroTitle: "Des décisions basées sur des certitudes",
-      longDesc: "Nous transformons le bruit du marché en signaux clairs grâce à l'analyse prédictive et au Big Data pour anticiper votre concurrence.",
-      i1: "Études de marché trimestrielles et tendances à 3-5 ans.", i2: "Veille tarifaire et alertes concurrence.", i3: "Prédictions Big Data.", i4: "Évaluation des investissements." 
+  "hero": {
+    "subtitle": "Évolution stratégique",
+    "title": "Conseil aux entreprises : <br/><span class=\"highlight-gradient\">analyse, stratégie et croissance</span>",
+    "desc": "Un service professionnel qui aide les organisations à analyser leurs processus, à identifier les possibilités d'amélioration et à élaborer des stratégies visant à stimuler leur croissance, leur efficacité et leur compétitivité sur le marché.",
+    "btn": {
+      "discover": "Découvrir son potentiel",
+      "demo": "Prenez rendez-vous pour une démonstration"
     }
   },
-  pbi: {
-    subtitle: "Produit Phare",
-    title: 'Solutions avec <span class="text-accent">Power BI</span>',
-    desc: "Transformez vos données en décisions intelligentes grâce à nos tableaux de bord et rapports personnalisés.",
-    cta: "Demander une Démo",
-    catTitle: "Solutions",
-    cat: { all: "Toutes les Solutions", direction: "Direction", finance: "Finances", sales: "Ventes", ops: "Opérations", strategy: "Stratégie", ai: "Intelligence Artificielle" },
-    aiTitle: 'Intelligence <span class="text-accent">Artificielle</span>',
-    aiDesc: "Nous mettons en œuvre des solutions d'IA générative et des modèles prédictifs pour automatiser les processus et améliorer la prise de décision.",
-    p1: { 
-      slug: "dashboards-ejecutivos",
-      title: "Tableaux de Bord Exécutifs", 
-      desc: "Contrôle total des KPI pour la haute direction.",
-      heroTitle: "Contrôle total depuis la haute direction",
-      longDesc: "Panneaux de contrôle en temps réel conçus spécifiquement pour les C-Levels. Visualisez le pouls de votre entreprise en un coup d'œil.",
-      i1: "KPI stratégiques unifiés.", i2: "Alertas intelligentes de déviation.", i3: "Accès mobile sécurisé 24/7.", i4: "Intégration de données multi-sources."
+  "trust": "Favoriser l'épanouissement de leaders mondiaux :",
+  "popularServices": {
+    "subtitle": "Conseil stratégique",
+    "title": "Solutions stratégiques",
+    "cta": "Voir toutes les solutions",
+    "viewAll": "Voir tous les services"
+  },
+  "manifesto": {
+    "subtitle": "Impact avéré",
+    "title": "La croissance ne se prédit pas, <br/><span class=\"text-accent\">elle se conçoit</span>",
+    "desc": "Découvrez comment notre intervention de conseil transforme les indicateurs clés. De l'augmentation exponentielle du chiffre d'affaires à l'optimisation des processus opérationnels, grâce à la synergie entre les talents humains et l'intelligence artificielle.",
+    "legal": "*Les données présentées sont anonymes et respectent nos politiques de confidentialité. Approuvé par l'équipe juridique."
+  },
+  "reviews": {
+    "title": "Voix du leadership",
+    "desc": "Des partenaires stratégiques qui ont transformé leurs secteurs d'activité grâce à Echopoint.",
+    "rating": "4,9/5 sur la base d'avis vérifiés",
+    "verified": "Partenaire vérifié",
+    "cta": "Lire les études de cas sur le blog",
+    "r1": {
+      "date": "Il y a deux semaines",
+      "text": "« La profondeur de l'analyse prédictive d'Echopoint nous a permis d'identifier un créneau de marché au Brésil que nous avions négligé. Le retour sur investissement au premier trimestre a dépassé nos attentes les plus optimistes. »"
     },
-    p2: { 
-      slug: "reportes-financieros",
-      title: "Rapports Financiers", 
-      desc: "Visualisation claire des états financiers.",
-      heroTitle: "Clarté financière absolue",
-      longDesc: "Visualisation avancée des états financiers, des flux de trésorerie et projections automatiques pour une gestion impeccable.",
-      i1: "P&L interactif par unité d'affaires.", i2: "Contrôle budget vs réel.", i3: "Analyse du vieillissement des comptes.", i4: "Projections de flux de trésorerie."
+    "r2": {
+      "date": "Il y a un mois",
+      "text": "« La mise en œuvre de leur stratégie d'expansion internationale s'est déroulée sans heurts. Leur équipe ne s'est pas contentée de nous fournir un plan, mais elle nous a accompagnés au quotidien dans sa mise en œuvre opérationnelle. »"
     },
-    p3: { 
-      slug: "analisis-ventas",
-      title: "Analyse des Ventes", 
-      desc: "Performance commerciale et tunnel de vente.",
-      heroTitle: "Boostez votre performance commerciale",
-      longDesc: "Découvrez les habitudes d'achat, la performance des vendeurs et la rentabilité par produit pour maximiser vos revenus.",
-      i1: "Suivi du Pipeline en temps réel.", i2: "Analyse du taux de conversion.", i3: "Classement clients et produits.", i4: "Analyse des tendances saisonnières."
-    },
-    p4: { 
-      slug: "optimizacion-operaciones",
-      title: "Optimisation des Opérations", 
-      desc: "Efficacité des processus logistiques.",
-      heroTitle: "Efficacité opérationnelle basée sur les données",
-      longDesc: "Identifiez les goulots d'étranglement et optimisez vos processus logistiques et productifs grâce à l'analytique de précision.",
-      i1: "Contrôle intelligent des stocks.", i2: "Suivi des délais de livraison.", i3: "Analyse de la capacité installée.", i4: "Réduction des coûts opérationnels."
-    },
-    p5: { 
-      slug: "estrategia-datos",
-      title: "Stratégie de Données", 
-      desc: "Architecture et gouvernance des données.",
-      heroTitle: "Réelle culture Data-Driven",
-      longDesc: "Nous ne nous contentons pas de visualiser ; nous structurons votre architecture de données pour que l'information circule sans friction.",
-      i1: "Gouvernance et sécurité des données.", i2: "Nettoyage et normalisation des bases de données.", i3: "Modélisation de données complexes.", i4: "Formation des équipes internes."
-    },
-    p6: { 
-      slug: "analyse-predictive",
-      title: "Intelligence Artificielle", 
-      desc: "Machine Learning pour la prévision de la demande.",
-      heroTitle: "Anticipez les tendances du marché",
-      longDesc: "Nous mettons en œuvre des algorithmes de ML qui analysent les données historiques pour prédire les tendances de vente et le comportement des consommateurs.",
-      i1: "Prévision de la demande saisonnière.", i2: "Détection précoce du churn.", i3: "Optimisation des stocks.", i4: "Modélisation de scénarios 'what-if'."
-    },
-    p7: { 
-      slug: "agents-ia-personnalises",
-      title: "Agents d'IA Générative", 
-      desc: "Automatisation des flux avec les LLMs.",
-      heroTitle: "Votre propre expert métier IA",
-      longDesc: "Nous développons des agents intelligents qui connaissent vos manuels, vos processus et votre base de connaissances pour assister vos employés ou vos clients.",
-      i1: "Assistants de support 24/7.", i2: "Automatisation de la rédaction technique.", i3: "Recherche intelligente de documents.", i4: "Intégration API avec vos systèmes."
-    },
-    p8: { 
-      slug: "vision-artificielle",
-      title: "Vision Artificielle", 
-      desc: "Reconnaissance d'images et d'objets.",
-      heroTitle: "Vos systèmes, maintenant avec des yeux",
-      longDesc: "Nous appliquons des modèles de vision par ordinateur pour le contrôle de la qualité, la sécurité périmétrique ou l'analyse du trafic dans les espaces physiques.",
-      i1: "Contrôle qualité automatisé.", i2: "Reconnaissance de motifs visuels.", i3: "Comptage de personnes et de véhicules.", i4: "Analyse de sécurité en tiempo réel."
-    },
-    p9: { 
-      slug: "analyse-nlp",
-      title: "Analyse Vocale et Textuelle", 
-      desc: "Extraction d'insights à partir des conversations.",
-      heroTitle: "Écoutez ce que disent vos données",
-      longDesc: "Nous analysons des milliers d'appels et de messages para extraer les sentiments, les thèmes récurrents et les opportunités de vente non détectées.",
-      i1: "Analyse du sentiment client.", i2: "Transcription et résumé automatiques.", i3: "Détection d'intention d'achat.", i4: "Tableau de bord de réputation de marque."
-    },
-    common: {
-      featuresTitle: "Ce qui est inclus :",
-      formTitle: "Commencez dès aujourd'hui",
-      formDesc: "Laissez-nous vos coordonnées pour planifier une séance stratégique sur",
-      whyTitle: "Pourquoi choisir Echopoint AI ?",
-      whyDesc: "Nous combinons l'expertise du conseil traditionnel avec la puissance de l'intelligence artificielle pour livrer des résultats concrets.",
-      card1Title: "Mise en œuvre agile",
-      card1Desc: "Nous ne perdons pas de temps en théories. Nous passons directement à l'exécution avec des plans de 90 jours.",
-      card2Title: "Technologie de pointe",
-      card2Desc: "Nous utilisons les derniers outils d'IA et de Big Data pour vous donner un avantage concurrentiel.",
-      card3Title: "Sécurité et confiance",
-      card3Desc: "Vos données sont en sécurité avec nous. Nous respectons les normes de confidentialité les plus strictes."
+    "r3": {
+      "date": "Il y a 3 semaines",
+      "text": "« La fusion entre l'IA et le conseil traditionnel, c'est l'avenir. Echopoint nous a aidés à automatiser la qualification des prospects, ce qui a permis à notre équipe commerciale de se concentrer sur la conclusion de contrats à forte valeur ajoutée. »"
     }
   },
-  about: {
-    headerTitle: "À Propos d'Echopoint AI",
-    headerDesc: "Renforcer l'avenir de l'entreprise grâce à la synergie humano-numérique.",
-    whoTitle: "Qui Sommes-Nous",
-    whoDesc: "Nous sommes des architectes de la transformation des entreprises. Echopoint AI est née de la conviction que la véritable croissance survient lorsque l'intuition humaine experte est fusionnée avec la précision analytique de l'intelligence artificielle. Nous ne sommes pas seulement des consultants ; nous sommes vos partenaires pour naviguer vers l'avenir.",
-    whatTitle: "Ce Que Nous Faisons",
-    whatDesc: "Nous libérons le potentiel caché de votre organisation. Grâce à des diagnostics approfondis et à des outils prédictifs, nous concevons des feuilles de route personnalisées qui optimisent les opérations, ouvrent de nouveaux marchés et garantissent une rentabilité évolutive dans un environnement concurrentiel.",
-    essSub: "Notre Essence",
-    essTitle: 'La Technologie qui <br/><span class="text-accent">Amplifie le Talent</span>',
-    essDesc: "Nous ne cherchons pas à remplacer l'intuition humaine, mais à la renforcer. Echopoint est le point de rencontre où la capacité de traitement de l'IA rejoint la créativité stratégique des personnes.",
-    essF1: "Des décisions basées sur les données, exécutées par des experts.",
-    essF2: "Communication précise : Bon message, moment exact.",
-    essF3: "Apprentissage continu : Votre stratégie évolue chaque jour.",
-    teamTitle: "Des Esprits Brillants",
-    role1: "Lead Data Scientist",
-    role2: "Stratège B2B",
+  "insights": {
+    "subtitle": "L'avis d'un expert",
+    "title": "Perspectives stratégiques",
+    "desc": "Tendances et analyses pour être à l'avant-garde du changement.",
+    "cta": "Voir tous les articles",
+    "readMore": "Lire l'article",
+    "search": "Rechercher des articles...",
+    "noResults": "Aucun article correspondant à votre recherche n'a été trouvé.",
+    "pageSubtitle": "Pensée phare",
+    "pageDesc": "Tendances, analyses et stratégies pour stimuler la croissance du B2B à l'ère numérique.",
+    "backToBlog": "Retour au blog",
+    "minRead": "temps de lecture :",
+    "readArticle": "Lire l'article",
+    "filterAll": "Tout le monde",
+    "nextArticle": "Article suivant",
+    "comingSoon": "L'intégralité de l'article sera bientôt disponible...",
+    "authorBio": "Stratège B2B senior comptant plus de 15 ans d'expérience dans la conduite de transformations numériques et d'expansions de marché.",
+    "categories": {
+      "estrategia": "Stratégie",
+      "tecnologia": "Technologie",
+      "ventas": "Ventes",
+      "expansion": "Expansion"
+    }
   },
-  contact: {
-    subtitle: "Connexion Directe",
-    title: "Commencer la Transformation",
-    desc: "Parlons de la façon dont notre intelligence stratégique peut accélérer vos objectifs.",
-    infoTitle: "Coordonnées",
-    infoDesc: "Nous sommes prêts à écouter vos défis et à concevoir la feuille de route de la réussite de votre entreprise.",
-    email: "Email",
-    phone: "Téléphone",
-    address: "Adresse",
-    faqTitle: "Questions Fréquemment Posées",
-    faqDesc: "Nous résolvons vos doutes avec transparence avant notre première réunion."
+  "footer": {
+    "rights": "Tous droits réservés.",
+    "desc": "Transformer l'avenir du B2B en alliant intelligence artificielle et créativité humaine.",
+    "nav": "Navigation",
+    "contact": "Contact",
+    "follow": "Suivez-nous",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "backToTop": "Retour en haut"
+  },
+  "magnet": {
+    "title": "Télécharger le rapport 2024",
+    "desc": "Téléchargez notre guide exclusif : « Synergie homme-IA : la nouvelle norme dans la vente B2B ».",
+    "placeholder": "Ton adresse e-mail professionnelle",
+    "btn": "Télécharger maintenant",
+    "success": "Envoi réussi ! Vérifie ta boîte mail.",
+    "error": "Erreur. Réessayez."
+  },
+  "services": {
+    "title": "Stratégie de <span class=\"text-accent\">croissance</span>",
+    "navTitle": "Stratégie de croissance",
+    "filterTitle": "Explorer les catégories",
+    "desc": "Plan global de croissance de l'entreprise assorti d'objectifs mesurables et d'indicateurs clés de performance (KPI) clairement définis.",
+    "heroTitle": "Tous les outils dont vous avez besoin pour dynamiser votre entreprise",
+    "heroDesc": "Conseil stratégique, analyse avancée et solutions d'IA sous un même toit.",
+    "cta": "Prendre rendez-vous pour une consultation",
+    "s1": {
+      "slug": "estrategia-crecimiento",
+      "title": "Stratégie de croissance",
+      "heroTitle": "Faites passer votre entreprise au niveau supérieur",
+      "longDesc": "Nous élaborons des feuilles de route concrètes, fondées sur des données factuelles. Nous identifions les opportunités cachées qui vous permettront d'accroître votre part de marché, de devancer la concurrence et d'augmenter votre rentabilité en toute sécurité.",
+      "i1": "Analyse concurrentielle et audit de marché approfondi.",
+      "i2": "Identification des niches rentables et des lacunes en matière de produits.",
+      "i3": "Plans d'expansion accompagnés de prévisions financières sur cinq ans.",
+      "i4": "Stratégies d'entrée et de localisation.",
+      "i5": "Validation de la proposition de valeur et tests A/B."
+    },
+    "s2": {
+      "slug": "desarrollo-alianzas",
+      "title": "Développement de partenariats",
+      "heroTitle": "Créez des écosystèmes performants",
+      "longDesc": "Nous identifions et négocions des partenariats stratégiques qui renforcent vos capacités et élargissent votre champ d'action commercial.",
+      "i1": "Recherche systématique de partenaires à l'aide de Scoring Matrix.",
+      "i2": "Mise en place de coentreprises et mécanismes de sortie.",
+      "i3": "Négociation d'accords stratégiques.",
+      "i4": "Représentation commerciale avec indicateurs clés de performance mensuels."
+    },
+    "s3": {
+      "slug": "generacion-ventas",
+      "title": "Génération de ventes",
+      "heroTitle": "Accélérez votre processus de vente",
+      "longDesc": "Nous mettons en œuvre des méthodologies de prospection B2B hautement performantes afin de conclure régulièrement des contrats avec des grandes entreprises.",
+      "i1": "Prospection B2B ciblée.",
+      "i2": "Notation MQL-SQL selon les critères BANT.",
+      "i3": "Ouverture de comptes Enterprise et de comités avec des cadres supérieurs.",
+      "i4": "Conclusion de ventes stratégiques."
+    },
+    "s4": {
+      "slug": "expansion-internacional",
+      "title": "Expansion internationale",
+      "heroTitle": "Votre porte d'entrée vers les marchés mondiaux",
+      "longDesc": "Nous réduisons les risques liés à l'internationalisation grâce à des études de faisabilité approfondies et à des équipes locales dédiées au lancement.",
+      "i1": "Études de faisabilité PESTEL.",
+      "i2": "Adaptation du modèle économique et conformité aux réglementations locales.",
+      "i3": "Vérification préalable des partenaires et des distributeurs locaux.",
+      "i4": "Plan de lancement sur 90 jours avec une équipe dédiée."
+    },
+    "s5": {
+      "slug": "nuevos-productos",
+      "title": "Nouveaux produits",
+      "heroTitle": "Une innovation validée par le marché",
+      "longDesc": "De la conception au lancement : nous validons vos idées à l'aide de méthodologies agiles afin d'assurer leur succès commercial.",
+      "i1": "Validation par le Design Thinking et le MVP.",
+      "i2": "Étude de la demande et des tendances.",
+      "i3": "Stratégie de mise sur le marché et segmentation de la clientèle.",
+      "i4": "Tarification stratégique et récupération de la marge."
+    },
+    "s6": {
+      "slug": "inteligencia-comercial",
+      "title": "Veille commerciale",
+      "heroTitle": "Des décisions fondées sur des certitudes",
+      "longDesc": "Nous transformons le bruit du marché en signaux clairs grâce à l'analyse prédictive et au Big Data afin de devancer vos concurrents.",
+      "i1": "Études de marché trimestrielles et tendances sur 3 à 5 ans.",
+      "i2": "Veille tarifaire et alertes sur la concurrence.",
+      "i3": "Prévisions basées sur le Big Data.",
+      "i4": "Évaluation des investissements."
+    }
+  },
+  "pbi": {
+    "subtitle": "Produit phare",
+    "title": "Solutions avec <span class=\"text-accent\">Power BI</span>",
+    "desc": "Transformez la complexité de vos données en décisions stratégiques claires. Nous centralisons vos informations dans des tableaux de bord interactifs pour vous permettre de diriger en toute confiance.",
+    "cta": "Demander une démonstration",
+    "catTitle": "Solutions",
+    "cat": {
+      "all": "Toutes les solutions",
+      "direction": "Adresse",
+      "finance": "Finances",
+      "sales": "Ventes",
+      "ops": "Opérations",
+      "strategy": "Stratégie",
+      "ai": "Intelligence artificielle"
+    },
+    "aiTitle": "Intelligence <span class=\"text-accent\">artificielle</span>",
+    "aiDesc": "Nous mettons en œuvre des solutions d'IA générative et des modèles prédictifs afin d'automatiser les processus et d'améliorer la prise de décision.",
+    "p1": {
+      "slug": "dashboards-ejecutivos",
+      "title": "Tableaux de bord de direction",
+      "desc": "Maîtrise totale des indicateurs clés de performance (KPI) pour la direction générale.",
+      "heroTitle": "Contrôle total par la direction générale",
+      "longDesc": "Des tableaux de bord en temps réel spécialement conçus pour les cadres supérieurs. Visualisez le pouls de votre entreprise en un seul coup d'œil.",
+      "i1": "Indicateurs clés de performance (KPI) stratégiques unifiés.",
+      "i2": "Alertes intelligentes en cas d'écarts.",
+      "i3": "Accès mobile sécurisé 24 h/24, 7 j/7.",
+      "i4": "Intégration avec plusieurs sources de données."
+    },
+    "p2": {
+      "slug": "reportes-financieros",
+      "title": "Rapports financiers",
+      "desc": "Présentation claire des états financiers et de la trésorerie.",
+      "heroTitle": "Une transparence financière totale",
+      "longDesc": "Affichage avancé des états financiers, des flux de trésorerie et des prévisions automatiques pour une gestion irréprochable.",
+      "i1": "Compte de résultat interactif par unité opérationnelle.",
+      "i2": "Comparaison entre les prévisions budgétaires et les résultats réels.",
+      "i3": "Analyse de l'ancienneté des soldes.",
+      "i4": "Prévisions de trésorerie (cash-flow)."
+    },
+    "p3": {
+      "slug": "analisis-ventas",
+      "title": "Analyse des ventes",
+      "desc": "Performance commerciale et entonnoir de vente.",
+      "heroTitle": "Boostez vos performances commerciales",
+      "longDesc": "Découvrez les tendances d'achat, les performances des vendeurs et la rentabilité par produit afin d'optimiser vos revenus.",
+      "i1": "Suivi du pipeline en temps réel.",
+      "i2": "Analyse du taux de conversion.",
+      "i3": "Classement des clients et des produits.",
+      "i4": "Analyse des tendances saisonnières."
+    },
+    "p4": {
+      "slug": "optimizacion-operaciones",
+      "title": "Optimisation des opérations",
+      "desc": "Efficacité des processus logistiques et de production.",
+      "heroTitle": "Efficacité opérationnelle fondée sur les données",
+      "longDesc": "Identifiez les goulots d'étranglement et optimisez vos processus logistiques et de production grâce à des analyses de précision.",
+      "i1": "Gestion intelligente des stocks.",
+      "i2": "Suivi des délais de livraison.",
+      "i3": "Analyse de la capacité installée.",
+      "i4": "Réduction des coûts d'exploitation."
+    },
+    "p5": {
+      "slug": "estrategia-datos",
+      "title": "Stratégie en matière de données",
+      "desc": "Architecture et gouvernance des données d'entreprise.",
+      "heroTitle": "Une véritable culture axée sur les données",
+      "longDesc": "Nous ne nous contentons pas de visualiser ; nous structurons votre architecture de données pour que l'information circule sans heurts.",
+      "i1": "Gouvernance des données et sécurité.",
+      "i2": "Nettoyage et normalisation des bases de données.",
+      "i3": "Modélisation complexe des données.",
+      "i4": "Formation des équipes internes."
+    },
+    "p6": {
+      "slug": "analisis-predictivo",
+      "title": "Intelligence artificielle",
+      "desc": "Apprentissage automatique pour la prévision de la demande.",
+      "heroTitle": "Anticipe l'avenir du marché",
+      "longDesc": "Nous mettons en œuvre des algorithmes d'apprentissage automatique qui analysent les données historiques afin de prévoir les tendances des ventes et le comportement des consommateurs.",
+      "i1": "Prévision de la demande saisonnière.",
+      "i2": "Détection précoce du risque de désabonnement.",
+      "i3": "Optimisation des stocks.",
+      "i4": "Modélisation de scénarios hypothétiques."
+    },
+    "p7": {
+      "slug": "agentes-ia-personalizados",
+      "title": "Agents d'IA générative",
+      "desc": "Automatisation des flux à l'aide des grands modèles de langage (LLM).",
+      "heroTitle": "Votre propre IA experte dans votre domaine d'activité",
+      "longDesc": "Nous développons des agents intelligents qui connaissent vos manuels, vos processus et votre base de connaissances afin d'aider vos employés ou vos clients.",
+      "i1": "Une assistance disponible 24 heures sur 24, 7 jours sur 7.",
+      "i2": "Automatisation de la rédaction technique.",
+      "i3": "Recherche avancée dans les documents.",
+      "i4": "Intégration via API avec vos systèmes."
+    },
+    "p8": {
+      "slug": "vision-artificial",
+      "title": "Vision artificielle",
+      "desc": "Reconnaissance d'images et d'objets.",
+      "heroTitle": "Vos systèmes, désormais dotés d'yeux",
+      "longDesc": "Nous utilisons des modèles de vision par ordinateur pour le contrôle qualité, la sécurité périmétrique ou l'analyse du trafic dans les espaces physiques.",
+      "i1": "Contrôle qualité automatisé.",
+      "i2": "Reconnaissance des motifs visuels.",
+      "i3": "Comptage des personnes et des véhicules.",
+      "i4": "Analyse de sécurité en temps réel."
+    },
+    "p9": {
+      "slug": "procesamiento-lenguaje-natural",
+      "title": "Analyse de la voix et du texte",
+      "desc": "Extraction d'informations à partir de conversations.",
+      "heroTitle": "Écoute ce que tes données ont à dire",
+      "longDesc": "Nous analysons des milliers d'appels et de messages afin d'en dégager les sentiments exprimés, les thèmes récurrents et les opportunités commerciales non identifiées.",
+      "i1": "Analyse des sentiments des clients.",
+      "i2": "Transcription et résumé automatique.",
+      "i3": "Détection des intentions d'achat.",
+      "i4": "Tableau de bord de la réputation de marque."
+    },
+    "common": {
+      "featuresTitle": "Ce qui comprend :",
+      "formTitle": "Commencez dès aujourd'hui",
+      "formDesc": "Laissez-nous vos coordonnées pour planifier une séance stratégique sur",
+      "whyTitle": "Pourquoi choisir Echopoint AI ?",
+      "whyDesc": "Nous allions notre expertise en conseil traditionnel à la puissance de l'intelligence artificielle pour vous offrir des résultats qui se répercutent directement sur votre compte de résultat.",
+      "card1Title": "Mise en œuvre agile",
+      "card1Desc": "Nous ne perdons pas de temps en théories. Nous passons directement à l'action avec des plans sur 90 jours.",
+      "card2Title": "Technologie de pointe",
+      "card2Desc": "Nous utilisons les derniers outils d'IA et de Big Data pour vous offrir un avantage concurrentiel.",
+      "card3Title": "Sécurité et confiance",
+      "card3Desc": "Vos données sont en sécurité chez nous. Nous respectons les normes les plus strictes en matière de confidentialité."
+    }
+  },
+  "about": {
+    "headerTitle": "À propos d'Echopoint AI",
+    "headerDesc": "Renforcer l'avenir des entreprises grâce à la synergie entre l'humain et le numérique.",
+    "whoTitle": "Qui sommes-nous ?",
+    "whoDesc": "Nous sommes des architectes de la transformation d'entreprise. Echopoint AI est né de la conviction que la véritable croissance naît de la fusion entre l'intuition humaine experte et la précision analytique de l'intelligence artificielle. Nous ne sommes pas seulement des consultants ; nous sommes vos partenaires pour vous guider vers l'avenir.",
+    "whatTitle": "Ce que nous faisons",
+    "whatDesc": "Nous libérons le potentiel caché de votre organisation. Grâce à un diagnostic approfondi et à des outils prédictifs, nous élaborons des feuilles de route sur mesure qui optimisent les opérations, ouvrent de nouveaux marchés et garantissent une rentabilité évolutive dans un environnement concurrentiel.",
+    "essSub": "Notre essence",
+    "essTitle": "Une technologie qui <br/><span class=\"text-accent\">met en valeur le talent</span>",
+    "essDesc": "Nous ne cherchons pas à remplacer l'intuition humaine, mais à la renforcer. Echopoint est le point de rencontre où la puissance de traitement de l'IA s'allie à la créativité stratégique des individus.",
+    "essF1": "Des décisions fondées sur des données, mises en œuvre par des experts.",
+    "essF2": "Une communication précise : un message juste, au bon moment.",
+    "essF3": "Apprentissage continu : ta stratégie évolue chaque jour.",
+    "teamTitle": "Esprits brillants",
+    "role1": "Responsable Data Scientist",
+    "role2": "Stratège B2B"
+  },
+  "contact": {
+    "subtitle": "Connexion directe",
+    "title": "Que la transformation commence",
+    "desc": "Discutons de la manière dont notre intelligence stratégique peut vous aider à atteindre vos objectifs plus rapidement.",
+    "infoTitle": "Coordonnées",
+    "infoDesc": "Nous sommes prêts à écouter vos défis et à tracer la voie vers la réussite de votre entreprise.",
+    "email": "E-mail",
+    "phone": "Téléphone",
+    "address": "Emplacement",
+    "faqTitle": "Foire aux questions",
+    "faqDesc": "Nous répondons à vos questions en toute transparence avant notre première rencontre."
   }
-
 };

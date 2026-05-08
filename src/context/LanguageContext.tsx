@@ -2,7 +2,7 @@
 
 import { createContext, useContext, ReactNode, useEffect, useTransition } from "react";
 import { useRouter, usePathname } from "next/navigation";
-import { dictionaries } from "@/i18n/dictionaries";
+import type { Dictionary } from "@/i18n/dictionaries";
 import { getInternalPath, getLocalizedPath } from "@/i18n/routing";
 
 export type Language = "ES" | "EN" | "FR" | "PT";
@@ -12,11 +12,20 @@ interface LanguageContextType {
   setLang: (lang: Language) => void;
   t: (key: string) => string;
   isPending: boolean;
+  dictionary: Dictionary;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-export const LanguageProvider = ({ children, initialLang }: { children: ReactNode; initialLang?: Language }) => {
+export const LanguageProvider = ({
+  children,
+  initialLang,
+  dictionary,
+}: {
+  children: ReactNode;
+  initialLang?: Language;
+  dictionary?: Dictionary;
+}) => {
   const router = useRouter();
   const pathname = usePathname();
   const [isPending, startTransition] = useTransition();
@@ -50,9 +59,9 @@ export const LanguageProvider = ({ children, initialLang }: { children: ReactNod
   };
 
   const t = (key: string): string => {
-    const dict = dictionaries[lang];
+    if (!dictionary) return key;
     const keys = key.split(".");
-    let value: unknown = dict;
+    let value: unknown = dictionary;
 
     for (const k of keys) {
       if (value === undefined || value === null || typeof value !== "object") break;
@@ -63,7 +72,7 @@ export const LanguageProvider = ({ children, initialLang }: { children: ReactNod
   };
 
   return (
-    <LanguageContext.Provider value={{ lang, setLang, t, isPending }}>
+    <LanguageContext.Provider value={{ lang, setLang, t, isPending, dictionary: dictionary ?? ({} as Dictionary) }}>
       {children}
     </LanguageContext.Provider>
   );

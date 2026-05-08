@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { LanguageProvider, type Language } from "@/context/LanguageContext";
+import { getDictionary } from "@/i18n/dictionaries";
 import ChatbotReveal from "@/components/Chatbot/ChatbotReveal";
 import ScrollToTop from "@/components/ScrollToTop/ScrollToTop";
 import LangSetter from "@/components/LangSetter/LangSetter";
@@ -110,6 +111,7 @@ export default async function LangLayout({
   params: Promise<{ lang: string }>;
 }>) {
   const { lang } = await params;
+  const dictionary = getDictionary(lang.toLowerCase());
   return (
     <>
       <LangSetter lang={lang} />
@@ -136,7 +138,7 @@ export default async function LangLayout({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLdWebSite) }}
       />
-      <LanguageProvider initialLang={lang.toUpperCase() as Language}>
+      <LanguageProvider initialLang={lang.toUpperCase() as Language} dictionary={dictionary}>
         <ScrollToTop />
         <a
           href="#main-content"

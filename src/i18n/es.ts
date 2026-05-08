@@ -48,7 +48,7 @@ export const ES = {
     authorBio: "Estratega B2B Senior con más de 15 años de experiencia liderando transformaciones digitales y expansiones de mercado.",
     categories: { estrategia: "Estrategia", tecnologia: "Tecnología", ventas: "Ventas", expansion: "Expansión" }
   },
-  footer: { rights: "Todos los derechos reservados.", desc: "Transformando el futuro B2B mediante la fusión de inteligencia artificial y creatividad humana.", nav: "Navegación", contact: "Contacto", follow: "Síguenos", privacy: "Política de Privacidad", terms: "Términos de Servicio" },
+  footer: { rights: "Todos los derechos reservados.", desc: "Transformando el futuro B2B mediante la fusión de inteligencia artificial y creatividad humana.", nav: "Navegación", contact: "Contacto", follow: "Síguenos", privacy: "Política de Privacidad", terms: "Términos de Servicio", backToTop: "Volver arriba" },
   magnet: {
     title: "Descarga el Informe 2024",
     desc: 'Obtén nuestra guía exclusiva: "Sinergia Humano-IA: El Nuevo Estándar en Ventas B2B".',

@@ -113,10 +113,10 @@ export default function Footer() {
         type="button"
         className={`${styles.backToTopButton} ${showBackToTop ? styles.backToTopVisible : ""}`}
         onClick={handleBackToTop}
-        aria-label="Volver arriba"
+        aria-label={t('footer.backToTop')}
       >
         <FontAwesomeIcon icon={faArrowUp} />
-        <span>Volver arriba</span>
+        <span>{t('footer.backToTop')}</span>
       </button>
     </footer>
 

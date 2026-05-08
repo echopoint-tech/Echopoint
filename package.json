@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "translate": "npx tsx scripts/translate.ts"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
@@ -21,6 +22,7 @@
     "zod": "^4.4.1"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^16.2.6",
     "@tailwindcss/postcss": "^4.2.4",
     "@types/node": "^20",
     "@types/react": "^19",

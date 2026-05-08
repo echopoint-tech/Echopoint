@@ -27,7 +27,6 @@ import Footer from "@/components/Footer";
 import AnimationObserver from "@/components/AnimationObserver";
 import ContactForm from "@/components/ContactForm";
 import { useLanguage } from "@/context/LanguageContext";
-import { dictionaries } from "@/i18n/dictionaries";
 import styles from "./ServiceDetailView.module.css";
 
 interface ServiceDetailClientProps {
@@ -36,17 +35,15 @@ interface ServiceDetailClientProps {
 }
 
 export default function ServiceDetailClient({ lang, slug }: ServiceDetailClientProps) {
-  const { t } = useLanguage();
+  const { t, dictionary } = useLanguage();
 
   interface ServiceEntry {
     slug: string; title: string; heroTitle: string; longDesc: string;
     i1: string; i2: string; i3: string; i4: string; i5?: string;
   }
 
-  const currentLang = lang.toUpperCase() as keyof typeof dictionaries;
-  const dict = dictionaries[currentLang];
-  const servicesData = Object.values(dict.services) as unknown[];
-  const pbiData = Object.values(dict.pbi) as unknown[];
+  const servicesData = Object.values(dictionary.services) as unknown[];
+  const pbiData = Object.values(dictionary.pbi) as unknown[];
 
   const findBySlug = (entries: unknown[]): ServiceEntry | undefined =>
     entries.find((v): v is ServiceEntry =>
