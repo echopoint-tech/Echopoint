@@ -10,6 +10,7 @@ interface AutoCarouselProps {
 
 export default function AutoCarousel({ children, className, intervalMs = 5000 }: AutoCarouselProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const rafRef = useRef<number | null>(null);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [activeIndex, setActiveIndex] = useState(0);
   const count = Children.count(children);
@@ -39,10 +40,14 @@ export default function AutoCarousel({ children, className, intervalMs = 5000 }:
   };
 
   const handleScroll = useCallback(() => {
-    if (scrollRef.current) {
-      const { scrollLeft, clientWidth } = scrollRef.current;
-      setActiveIndex(Math.round(scrollLeft / clientWidth));
-    }
+    if (rafRef.current !== null) return;
+    rafRef.current = requestAnimationFrame(() => {
+      if (scrollRef.current) {
+        const { scrollLeft, clientWidth } = scrollRef.current;
+        setActiveIndex(Math.round(scrollLeft / clientWidth));
+      }
+      rafRef.current = null;
+    });
   }, []);
 
   useEffect(() => {

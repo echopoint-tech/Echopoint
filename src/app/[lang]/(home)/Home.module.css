@@ -697,7 +697,6 @@
 /* Hero Intro Entrance Animations */
 :global(.hero-intro) :global(.subtitle),
 :global(.hero-intro) h1,
-:global(.hero-intro) p,
 :global(.hero-intro) :global(.hero-actions),
 :global(.hero-trust-strip) {
     opacity: 0;
@@ -713,16 +712,12 @@
     animation-delay: 0.16s;
 }
 
-:global(.hero-intro) p {
+:global(.hero-intro) :global(.hero-actions) {
     animation-delay: 0.24s;
 }
 
-:global(.hero-intro) :global(.hero-actions) {
-    animation-delay: 0.32s;
-}
-
 :global(.hero-trust-strip) {
-    animation-delay: 0.40s;
+    animation-delay: 0.32s;
 }
 
 @keyframes heroFadeUp {
