@@ -320,7 +320,6 @@ html[data-snap="true"] #main-content > section#popular-services {
 
 /* Hero Intro Entrance Animations */
 .hero-intro .subtitle,
-.hero-intro h1,
 .hero-intro .hero-actions,
 .hero-trust-strip {
     opacity: 0;
@@ -328,7 +327,8 @@ html[data-snap="true"] #main-content > section#popular-services {
     animation: heroFadeUp 0.7s ease forwards;
 }
 
-/* LCP element: no opacity:0 so browser paints it on first render, only translate animates */
+/* h1 and p: no opacity:0 — browser paints on first render for LCP, only translateY animates */
+.hero-intro h1,
 .hero-intro p {
     transform: translateY(14px);
     animation: heroFadeUpTransform 0.7s ease forwards;
