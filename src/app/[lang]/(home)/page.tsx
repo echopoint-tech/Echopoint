@@ -150,7 +150,7 @@ export default async function Home({
                   className={styles.responsiveImage}
                   width={800}
                   height={451}
-                  priority
+                  loading="lazy"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
                 />
               </div>
