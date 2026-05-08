@@ -26,10 +26,10 @@ export default async function VCardV2Page({ params }: Props) {
   const dict = getDictionary(lang);
 
   const contactInfo = {
-    name: "[....................]",
+    name: "Ary Miedzwinsky",
     position: lang === 'es' ? "Estrategia & Crecimiento" : "Strategy & Growth",
-    whatsapp: "https://wa.me/", 
-    email: "mailto:", 
+    whatsapp: "https://wa.me/5574805532", 
+    email: "mailto:ary.m@echopoint.mx.com", 
     website: `/${lang}`
   };
 

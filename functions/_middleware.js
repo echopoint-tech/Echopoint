@@ -5,32 +5,25 @@ export async function onRequest(context) {
 
   // Si el host es el subdominio de la tarjeta
   if (host.startsWith("card.")) {
-    // 1. Permitir archivos estáticos y de sistema (imprescindible para el diseño)
-    if (
-      url.pathname.startsWith("/_next/") || 
-      url.pathname.startsWith("/static/") || 
-      url.pathname.endsWith(".webp") || 
-      url.pathname.endsWith(".png") || 
-      url.pathname.endsWith(".css") ||
-      url.pathname.endsWith(".js")
-    ) {
-      return context.next();
+    
+    // 1. SI ES UN ARCHIVO (tiene punto como .css, .js, .webp) O ES DE NEXT.JS, entregarlo directamente
+    // Usamos ASSETS.fetch para asegurar que Cloudflare entregue el archivo real.
+    if (url.pathname.includes(".") || url.pathname.startsWith("/_next/")) {
+      return context.env.ASSETS.fetch(url);
     }
 
-    // 2. Verificamos si tiene la "llave" de acceso del QR
+    // 2. Verificamos la "llave" del QR solo para la raíz
     const hasQrKey = url.searchParams.get("source") === "qr";
 
-    // 3. Si es la raíz (/) y TIENE la llave, mostramos la VCard
     if ((url.pathname === "/" || url.pathname === "") && hasQrKey) {
       const newUrl = new URL("/es/card/", url.origin);
       return context.env.ASSETS.fetch(newUrl);
     } 
     
-    // 4. Si NO tiene la llave o intenta entrar a otra ruta (ej: /servicios),
-    // lo mandamos al dominio principal.
+    // 3. Todo lo demás (visitas directas sin llave), al dominio principal
     return Response.redirect(`https://${mainDomain}${url.pathname}${url.search}`, 302);
   }
 
-  // Para el dominio principal y otras rutas, continuar normalmente
+  // Para el dominio principal, continuar normal
   return context.next();
 }
