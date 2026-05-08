@@ -121,8 +121,13 @@ export default async function LangLayout({
         imageSrcSet="/logo-mobile.webp 200w, /logo.webp 400w"
         imageSizes="(max-width: 768px) 200px, 400px"
       />
-      <link rel="preconnect" href="https://images.unsplash.com" />
-      <link rel="dns-prefetch" href="https://images.unsplash.com" />
+      <link
+        rel="preload"
+        href="/photo-1551288049-bebda4e38f71.webp"
+        as="image"
+        fetchPriority="high"
+        media="(max-width: 768px)"
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLdOrganization) }}

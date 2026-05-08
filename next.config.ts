@@ -54,12 +54,7 @@ const nextConfig: NextConfig = {
   devIndicators: false,
   images: {
     unoptimized: true, // Requerido para Cloudflare Pages
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "images.unsplash.com",
-      },
-    ],
+    remotePatterns: [],
   },
   experimental: {
     optimizePackageImports: [
