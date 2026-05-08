@@ -144,13 +144,13 @@ export default async function Home({
               </div>
               <div className={`${styles.manifestoImageContainer} reveal reveal-delay-2`}>
                 <Image
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=75"
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=60"
                   alt="Visualización de datos e inteligencia artificial impulsando el crecimiento empresarial"
                   title="Visualización de datos e inteligencia artificial impulsando el crecimiento empresarial"
                   className={styles.responsiveImage}
-                  width={1470}
-                  height={827}
-                  loading="lazy"
+                  width={800}
+                  height={451}
+                  priority
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
                 />
               </div>

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
+
 import { useLanguage } from "@/context/LanguageContext";
 import { getLocalizedPath } from "@/i18n/routing";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -47,7 +47,18 @@ export default function Footer() {
         <div className={styles.footerGrid}>
           <div className={styles.footerBrand}>
             <Link href={getLocalizedPath(lang, "/")} className="logo" title="Echopoint AI - Inicio">
-              <Image src="/logo.webp" alt="Echopoint AI" title="Echopoint AI - Inicio" className={styles.logoImg} width={180} height={60} />
+              <img
+                src="/logo.webp"
+                srcSet="/logo-mobile.webp 200w, /logo.webp 400w"
+                sizes="(max-width: 768px) 200px, 400px"
+                alt="Echopoint AI"
+                title="Echopoint AI - Inicio"
+                className={styles.logoImg}
+                width={113}
+                height={60}
+                loading="lazy"
+                decoding="async"
+              />
             </Link>
             <p>
               {t('footer.desc')}
