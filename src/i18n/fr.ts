@@ -317,5 +317,11 @@ export const FR = {
     "address": "Emplacement",
     "faqTitle": "Foire aux questions",
     "faqDesc": "Nous répondons à vos questions en toute transparence avant notre première rencontre."
+  },
+  "metadata": {
+    "title": "Echopoint AI - Conseil en Stratégie d'Entreprise",
+    "description": "Echopoint fusionne l'intuition humaine et la puissance de l'IA pour des stratégies B2B transformatrices. Conseil en entreprise, analyse prédictive et expansion internationale.",
+    "siteName": "Echopoint AI",
+    "orgDescription": "Conseil stratégique en entreprise qui fusionne l'intelligence artificielle et la créativité humaine pour des stratégies B2B transformatrices."
   }
 };

@@ -317,5 +317,11 @@ export const EN = {
     "address": "Location",
     "faqTitle": "Frequently Asked Questions",
     "faqDesc": "We’ll address your questions openly and transparently before our first meeting."
+  },
+  "metadata": {
+    "title": "Echopoint AI - Strategic Business Consulting",
+    "description": "Echopoint merges human intuition and AI power for transformative B2B strategies. Business consulting, predictive analytics, and international expansion.",
+    "siteName": "Echopoint AI",
+    "orgDescription": "Strategic business consulting that merges artificial intelligence and human creativity for transformative B2B strategies."
   }
 };

@@ -231,5 +231,11 @@ export const ES = {
     address: "Ubicación",
     faqTitle: "Preguntas Frecuentes",
     faqDesc: "Resolvemos tus dudas con transparencia antes de nuestra primera reunión."
+  },
+  metadata: {
+    title: "Echopoint AI - Consultoría Empresarial Estratégica",
+    description: "Echopoint fusiona intuición humana y potencia de IA para estrategias B2B transformadoras. Consultoría empresarial, análisis predictivo y expansión internacional.",
+    siteName: "Echopoint AI",
+    orgDescription: "Consultoría empresarial estratégica que fusiona inteligencia artificial y creatividad humana para estrategias B2B transformadoras."
   }
 };
