@@ -122,7 +122,7 @@ export const EN = {
       "slug": "generacion-ventas",
       "title": "Sales Generation",
       "heroTitle": "Speed up your sales pipeline",
-      "longDesc": "We implement high-performance B2B prospecting methodologies to secure recurring business with enterprise-level clients.",
+      "longDesc": "We implement high-performance B2B prospecting methodologies to secure recurring business with enterprise clients.",
       "i1": "Targeted B2B prospecting.",
       "i2": "Scoring MQLs and SQLs using BANT criteria.",
       "i3": "Opening Enterprise accounts and engaging with C-level executives.",
@@ -161,7 +161,7 @@ export const EN = {
   },
   "pbi": {
     "subtitle": "Featured Product",
-    "title": "<span class=\"text-accent\">Power BI</span> Solutions",
+    "title": "<span class=\"text-accent\">BI</span> Solutions",
     "desc": "Turn the complexity of your data into clear strategic decisions. We consolidate your information into interactive dashboards so you can lead with complete confidence.",
     "cta": "Request a Demo",
     "catTitle": "Solutions",
@@ -179,7 +179,7 @@ export const EN = {
     "p1": {
       "slug": "dashboards-ejecutivos",
       "title": "Executive Dashboards",
-      "desc": "Comprehensive KPI monitoring for senior management.",
+      "desc": "Comprehensive KPI oversight for senior management.",
       "heroTitle": "Full control from senior management",
       "longDesc": "Real-time dashboards designed specifically for C-level executives. See how your company is performing at a glance.",
       "i1": "Unified strategic KPIs.",
@@ -224,7 +224,7 @@ export const EN = {
       "slug": "estrategia-datos",
       "title": "Data Strategy",
       "desc": "Enterprise Data Architecture and Governance.",
-      "heroTitle": "A Truly Data-Driven Culture",
+      "heroTitle": "A True Data-Driven Culture",
       "longDesc": "We don't just visualize; we structure your data architecture so that information flows seamlessly.",
       "i1": "Data governance and security.",
       "i2": "Database cleaning and normalization.",
@@ -282,7 +282,7 @@ export const EN = {
       "whyTitle": "Why choose Echopoint AI?",
       "whyDesc": "We combine our expertise in traditional consulting with the power of artificial intelligence to deliver results that are reflected in your bottom line.",
       "card1Title": "Agile Implementation",
-      "card1Desc": "We don't waste time on theories. We get straight to work with 90-day plans.",
+      "card1Desc": "We don't waste time on theories. We get straight to action with 90-day plans.",
       "card2Title": "Cutting-Edge Technology",
       "card2Desc": "We use the latest AI and big data tools to give you a competitive edge.",
       "card3Title": "Safety and Trust",
@@ -375,7 +375,7 @@ export const EN = {
     },
     "s8": {
       "title": "8. Changes to this Privacy Notice",
-      "p1": "We reserve the right to update this Privacy Notice at any time. Changes will be posted on this page with a new update date. We recommend that you review it periodically."
+      "p1": "We reserve the right to update this Privacy Notice at any time. Any changes will be posted on this page with a new update date. We recommend that you review it periodically."
     },
     "s9": {
       "title": "9. Applicable Law",
@@ -400,7 +400,7 @@ export const EN = {
       "l1": "Use the Site only for lawful and legitimate purposes",
       "l2": "Provide accurate and complete information on the contact forms",
       "l3": "Do not attempt to access unauthorized systems, networks, or data",
-      "l4": "Do not submit offensive, fraudulent, or malicious content through the forms",
+      "l4": "Do not submit offensive, fraudulent, or malicious content via the forms",
       "l5": "Do not use automated tools (bots, scrapers) to extract content from the Site",
       "l6": "Do not attempt to interfere with the normal operation of the Site through denial-of-service attacks or other similar techniques"
     },
@@ -430,7 +430,7 @@ export const EN = {
     },
     "s9": {
       "title": "9. Contact",
-      "p1": "If you have any questions about these Terms of Service, you can contact us at:"
+      "p1": "If you have any questions about these Terms of Service, please contact us at:"
     }
   }
 };

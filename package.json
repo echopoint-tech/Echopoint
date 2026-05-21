@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --webpack",
     "build": "npx tsx scripts/optimize-images.ts && next build",
     "analyze": "npx tsx scripts/optimize-images.ts && cross-env ANALYZE=true next build --webpack",
     "start": "next start",

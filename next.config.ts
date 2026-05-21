@@ -53,10 +53,9 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
-  output: "export",
+  ...(process.env.NODE_ENV === "production" ? { output: "export" } : {}),
   trailingSlash: true,
   devIndicators: false,
-  turbopack: {},
   images: {
     unoptimized: true, // Requerido para Cloudflare Pages
     remotePatterns: [

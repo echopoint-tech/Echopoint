@@ -31,7 +31,7 @@ export const FR = {
   "reviews": {
     "title": "Voix du leadership",
     "desc": "Des partenaires stratégiques qui ont transformé leurs secteurs d'activité grâce à Echopoint.",
-    "rating": "4,9/5 sur la base d'avis vérifiés",
+    "rating": "4,9/5 d'après des avis vérifiés",
     "verified": "Partenaire vérifié",
     "cta": "Lire les études de cas sur le blog",
     "r1": {
@@ -40,11 +40,11 @@ export const FR = {
     },
     "r2": {
       "date": "Il y a un mois",
-      "text": "« La mise en œuvre de leur stratégie d'expansion internationale s'est déroulée sans heurts. Leur équipe ne s'est pas contentée de nous fournir un plan, mais elle nous a accompagnés au quotidien dans sa mise en œuvre opérationnelle. »"
+      "text": "« La mise en œuvre de leur stratégie d'expansion internationale s'est déroulée sans heurts. Leur équipe ne s'est pas contentée de nous fournir un plan, mais nous a également accompagnés au quotidien dans sa mise en œuvre opérationnelle. »"
     },
     "r3": {
       "date": "Il y a 3 semaines",
-      "text": "« La fusion entre l'IA et le conseil traditionnel, c'est l'avenir. Echopoint nous a aidés à automatiser la qualification des prospects, ce qui a permis à notre équipe commerciale de se concentrer sur la conclusion de contrats à forte valeur ajoutée. »"
+      "text": "« La fusion entre l'IA et le conseil traditionnel est l'avenir. Echopoint nous a aidés à automatiser la qualification des prospects, ce qui a permis à notre équipe commerciale de se concentrer sur la conclusion de contrats à forte valeur ajoutée. »"
     }
   },
   "insights": {
@@ -132,7 +132,7 @@ export const FR = {
       "slug": "expansion-internacional",
       "title": "Expansion internationale",
       "heroTitle": "Votre porte d'entrée vers les marchés mondiaux",
-      "longDesc": "Nous réduisons les risques liés à l'internationalisation grâce à des études de faisabilité approfondies et à des équipes locales dédiées au lancement.",
+      "longDesc": "Nous réduisons les risques liés à l'internationalisation grâce à des études de faisabilité approfondies et à des équipes de lancement locales dédiées.",
       "i1": "Études de faisabilité PESTEL.",
       "i2": "Adaptation du modèle économique et conformité aux réglementations locales.",
       "i3": "Vérification préalable des partenaires et des distributeurs locaux.",
@@ -161,7 +161,7 @@ export const FR = {
   },
   "pbi": {
     "subtitle": "Produit phare",
-    "title": "Solutions avec <span class=\"text-accent\">Power BI</span>",
+    "title": "Solutions <span class=\"text-accent\">BI</span>",
     "desc": "Transformez la complexité de vos données en décisions stratégiques claires. Nous centralisons vos informations dans des tableaux de bord interactifs pour vous permettre de diriger en toute confiance.",
     "cta": "Demander une démonstration",
     "catTitle": "Solutions",
@@ -181,8 +181,8 @@ export const FR = {
       "title": "Tableaux de bord de direction",
       "desc": "Maîtrise totale des indicateurs clés de performance (KPI) pour la direction générale.",
       "heroTitle": "Contrôle total par la direction générale",
-      "longDesc": "Des tableaux de bord en temps réel spécialement conçus pour les cadres dirigeants. Visualisez le pouls de votre entreprise en un seul coup d'œil.",
-      "i1": "Indicateurs clés de performance (KPI) stratégiques unifiés.",
+      "longDesc": "Des tableaux de bord en temps réel spécialement conçus pour les cadres supérieurs. Visualisez le pouls de votre entreprise en un seul coup d'œil.",
+      "i1": "Indicateurs clés de performance stratégiques unifiés.",
       "i2": "Alertes intelligentes en cas d'écarts.",
       "i3": "Accès mobile sécurisé 24 h/24, 7 j/7.",
       "i4": "Intégration avec plusieurs sources de données."
@@ -192,18 +192,18 @@ export const FR = {
       "title": "Rapports financiers",
       "desc": "Présentation claire des états financiers et de la trésorerie.",
       "heroTitle": "Une transparence financière totale",
-      "longDesc": "Affichage avancé des états financiers, des flux de trésorerie et des prévisions automatiques pour une gestion irréprochable.",
+      "longDesc": "Affichage avancé des états financiers, des flux de trésorerie et des projections automatiques pour une gestion irréprochable.",
       "i1": "Compte de résultat interactif par unité opérationnelle.",
       "i2": "Comparaison entre les prévisions budgétaires et les résultats réels.",
       "i3": "Analyse de l'ancienneté des soldes.",
-      "i4": "Prévisions de trésorerie (cash-flow)."
+      "i4": "Prévisions de trésorerie (Cashflow)."
     },
     "p3": {
       "slug": "analisis-ventas",
       "title": "Analyse des ventes",
       "desc": "Performance commerciale et entonnoir de vente.",
       "heroTitle": "Boostez vos performances commerciales",
-      "longDesc": "Découvrez les habitudes d'achat, les performances des vendeurs et la rentabilité par produit afin de maximiser vos revenus.",
+      "longDesc": "Découvrez les tendances d'achat, les performances des vendeurs et la rentabilité par produit afin de maximiser vos revenus.",
       "i1": "Suivi du pipeline en temps réel.",
       "i2": "Analyse du taux de conversion.",
       "i3": "Classement des clients et des produits.",
@@ -251,7 +251,7 @@ export const FR = {
       "i1": "Une assistance disponible 24 heures sur 24, 7 jours sur 7.",
       "i2": "Automatisation de la rédaction technique.",
       "i3": "Recherche avancée dans les documents.",
-      "i4": "Intégration via une API avec vos systèmes."
+      "i4": "Intégration via API avec vos systèmes."
     },
     "p8": {
       "slug": "vision-artificial",
@@ -269,7 +269,7 @@ export const FR = {
       "title": "Analyse de la voix et du texte",
       "desc": "Extraction d'informations à partir de conversations.",
       "heroTitle": "Écoute ce que tes données ont à dire",
-      "longDesc": "Nous analysons des milliers d'appels et de messages afin d'en dégager les sentiments exprimés, les thèmes récurrents et les opportunités commerciales non détectées.",
+      "longDesc": "Nous analysons des milliers d'appels et de messages afin d'en dégager les sentiments, les thèmes récurrents et les opportunités commerciales non identifiées.",
       "i1": "Analyse des sentiments des clients.",
       "i2": "Transcription et résumé automatique.",
       "i3": "Détection des intentions d'achat.",
@@ -298,7 +298,7 @@ export const FR = {
     "whatDesc": "Nous libérons le potentiel caché de votre organisation. Grâce à un diagnostic approfondi et à des outils prédictifs, nous élaborons des feuilles de route sur mesure qui optimisent les opérations, ouvrent de nouveaux marchés et garantissent une rentabilité évolutive dans un environnement concurrentiel.",
     "essSub": "Notre essence",
     "essTitle": "Une technologie qui <br/><span class=\"text-accent\">met en valeur le talent</span>",
-    "essDesc": "Nous ne cherchons pas à remplacer l'intuition humaine, mais à la renforcer. Echopoint est le point de rencontre où la puissance de calcul de l'IA s'allie à la créativité stratégique des individus.",
+    "essDesc": "Nous ne cherchons pas à remplacer l'intuition humaine, mais à la renforcer. Echopoint est le point de rencontre où la puissance de traitement de l'IA s'allie à la créativité stratégique des individus.",
     "essF1": "Des décisions fondées sur des données, mises en œuvre par des experts.",
     "essF2": "Une communication précise : un message juste, au bon moment.",
     "essF3": "Apprentissage continu : ta stratégie évolue chaque jour.",
@@ -350,13 +350,13 @@ export const FR = {
       "l4": "Assurer le suivi des demandes commerciales ou relatives aux services"
     },
     "s4": {
-      "title": "4. Transmission de données à des tiers",
+      "title": "4. Transfert de données à des tiers",
       "p1": "Pour assurer le bon fonctionnement du Site, nous partageons des données avec les prestataires de services suivants :",
       "l1": "Resend — Fournisseur de services d'envoi d'e-mails transactionnels. Vos coordonnées sont transmises à ce service afin de vous envoyer une notification concernant votre message.",
       "l2": "New Relic — Plateforme de surveillance des performances. Elle recueille des données anonymes sur la navigation et les performances du site.",
       "l3": "Drift — Plateforme de chat en direct. Elle peut collecter des données relatives aux sessions et aux interactions à l'aide de cookies.",
       "l4": "Cloudflare — Fournisseur d'hébergement et de CDN. Traite le trafic web de manière standard dans le cadre de l'infrastructure du site.",
-      "l5": "Google Fonts — Service de polices de caractères. Il effectue des requêtes pour obtenir des fichiers de polices auprès des serveurs de Google lors du chargement du site.",
+      "l5": "Google Fonts — Service de polices de caractères. Envoie des requêtes pour obtenir des fichiers de polices depuis les serveurs de Google lors du chargement du site.",
       "after1": "Nous ne vendons pas, ne louons pas et ne partageons pas vos données personnelles avec des tiers à des fins commerciales propres."
     },
     "s5": {
@@ -371,11 +371,11 @@ export const FR = {
     },
     "s7": {
       "title": "7. Conservation des données",
-      "p1": "Les données issues des formulaires de contact sont reçues et stockées dans la messagerie professionnelle d'EchoPoint. Nous ne disposons pas d'une base de données distincte pour les utilisateurs ou les contacts. Les messages sont conservés aussi longtemps que nécessaire pour assurer le suivi de la demande concernée."
+      "p1": "Les données issues des formulaires de contact sont reçues et stockées dans la messagerie électronique d'entreprise d'EchoPoint. Nous ne disposons pas d'une base de données distincte pour les utilisateurs ou les contacts. Les messages sont conservés aussi longtemps que nécessaire pour assurer le suivi de la demande correspondante."
     },
     "s8": {
       "title": "8. Modifications apportées à la présente déclaration de confidentialité",
-      "p1": "Nous nous réservons le droit de mettre à jour la présente déclaration de confidentialité à tout moment. Les modifications seront publiées sur cette page, accompagnées d'une nouvelle date de mise à jour. Nous vous recommandons de la consulter régulièrement."
+      "p1": "Nous nous réservons le droit de mettre à jour la présente déclaration de confidentialité à tout moment. Les modifications seront publiées sur cette page avec une nouvelle date de mise à jour. Nous vous recommandons de la consulter régulièrement."
     },
     "s9": {
       "title": "9. Législation applicable",
@@ -392,7 +392,7 @@ export const FR = {
     "s2": {
       "title": "2. Description du service",
       "p1": "EchoPoint est une société de conseil stratégique B2B basée à Mexico. Ce site a pour objectif de présenter des informations sur nos services de conseil, d'analyse prédictive, d'expansion internationale et d'optimisation des ventes, ainsi que de recueillir les demandes de contact de clients potentiels.",
-      "p2": "Le site ne propose ni services d'abonnement, ni comptes d'utilisateur, ni traitement des paiements en ligne. Les formulaires de contact constituent le seul moyen d'interaction disponible."
+      "p2": "Le site ne propose pas de services d'abonnement, de comptes utilisateurs ni de paiement en ligne. Les formulaires de contact constituent le seul moyen d'interaction disponible."
     },
     "s3": {
       "title": "3. Utilisation autorisée du site",
@@ -418,19 +418,19 @@ export const FR = {
     },
     "s6": {
       "title": "6. Disponibilité du site",
-      "p1": "EchoPoint s'efforce d'assurer la disponibilité permanente du Site, mais ne garantit pas une disponibilité ininterrompue. Le Site peut être temporairement indisponible pour des raisons de maintenance, de mises à jour ou pour des causes indépendantes de notre volonté."
+      "p1": "EchoPoint s'efforce d'assurer la disponibilité continue du Site, mais ne garantit pas une disponibilité ininterrompue. Le Site peut être temporairement indisponible pour des raisons de maintenance, de mises à jour ou pour des causes indépendantes de notre volonté."
     },
     "s7": {
       "title": "7. Modifications des conditions",
-      "p1": "EchoPoint se réserve le droit de modifier les présentes Conditions d'utilisation à tout moment. Les modifications entreront en vigueur dès leur publication sur le Site, accompagnées d'une nouvelle date de mise à jour. La poursuite de l'utilisation du Site après ces modifications vaut acceptation des nouvelles conditions."
+      "p1": "EchoPoint se réserve le droit de modifier les présentes Conditions d'utilisation à tout moment. Les modifications entreront en vigueur dès leur publication sur le Site, accompagnées d'une nouvelle date de mise à jour. En continuant à utiliser le Site après ces modifications, vous acceptez les nouvelles conditions."
     },
     "s8": {
-      "title": "8. Législation applicable et juridiction compétente",
+      "title": "8. Droit applicable et juridiction compétente",
       "p1": "Les présentes Conditions d'utilisation sont régies et interprétées conformément à la législation en vigueur aux États-Unis mexicains. Pour le règlement de tout litige découlant de l'utilisation du Site, les parties se soumettent à la compétence des tribunaux compétents de Mexico, renonçant expressément à toute autre juridiction qui pourrait leur correspondre en raison de leur domicile actuel ou futur."
     },
     "s9": {
       "title": "9. Contact",
-      "p1": "Si vous avez des questions concernant les présentes Conditions d'utilisation, vous pouvez nous contacter à l'adresse suivante :"
+      "p1": "Si vous avez des questions concernant les présentes conditions d'utilisation, vous pouvez nous contacter à l'adresse suivante :"
     }
   }
 };

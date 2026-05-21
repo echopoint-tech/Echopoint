@@ -65,125 +65,125 @@ export const ES = {
     heroTitle: "Todas las herramientas que necesitas para impulsar tu empresa",
     heroDesc: "Consultoría estratégica, analítica avanzada y soluciones de IA bajo un mismo techo.",
     cta: "Agendar Consultoría",
-    s1: { 
+    s1: {
       slug: "estrategia-crecimiento",
-      title: "Estrategia de Crecimiento", 
+      title: "Estrategia de Crecimiento",
       heroTitle: "Escala tu empresa al siguiente nivel",
       longDesc: "Diseñamos hojas de ruta accionables basadas en datos duros. Identificamos oportunidades ocultas para expandir tu cuota de mercado, superar a la competencia y escalar tu rentabilidad con seguridad.",
-      i1: "Análisis competitivo y auditoría de mercado exhaustiva.", i2: "Identificación de nichos rentables y gaps de producto.", i3: "Planes de expansión con proyecciones financieras a 5 años.", i4: "Estrategias de entrada y localización.", i5: "Validación de propuesta de valor y testing A/B." 
+      i1: "Análisis competitivo y auditoría de mercado exhaustiva.", i2: "Identificación de nichos rentables y gaps de producto.", i3: "Planes de expansión con proyecciones financieras a 5 años.", i4: "Estrategias de entrada y localización.", i5: "Validación de propuesta de valor y testing A/B."
     },
-    s2: { 
+    s2: {
       slug: "desarrollo-alianzas",
-      title: "Desarrollo de Alianzas", 
+      title: "Desarrollo de Alianzas",
       heroTitle: "Construye ecosistemas de éxito",
       longDesc: "Identificamos y negociamos asociaciones estratégicas que multiplican tus capacidades y alcance comercial.",
-      i1: "Búsqueda sistemática de partners con Scoring Matrix.", i2: "Estructuración de Joint Ventures y mecanismos de exit.", i3: "Negociación de acuerdos estratégicos.", i4: "Representación comercial con KPIs mensuales." 
+      i1: "Búsqueda sistemática de partners con Scoring Matrix.", i2: "Estructuración de Joint Ventures y mecanismos de exit.", i3: "Negociación de acuerdos estratégicos.", i4: "Representación comercial con KPIs mensuales."
     },
-    s3: { 
+    s3: {
       slug: "generacion-ventas",
-      title: "Generación de Ventas", 
+      title: "Generación de Ventas",
       heroTitle: "Acelera tu pipeline comercial",
       longDesc: "Implementamos metodologías de prospección B2B de alto rendimiento para cerrar cuentas Enterprise de forma recurrente.",
-      i1: "Prospección B2B segmentada.", i2: "Scoring MQL-SQL con criterios BANT.", i3: "Apertura de cuentas Enterprise y comités con C-level.", i4: "Cierre de ventas estratégicas." 
+      i1: "Prospección B2B segmentada.", i2: "Scoring MQL-SQL con criterios BANT.", i3: "Apertura de cuentas Enterprise y comités con C-level.", i4: "Cierre de ventas estratégicas."
     },
-    s4: { 
+    s4: {
       slug: "expansion-internacional",
-      title: "Expansión Internacional", 
+      title: "Expansión Internacional",
       heroTitle: "Tu puerta a mercados globales",
       longDesc: "Reducimos el riesgo de internacionalización mediante estudios de viabilidad profunda y equipos de lanzamiento local dedicados.",
-      i1: "Estudios de viabilidad PESTEL.", i2: "Adaptación de modelo de negocio y cumplimiento local.", i3: "Due diligence de socios y distribuidores locales.", i4: "Plan de lanzamiento 90-días con equipo dedicado." 
+      i1: "Estudios de viabilidad PESTEL.", i2: "Adaptación de modelo de negocio y cumplimiento local.", i3: "Due diligence de socios y distribuidores locales.", i4: "Plan de lanzamiento 90-días con equipo dedicado."
     },
-    s5: { 
+    s5: {
       slug: "nuevos-productos",
-      title: "Nuevos Productos", 
+      title: "Nuevos Productos",
       heroTitle: "Innovación validada por el mercado",
       longDesc: "Desde el concepto hasta el lanzamiento: validamos tus ideas con metodologías ágiles para asegurar el éxito comercial.",
-      i1: "Validación con Design Thinking y MVP.", i2: "Investigación de demanda y tendencias.", i3: "Estrategia Go-To-Market y segmentación de clientes.", i4: "Pricing estratégico y captura de surplus." 
+      i1: "Validación con Design Thinking y MVP.", i2: "Investigación de demanda y tendencias.", i3: "Estrategia Go-To-Market y segmentación de clientes.", i4: "Pricing estratégico y captura de surplus."
     },
-    s6: { 
+    s6: {
       slug: "inteligencia-comercial",
-      title: "Inteligencia Comercial", 
+      title: "Inteligencia Comercial",
       heroTitle: "Decisiones basadas en certezas",
       longDesc: "Convertimos el ruido del mercado en señales claras mediante análisis predictivo y Big Data para anticipar tu competencia.",
-      i1: "Estudios de mercado trimestrales y tendencias 3-5 años.", i2: "Inteligencia de precios y alertas de competencia.", i3: "Predicciones de Big Data.", i4: "Evaluación de inversiones." 
+      i1: "Estudios de mercado trimestrales y tendencias 3-5 años.", i2: "Inteligencia de precios y alertas de competencia.", i3: "Predicciones de Big Data.", i4: "Evaluación de inversiones."
     }
   },
   pbi: {
     subtitle: "Producto Destacado",
-    title: 'Soluciones con <span class="text-accent">Power BI</span>',
+    title: 'Soluciones <span class="text-accent">BI</span>',
     desc: "Transforma la complejidad de tus datos en decisiones estratégicas claras. Centralizamos tu información en dashboards interactivos para que lideres con absoluta certeza.",
     cta: "Solicitar Demo",
     catTitle: "Soluciones",
     cat: { all: "Todas las Soluciones", direction: "Dirección", finance: "Finanzas", sales: "Ventas", ops: "Operaciones", strategy: "Estrategia", ai: "Inteligencia Artificial" },
     aiTitle: 'Inteligencia <span class="text-accent">Artificial</span>',
     aiDesc: "Implementamos soluciones de IA generativa y modelos predictivos para automatizar procesos y mejorar la toma de decisiones.",
-    p1: { 
+    p1: {
       slug: "dashboards-ejecutivos",
-      title: "Dashboards Ejecutivos", 
+      title: "Dashboards Ejecutivos",
       desc: "Control total de KPIs para la alta dirección.",
       heroTitle: "Control total desde la alta dirección",
       longDesc: "Paneles de control en tiempo real diseñados específicamente para C-Levels. Visualiza el pulso de tu empresa en un solo vistazo.",
       i1: "KPIs estratégicos unificados.", i2: "Alertas inteligentes de desviaciones.", i3: "Acceso móvil seguro 24/7.", i4: "Integración con múltiples fuentes de datos."
     },
-    p2: { 
+    p2: {
       slug: "reportes-financieros",
-      title: "Reportes Financieros", 
+      title: "Reportes Financieros",
       desc: "Visualización clara de estados financieros y caja.",
       heroTitle: "Claridad financiera absoluta",
       longDesc: "Visualización avanzada de estados financieros, flujo de caja y proyecciones automáticas para una gestión impecable.",
       i1: "P&L interactivo por unidad de negocio.", i2: "Control de presupuestos vs real.", i3: "Análisis de antigüedad de saldos.", i4: "Proyecciones de flujo de caja (Cashflow)."
     },
-    p3: { 
+    p3: {
       slug: "analisis-ventas",
-      title: "Análisis de Ventas", 
+      title: "Análisis de Ventas",
       desc: "Rendimiento comercial y embudo de ventas.",
       heroTitle: "Impulsa tu rendimiento comercial",
       longDesc: "Descubre patrones de compra, rendimiento de vendedores y rentabilidad por producto para maximizar tus ingresos.",
       i1: "Seguimiento de Pipeline en tiempo real.", i2: "Análisis de tasa de conversión.", i3: "Ranking de clientes y productos.", i4: "Análisis de tendencias estacionales."
     },
-    p4: { 
+    p4: {
       slug: "optimizacion-operaciones",
-      title: "Optimización de Operaciones", 
+      title: "Optimización de Operaciones",
       desc: "Eficiencia en procesos logísticos y productivos.",
       heroTitle: "Eficiencia operativa basada en datos",
       longDesc: "Identifica cuellos de botella y optimiza tus procesos logísticos y productivos con analítica de precisión.",
       i1: "Control de inventarios inteligentes.", i2: "Monitoreo de tiempos de entrega.", i3: "Análisis de capacidad instalada.", i4: "Reducción de costos operativos."
     },
-    p5: { 
+    p5: {
       slug: "estrategia-datos",
-      title: "Estrategia de Datos", 
+      title: "Estrategia de Datos",
       desc: "Arquitectura y gobernanza de datos empresariales.",
       heroTitle: "Cultura Data-Driven real",
       longDesc: "No solo visualizamos; estructuramos tu arquitectura de datos para que la información fluya sin fricciones.",
       i1: "Gobierno de datos y seguridad.", i2: "Limpieza y normalización de DBs.", i3: "Modelado de datos complejo.", i4: "Capacitación de equipos internos."
     },
-    p6: { 
+    p6: {
       slug: "analisis-predictivo",
-      title: "Inteligencia Artificial", 
+      title: "Inteligencia Artificial",
       desc: "Machine Learning para previsión de demanda.",
       heroTitle: "Anticipa el futuro del mercado",
       longDesc: "Implementamos algoritmos de ML que analizan datos históricos para predecir tendencias de ventas y comportamiento del consumidor.",
       i1: "Previsión de demanda estacional.", i2: "Detección temprana de churn.", i3: "Optimización de inventarios.", i4: "Modelado de escenarios 'what-if'."
     },
-    p7: { 
+    p7: {
       slug: "agentes-ia-personalizados",
-      title: "Agentes de IA Generativa", 
+      title: "Agentes de IA Generativa",
       desc: "Automatización de flujos con LLMs.",
       heroTitle: "Tu propia IA experta en tu negocio",
       longDesc: "Desarrollamos agentes inteligentes que conocen tus manuales, procesos y base de conocimientos para asistir a empleados o clientes.",
       i1: "Asistentes de soporte 24/7.", i2: "Automatización de redacción técnica.", i3: "Búsqueda inteligente en documentos.", i4: "Integración vía API con tus sistemas."
     },
-    p8: { 
+    p8: {
       slug: "vision-artificial",
-      title: "Visión Artificial", 
+      title: "Visión Artificial",
       desc: "Reconocimiento de imágenes y objetos.",
       heroTitle: "Tus sistemas, ahora con ojos",
       longDesc: "Aplicamos modelos de computer vision para control de calidad, seguridad perimetral o análisis de tráfico en espacios físicos.",
       i1: "Control de calidad automatizado.", i2: "Reconocimiento de patrones visuales.", i3: "Conteo de personas y vehículos.", i4: "Análisis de seguridad en tiempo real."
     },
-    p9: { 
+    p9: {
       slug: "procesamiento-lenguaje-natural",
-      title: "Análisis de Voz y Texto", 
+      title: "Análisis de Voz y Texto",
       desc: "Extracción de insights en conversaciones.",
       heroTitle: "Escucha lo que tus datos dicen",
       longDesc: "Analizamos miles de llamadas y mensajes para extraer sentimientos, temas recurrentes y oportunidades de venta no detectadas.",

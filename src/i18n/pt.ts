@@ -39,7 +39,7 @@ export const PT = {
       "text": "&quot;A profundidade da análise preditiva da Echopoint nos permitiu identificar um nicho de mercado no Brasil que havíamos deixado passar. O ROI no primeiro trimestre superou nossas expectativas mais otimistas.&quot;"
     },
     "r2": {
-      "date": "Há 1 mês",
+      "date": "Há um mês",
       "text": "&quot;A implementação da estratégia de expansão internacional foi um processo tranquilo. A equipe deles não apenas apresentou um plano, mas também nos acompanhou na execução operacional no dia a dia.&quot;"
     },
     "r3": {
@@ -83,7 +83,7 @@ export const PT = {
   },
   "magnet": {
     "title": "Baixe o Relatório de 2024",
-    "desc": "Baixe nosso guia exclusivo: &quot;Sinergia entre humanos e IA: o novo padrão nas vendas B2B&quot;.",
+    "desc": "Baixe nosso guia exclusivo: &quot;Sinergia entre humanos e IA: o novo padrão em vendas B2B&quot;.",
     "placeholder": "Seu e-mail corporativo",
     "btn": "Baixar agora",
     "success": "Enviado com sucesso! Verifique seu e-mail.",
@@ -95,7 +95,7 @@ export const PT = {
     "filterTitle": "Explorar categorias",
     "desc": "Plano integral de crescimento empresarial com metas mensuráveis e KPIs definidos.",
     "heroTitle": "Todas as ferramentas de que você precisa para impulsionar sua empresa",
-    "heroDesc": "Consultoria estratégica, análise avançada e soluções de IA, tudo sob o mesmo teto.",
+    "heroDesc": "Consultoria estratégica, análise avançada e soluções de IA, tudo em um só lugar.",
     "cta": "Agendar uma consulta",
     "s1": {
       "slug": "estrategia-crecimiento",
@@ -125,7 +125,7 @@ export const PT = {
       "longDesc": "Implementamos metodologias de prospecção B2B de alto desempenho para conquistar contas corporativas de forma recorrente.",
       "i1": "Prospecção B2B segmentada.",
       "i2": "Pontuação de MQL-SQL com critérios BANT.",
-      "i3": "Abertura de contas corporativas e reuniões com a alta administração.",
+      "i3": "Abertura de contas corporativas e reuniões com a alta direção.",
       "i4": "Conclusão de vendas estratégicas."
     },
     "s4": {
@@ -161,7 +161,7 @@ export const PT = {
   },
   "pbi": {
     "subtitle": "Produto em destaque",
-    "title": "Soluções com <span class=\"text-accent\">o Power BI</span>",
+    "title": "Soluções <span class=\"text-accent\">de BI</span>",
     "desc": "Transforme a complexidade dos seus dados em decisões estratégicas claras. Centralizamos suas informações em painéis interativos para que você possa liderar com total segurança.",
     "cta": "Solicitar demonstração",
     "catTitle": "Soluções",
@@ -181,7 +181,7 @@ export const PT = {
       "title": "Painéis executivos",
       "desc": "Controle total dos KPIs para a alta administração.",
       "heroTitle": "Controle total por parte da alta administração",
-      "longDesc": "Painéis de controle em tempo real projetados especificamente para executivos de alto escalão. Visualize o desempenho da sua empresa de relance.",
+      "longDesc": "Painéis de controle em tempo real projetados especificamente para executivos de alto escalão. Visualize o desempenho da sua empresa de uma só vez.",
       "i1": "KPIs estratégicos unificados.",
       "i2": "Alertas inteligentes de desvios.",
       "i3": "Acesso móvel seguro 24 horas por dia, 7 dias por semana.",
@@ -194,7 +194,7 @@ export const PT = {
       "heroTitle": "Transparência financeira total",
       "longDesc": "Visualização avançada de demonstrações financeiras, fluxo de caixa e projeções automáticas para uma gestão impecável.",
       "i1": "Demonstração de resultados interativa por unidade de negócios.",
-      "i2": "Controle do orçamento versus resultados reais.",
+      "i2": "Controle do orçamento versus valores reais.",
       "i3": "Análise da antiguidade dos saldos.",
       "i4": "Projeções de fluxo de caixa."
     },
@@ -247,7 +247,7 @@ export const PT = {
       "title": "Agentes de IA generativa",
       "desc": "Automação de fluxos com LLMs.",
       "heroTitle": "Sua própria IA especializada no seu negócio",
-      "longDesc": "Desenvolvemos agentes inteligentes que conhecem seus manuais, processos e base de conhecimento para ajudar funcionários ou clientes.",
+      "longDesc": "Desenvolvemos agentes inteligentes que conhecem seus manuais, processos e base de conhecimento para prestar assistência a funcionários ou clientes.",
       "i1": "Assistentes de suporte 24 horas por dia, 7 dias por semana.",
       "i2": "Automação da redação técnica.",
       "i3": "Pesquisa inteligente em documentos.",
@@ -255,7 +255,7 @@ export const PT = {
     },
     "p8": {
       "slug": "vision-artificial",
-      "title": "Visão Artificial",
+      "title": "Visão computacional",
       "desc": "Reconhecimento de imagens e objetos.",
       "heroTitle": "Seus sistemas, agora com olhos",
       "longDesc": "Aplicamos modelos de visão computacional para controle de qualidade, segurança perimetral ou análise de tráfego em espaços físicos.",
@@ -280,7 +280,7 @@ export const PT = {
       "formTitle": "Comece hoje mesmo",
       "formDesc": "Deixe seus dados para agendar uma sessão estratégica sobre",
       "whyTitle": "Por que escolher o Echopoint AI?",
-      "whyDesc": "Combinamos nossa experiência em consultoria tradicional com o poder da Inteligência Artificial para entregar resultados que se refletem em sua demonstração de resultados.",
+      "whyDesc": "Combinamos nossa experiência em consultoria tradicional com o poder da Inteligência Artificial para oferecer resultados que se refletem em sua demonstração de resultados.",
       "card1Title": "Implementação Ágil",
       "card1Desc": "Não perdemos tempo com teorias. Vamos direto à ação com planos de 90 dias.",
       "card2Title": "Tecnologia de ponta",
@@ -291,7 +291,7 @@ export const PT = {
   },
   "about": {
     "headerTitle": "Sobre a Echopoint AI",
-    "headerDesc": "Impulsionando o futuro empresarial por meio da sinergia entre o ser humano e o digital.",
+    "headerDesc": "Impulsionando o futuro empresarial por meio da sinergia entre o ser humano e o mundo digital.",
     "whoTitle": "Quem somos",
     "whoDesc": "Somos arquitetos da transformação empresarial. A Echopoint AI nasceu da convicção de que o verdadeiro crescimento surge da fusão entre a intuição humana especializada e a precisão analítica da inteligência artificial. Não somos apenas consultores; somos seus parceiros nessa jornada rumo ao futuro.",
     "whatTitle": "O que fazemos",
@@ -309,7 +309,7 @@ export const PT = {
   "contact": {
     "subtitle": "Conexão direta",
     "title": "Começa a transformação",
-    "desc": "Vamos conversar sobre como nossa inteligência estratégica pode ajudar você a alcançar seus objetivos mais rapidamente.",
+    "desc": "Vamos conversar sobre como nossa inteligência estratégica pode ajudar a acelerar o alcance dos seus objetivos.",
     "infoTitle": "Informações de contato",
     "infoDesc": "Estamos prontos para ouvir os seus desafios e traçar o caminho para o sucesso da sua empresa.",
     "email": "E-mail",
@@ -375,11 +375,11 @@ export const PT = {
     },
     "s8": {
       "title": "8. Alterações a esta Declaração de Privacidade",
-      "p1": "Reservamo-nos o direito de atualizar esta Declaração de Privacidade a qualquer momento. As alterações serão publicadas nesta página com uma nova data de atualização. Recomendamos que você a consulte periodicamente."
+      "p1": "Reservamo-nos o direito de atualizar esta Política de Privacidade a qualquer momento. As alterações serão publicadas nesta página com uma nova data de atualização. Recomendamos que você a consulte periodicamente."
     },
     "s9": {
       "title": "9. Legislação aplicável",
-      "p1": "Esta Declaração de Privacidade é regida pela Lei Federal de Proteção de Dados Pessoais em Posse de Particulares (LFPDPPP) e pela demais legislação aplicável nos Estados Unidos Mexicanos. Para usuários localizados no Espaço Econômico Europeu, aplicamos os princípios do Regulamento Geral de Proteção de Dados (RGPD/GDPR) na medida do aplicável."
+      "p1": "Esta Declaração de Privacidade rege-se pela Lei Federal de Proteção de Dados Pessoais em Posse de Particulares (LFPDPPP) e pela demais legislação aplicável nos Estados Unidos Mexicanos. Para usuários localizados no Espaço Econômico Europeu, aplicamos os princípios do Regulamento Geral de Proteção de Dados (RGPD/GDPR) na medida do aplicável."
     }
   },
   "terms": {
@@ -417,7 +417,7 @@ export const PT = {
       "p3": "A EchoPoint não se responsabiliza pelo conteúdo de sites de terceiros que possam estar vinculados a partir do Site."
     },
     "s6": {
-      "title": "6. Disponibilidade do Site",
+      "title": "6. Disponibilidade do site",
       "p1": "A EchoPoint se empenha em manter o Site disponível de forma contínua, mas não garante uma disponibilidade ininterrupta. O Site pode ficar temporariamente fora do ar devido a manutenção, atualizações ou motivos alheios ao nosso controle."
     },
     "s7": {
@@ -426,7 +426,7 @@ export const PT = {
     },
     "s8": {
       "title": "8. Legislação aplicável e jurisdição",
-      "p1": "Estes Termos de Serviço são regidos e interpretados de acordo com as leis vigentes nos Estados Unidos Mexicanos. Para a resolução de qualquer controvérsia decorrente do uso do Site, as partes submetem-se à jurisdição dos tribunais competentes da Cidade do México, renunciando expressamente a qualquer outro foro que lhes possa corresponder em razão de seu domicílio atual ou futuro."
+      "p1": "Estes Termos de Serviço são regidos e interpretados de acordo com as leis vigentes nos Estados Unidos Mexicanos. Para a resolução de qualquer controvérsia decorrente do uso do Site, as partes se submetem à jurisdição dos tribunais competentes da Cidade do México, renunciando expressamente a qualquer outro foro que lhes possa corresponder em razão de seu domicílio atual ou futuro."
     },
     "s9": {
       "title": "9. Contato",
