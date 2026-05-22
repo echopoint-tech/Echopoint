@@ -113,7 +113,7 @@ export default async function LangLayout({
   };
 
   return (
-    <html lang={lang.toLowerCase()} className={fontClassNames}>
+    <html lang={lang.toLowerCase()} className={fontClassNames} data-scroll-behavior="smooth">
       <head>
         <link
           rel="preload"

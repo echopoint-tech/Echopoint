@@ -58,6 +58,7 @@ const nextConfig: NextConfig = {
   devIndicators: false,
   images: {
     unoptimized: true, // Requerido para Cloudflare Pages
+    qualities: [75, 90],
     remotePatterns: [
       {
         protocol: "https",

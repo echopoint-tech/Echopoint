@@ -5,9 +5,9 @@ import { getInternalPath } from './i18n/routing';
 const locales = ['es', 'en', 'fr', 'pt'];
 const defaultLocale = 'es';
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
-  
+
   // Skip public files, API, and images
   if (
     pathname.startsWith('/_next') ||
@@ -26,17 +26,17 @@ export function middleware(request: NextRequest) {
   if (pathnameHasLocale) {
     const locale = pathname.split('/')[1];
     const restOfPath = pathname.substring(locale.length + 1);
-    
+
     // Map translated URL (e.g. /en/services) to internal path (e.g. /en/servicios)
     const internalPath = getInternalPath(locale, restOfPath);
-    
+
     // If the path was translated, rewrite it so Next.js loads the correct folder internally
     if (internalPath !== restOfPath && internalPath !== `/${restOfPath}`) {
       const rewrittenUrl = request.nextUrl.clone();
       rewrittenUrl.pathname = `/${locale}${internalPath}`;
       return NextResponse.rewrite(rewrittenUrl);
     }
-    
+
     return NextResponse.next();
   }
 
