@@ -40,8 +40,13 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       description: dictionary.metadata.description,
     },
     icons: {
-      icon: "/favicon.ico",
+      icon: [
+        { url: "/favicon.ico", sizes: "16x16 32x32 48x48" },
+        { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
+        { url: "/icon-512.png", type: "image/png", sizes: "512x512" },
+      ],
       shortcut: "/favicon.ico",
+      apple: "/icon-192.png",
     },
     robots: {
       index: true,
