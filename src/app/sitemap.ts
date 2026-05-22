@@ -31,6 +31,7 @@ function buildAlternates(baseUrl: string, internalPath: string): Record<string, 
   for (const locale of locales) {
     langs[localeHreflang[locale]] = `${baseUrl}${getLocalizedPath(locale, internalPath)}`;
   }
+  langs['x-default'] = `${baseUrl}${getLocalizedPath('es', internalPath)}`;
   return langs;
 }
 

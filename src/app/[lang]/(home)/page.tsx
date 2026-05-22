@@ -1,9 +1,10 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AnimationObserver from "@/components/AnimationObserver";
 import NeuralCanvas from "@/components/NeuralCanvas/NeuralCanvasLoader";
 import { getDictionary } from "@/i18n/dictionaries";
-import { getLocalizedPath } from "@/i18n/routing";
+import { getLocalizedPath, buildPageAlternates } from "@/i18n/routing";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -24,6 +25,17 @@ import AutoCarousel from "@/components/AutoCarousel/AutoCarousel";
 
 import { createTranslator } from "@/lib/translator";
 import styles from "./Home.module.css";
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params;
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://echopoint-intsolutions.com';
+  return {
+    alternates: {
+      canonical: `${baseUrl}${getLocalizedPath(lang, '/')}`,
+      languages: buildPageAlternates(baseUrl, '/'),
+    },
+  };
+}
 
 export default async function Home({
   params,

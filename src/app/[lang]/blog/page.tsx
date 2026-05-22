@@ -21,12 +21,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${t("insights.title")} - Echopoint AI`,
     description: t("insights.pageDesc"),
     alternates: {
-      canonical: `${baseUrl}/${lang}/blog`,
+      canonical: `${baseUrl}/${lang}/blog/`,
       languages: {
-        'es-MX': `${baseUrl}/es/blog`,
-        'en-US': `${baseUrl}/en/blog`,
-        'fr-FR': `${baseUrl}/fr/blog`,
-        'pt-BR': `${baseUrl}/pt/blog`,
+        'es-MX': `${baseUrl}/es/blog/`,
+        'en-US': `${baseUrl}/en/blog/`,
+        'fr-FR': `${baseUrl}/fr/blog/`,
+        'pt-BR': `${baseUrl}/pt/blog/`,
+        'x-default': `${baseUrl}/es/blog/`,
       },
     },
   };

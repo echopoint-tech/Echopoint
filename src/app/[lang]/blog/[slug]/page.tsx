@@ -49,12 +49,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${post.title} - Echopoint AI`,
     description: post.excerpt,
     alternates: {
-      canonical: `${baseUrl}/${lang}/blog/${slug}`,
+      canonical: `${baseUrl}/${lang}/blog/${slug}/`,
       languages: {
-        'es-MX': `${baseUrl}/es/blog/${slug}`,
-        'en-US': `${baseUrl}/en/blog/${slug}`,
-        'fr-FR': `${baseUrl}/fr/blog/${slug}`,
-        'pt-BR': `${baseUrl}/pt/blog/${slug}`,
+        'es-MX': `${baseUrl}/es/blog/${slug}/`,
+        'en-US': `${baseUrl}/en/blog/${slug}/`,
+        'fr-FR': `${baseUrl}/fr/blog/${slug}/`,
+        'pt-BR': `${baseUrl}/pt/blog/${slug}/`,
+        'x-default': `${baseUrl}/es/blog/${slug}/`,
       },
     },
     openGraph: {

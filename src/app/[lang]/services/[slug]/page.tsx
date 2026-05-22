@@ -1,5 +1,7 @@
+import type { Metadata } from "next";
 import ServiceDetailView from "@/components/Views/ServiceDetailView";
 import { dictionaries } from "@/i18n/dictionaries";
+import { getLocalizedPath, buildPageAlternates } from "@/i18n/routing";
 
 export async function generateStaticParams() {
   const langs = ["en", "fr"] as const;
@@ -18,6 +20,18 @@ export async function generateStaticParams() {
   });
 
   return params;
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: string; slug: string }> }): Promise<Metadata> {
+  const { lang, slug } = await params;
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://echopoint-intsolutions.com';
+  const internalPath = `/servicios/${slug}`;
+  return {
+    alternates: {
+      canonical: `${baseUrl}${getLocalizedPath(lang, internalPath)}`,
+      languages: buildPageAlternates(baseUrl, internalPath),
+    },
+  };
 }
 
 export default async function Page({ params }: { params: Promise<{ lang: string; slug: string }> }) {

@@ -26,28 +26,48 @@ export const pathTranslationMap: Record<string, Record<string, string>> = {
   },
 };
 
+const HREFLANG_MAP: Record<string, string> = {
+  es: 'es-MX',
+  en: 'en-US',
+  fr: 'fr-FR',
+  pt: 'pt-BR',
+};
+
 // Reverse map to get the translated URL from an internal path
 export const getLocalizedPath = (locale: string, internalPath: string): string => {
   const lang = locale.toLowerCase();
-  if (!pathTranslationMap[lang]) return `/${lang}${internalPath}`;
+  if (!pathTranslationMap[lang]) return `/${lang}${internalPath}/`;
 
   // internalPath typically looks like "/servicios" or "/servicios/slug"
   const parts = internalPath.split("/").filter(Boolean);
-  if (parts.length === 0) return `/${lang}`;
+  if (parts.length === 0) return `/${lang}/`;
 
   const rootFolder = parts[0];
-  
+
   // Find the translated folder name by looking up the value in the map
   const entries = Object.entries(pathTranslationMap[lang]);
   const matchedEntry = entries.find(([_, internal]) => internal === rootFolder);
-  
+
   if (matchedEntry) {
     const translatedRoot = matchedEntry[0];
     parts[0] = translatedRoot;
-    return `/${lang}/${parts.join("/")}`;
+    return `/${lang}/${parts.join("/")}/`;
   }
 
-  return `/${lang}${internalPath}`;
+  return `/${lang}${internalPath}/`;
+};
+
+// Build hreflang alternates for generateMetadata, given an internal path like "/servicios"
+export const buildPageAlternates = (
+  baseUrl: string,
+  internalPath: string,
+): Record<string, string> => {
+  const result: Record<string, string> = {};
+  for (const locale of Object.keys(pathTranslationMap)) {
+    result[HREFLANG_MAP[locale]] = `${baseUrl}${getLocalizedPath(locale, internalPath)}`;
+  }
+  result['x-default'] = `${baseUrl}${getLocalizedPath('es', internalPath)}`;
+  return result;
 };
 
 export const getInternalPath = (locale: string, externalPath: string): string => {
