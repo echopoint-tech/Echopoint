@@ -62,7 +62,7 @@ export const PT = {
     "readArticle": "Ler artigo",
     "filterAll": "Todos",
     "nextArticle": "Próximo artigo",
-    "comingSoon": "O artigo completo estará disponível em breve...",
+    "comingSoon": "O artigo completo será publicado em breve...",
     "authorBio": "Estrategista sênior de B2B com mais de 15 anos de experiência liderando transformações digitais e expansões de mercado.",
     "categories": {
       "estrategia": "Estratégia",
@@ -83,7 +83,7 @@ export const PT = {
   },
   "magnet": {
     "title": "Baixe o Relatório de 2024",
-    "desc": "Baixe nosso guia exclusivo: &quot;Sinergia entre humanos e IA: o novo padrão em vendas B2B&quot;.",
+    "desc": "Baixe nosso guia exclusivo: &quot;Sinergia entre humanos e IA: o novo padrão nas vendas B2B&quot;.",
     "placeholder": "Seu e-mail corporativo",
     "btn": "Baixar agora",
     "success": "Enviado com sucesso! Verifique seu e-mail.",
@@ -110,7 +110,7 @@ export const PT = {
     },
     "s2": {
       "slug": "desarrollo-alianzas",
-      "title": "Desenvolvimento de Parcerias",
+      "title": "Desenvolvimento de parcerias",
       "heroTitle": "Crie ecossistemas de sucesso",
       "longDesc": "Identificamos e negociamos parcerias estratégicas que ampliam suas capacidades e seu alcance comercial.",
       "i1": "Busca sistemática de parceiros com a Scoring Matrix.",
@@ -178,10 +178,10 @@ export const PT = {
     "aiDesc": "Implementamos soluções de IA generativa e modelos preditivos para automatizar processos e melhorar a tomada de decisões.",
     "p1": {
       "slug": "dashboards-ejecutivos",
-      "title": "Painéis executivos",
+      "title": "Painéis Executivos",
       "desc": "Controle total dos KPIs para a alta administração.",
       "heroTitle": "Controle total por parte da alta administração",
-      "longDesc": "Painéis de controle em tempo real projetados especificamente para executivos de alto escalão. Visualize o desempenho da sua empresa de uma só vez.",
+      "longDesc": "Painéis de controle em tempo real projetados especificamente para executivos de alto escalão. Visualize o desempenho da sua empresa de relance.",
       "i1": "KPIs estratégicos unificados.",
       "i2": "Alertas inteligentes de desvios.",
       "i3": "Acesso móvel seguro 24 horas por dia, 7 dias por semana.",
@@ -247,7 +247,7 @@ export const PT = {
       "title": "Agentes de IA generativa",
       "desc": "Automação de fluxos com LLMs.",
       "heroTitle": "Sua própria IA especializada no seu negócio",
-      "longDesc": "Desenvolvemos agentes inteligentes que conhecem seus manuais, processos e base de conhecimento para prestar assistência a funcionários ou clientes.",
+      "longDesc": "Desenvolvemos agentes inteligentes que conhecem seus manuais, processos e base de conhecimento para ajudar funcionários ou clientes.",
       "i1": "Assistentes de suporte 24 horas por dia, 7 dias por semana.",
       "i2": "Automação da redação técnica.",
       "i3": "Pesquisa inteligente em documentos.",
@@ -255,7 +255,7 @@ export const PT = {
     },
     "p8": {
       "slug": "vision-artificial",
-      "title": "Visão computacional",
+      "title": "Visão Artificial",
       "desc": "Reconhecimento de imagens e objetos.",
       "heroTitle": "Seus sistemas, agora com olhos",
       "longDesc": "Aplicamos modelos de visão computacional para controle de qualidade, segurança perimetral ou análise de tráfego em espaços físicos.",
@@ -273,7 +273,7 @@ export const PT = {
       "i1": "Análise de sentimentos dos clientes.",
       "i2": "Transcrição e resumo automático.",
       "i3": "Detecção de intenções de compra.",
-      "i4": "Painel de reputação da marca."
+      "i4": "Painel de controle de reputação da marca."
     },
     "common": {
       "featuresTitle": "O que inclui:",
@@ -286,14 +286,14 @@ export const PT = {
       "card2Title": "Tecnologia de ponta",
       "card2Desc": "Utilizamos as mais recentes ferramentas de IA e Big Data para lhe proporcionar uma vantagem competitiva.",
       "card3Title": "Segurança e confiança",
-      "card3Desc": "Seus dados estão seguros conosco. Cumprimos os mais altos padrões de privacidade."
+      "card3Desc": "Seus dados estão seguros conosco. Cumprimos os mais elevados padrões de privacidade."
     }
   },
   "about": {
     "headerTitle": "Sobre a Echopoint AI",
     "headerDesc": "Impulsionando o futuro empresarial por meio da sinergia entre o ser humano e o mundo digital.",
     "whoTitle": "Quem somos",
-    "whoDesc": "Somos arquitetos da transformação empresarial. A Echopoint AI nasceu da convicção de que o verdadeiro crescimento surge da fusão entre a intuição humana especializada e a precisão analítica da inteligência artificial. Não somos apenas consultores; somos seus parceiros nessa jornada rumo ao futuro.",
+    "whoDesc": "Somos arquitetos da transformação empresarial. A Echopoint AI surgiu da convicção de que o verdadeiro crescimento resulta da fusão entre a intuição humana especializada e a precisão analítica da inteligência artificial. Não somos apenas consultores; somos seus parceiros nessa jornada rumo ao futuro.",
     "whatTitle": "O que fazemos",
     "whatDesc": "Desbloqueamos o potencial oculto da sua organização. Por meio de um diagnóstico aprofundado e de ferramentas preditivas, elaboramos planos de ação personalizados que otimizam as operações, abrem novos mercados e garantem uma rentabilidade escalável em um ambiente competitivo.",
     "essSub": "Nossa Essência",
@@ -338,7 +338,7 @@ export const PT = {
       "l2": "E-mail corporativo",
       "l3": "Assunto e mensagem de contato",
       "l4": "Endereço IP (detectado automaticamente, para fins de segurança e prevenção de spam)",
-      "after1": "Para baixar os materiais, solicitamos apenas seu endereço de e-mail.",
+      "after1": "Para o download de materiais, solicitamos apenas seu endereço de e-mail.",
       "after2": "Não coletamos dados pessoais sensíveis, nos termos da Lei Federal de Proteção de Dados Pessoais em Posse de Particulares (LFPDPPP)."
     },
     "s3": {
@@ -379,14 +379,14 @@ export const PT = {
     },
     "s9": {
       "title": "9. Legislação aplicável",
-      "p1": "Esta Declaração de Privacidade rege-se pela Lei Federal de Proteção de Dados Pessoais em Posse de Particulares (LFPDPPP) e pela demais legislação aplicável nos Estados Unidos Mexicanos. Para usuários localizados no Espaço Econômico Europeu, aplicamos os princípios do Regulamento Geral de Proteção de Dados (RGPD/GDPR) na medida do aplicável."
+      "p1": "Esta Declaração de Privacidade rege-se pela Lei Federal de Proteção de Dados Pessoais em Posse de Particulares (LFPDPPP) e pela demais legislação aplicável nos Estados Unidos Mexicanos. Para usuários localizados no Espaço Econômico Europeu, aplicamos os princípios do Regulamento Geral sobre a Proteção de Dados (RGPD/GDPR) na medida do aplicável."
     }
   },
   "terms": {
     "lastUpdated": "11 de maio de 2026",
     "s1": {
       "title": "1. Aceitação dos termos",
-      "p1": "Ao acessar e utilizar o site echopointmx.com (o “Site”), você concorda em se comprometer com estes Termos de Serviço. Caso não concorde com algum destes termos, pedimos que não utilize o Site.",
+      "p1": "Ao acessar e utilizar o site echopointmx.com (o “Site”), você concorda em se comprometer com os presentes Termos de Serviço. Caso não concorde com algum destes termos, pedimos que não utilize o Site.",
       "p2": "Estes termos se aplicam a todos os visitantes e usuários do Site."
     },
     "s2": {
@@ -413,7 +413,7 @@ export const PT = {
     "s5": {
       "title": "5. Limitação de responsabilidade",
       "p1": "O conteúdo deste site é fornecido para fins informativos gerais. A EchoPoint não garante a exatidão, integridade ou atualidade das informações publicadas e se reserva o direito de alterá-las sem aviso prévio.",
-      "p2": "Na medida máxima permitida pela legislação aplicável, a EchoPoint não se responsabiliza por danos diretos, indiretos, incidentais ou consequentes decorrentes do uso ou da impossibilidade de usar o Site, incluindo perda de dados ou de oportunidades de negócios.",
+      "p2": "Na medida máxima permitida pela legislação aplicável, a EchoPoint não se responsabiliza por danos diretos, indiretos, incidentais ou consequentes decorrentes do uso ou da impossibilidade de uso do Site, incluindo perda de dados ou de oportunidades de negócios.",
       "p3": "A EchoPoint não se responsabiliza pelo conteúdo de sites de terceiros que possam estar vinculados a partir do Site."
     },
     "s6": {

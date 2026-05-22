@@ -122,7 +122,7 @@ export const EN = {
       "slug": "generacion-ventas",
       "title": "Sales Generation",
       "heroTitle": "Speed up your sales pipeline",
-      "longDesc": "We implement high-performance B2B prospecting methodologies to secure recurring business with enterprise clients.",
+      "longDesc": "We implement high-performance B2B prospecting methodologies to secure recurring enterprise accounts.",
       "i1": "Targeted B2B prospecting.",
       "i2": "Scoring MQLs and SQLs using BANT criteria.",
       "i3": "Opening Enterprise accounts and engaging with C-level executives.",
@@ -179,7 +179,7 @@ export const EN = {
     "p1": {
       "slug": "dashboards-ejecutivos",
       "title": "Executive Dashboards",
-      "desc": "Comprehensive KPI oversight for senior management.",
+      "desc": "Comprehensive KPI monitoring for senior management.",
       "heroTitle": "Full control from senior management",
       "longDesc": "Real-time dashboards designed specifically for C-level executives. See how your company is performing at a glance.",
       "i1": "Unified strategic KPIs.",
@@ -282,7 +282,7 @@ export const EN = {
       "whyTitle": "Why choose Echopoint AI?",
       "whyDesc": "We combine our expertise in traditional consulting with the power of artificial intelligence to deliver results that are reflected in your bottom line.",
       "card1Title": "Agile Implementation",
-      "card1Desc": "We don't waste time on theories. We get straight to action with 90-day plans.",
+      "card1Desc": "We don't waste time on theories. We get straight to work with 90-day plans.",
       "card2Title": "Cutting-Edge Technology",
       "card2Desc": "We use the latest AI and big data tools to give you a competitive edge.",
       "card3Title": "Safety and Trust",
@@ -322,7 +322,7 @@ export const EN = {
     "title": "Echopoint AI - Strategic Business Consulting",
     "description": "Echopoint combines human intuition with the power of AI to deliver transformative B2B strategies. Business consulting, predictive analytics, and international expansion.",
     "siteName": "Echopoint AI",
-    "orgDescription": "Strategic business consulting that combines artificial intelligence and human creativity to develop transformative B2B strategies."
+    "orgDescription": "Strategic business consulting that combines artificial intelligence and human creativity to deliver transformative B2B strategies."
   },
   "privacy": {
     "lastUpdated": "May 11, 2026",
@@ -375,7 +375,7 @@ export const EN = {
     },
     "s8": {
       "title": "8. Changes to this Privacy Notice",
-      "p1": "We reserve the right to update this Privacy Notice at any time. Any changes will be posted on this page with a new update date. We recommend that you review it periodically."
+      "p1": "We reserve the right to update this Privacy Notice at any time. Any changes will be posted on this page along with a new update date. We recommend that you review it periodically."
     },
     "s9": {
       "title": "9. Applicable Law",
@@ -386,7 +386,7 @@ export const EN = {
     "lastUpdated": "May 11, 2026",
     "s1": {
       "title": "1. Acceptance of the Terms",
-      "p1": "By accessing and using the echopointmx.com website (the &quot;Site&quot;), you agree to be bound by these Terms of Service. If you do not agree to any of these terms, please do not use the Site.",
+      "p1": "By accessing and using the echopointmx.com website (the &quot;Site&quot;), you agree to be bound by these Terms of Service. If you do not agree with any of these terms, please do not use the Site.",
       "p2": "These terms apply to all visitors and users of the Site."
     },
     "s2": {
@@ -400,7 +400,7 @@ export const EN = {
       "l1": "Use the Site only for lawful and legitimate purposes",
       "l2": "Provide accurate and complete information on the contact forms",
       "l3": "Do not attempt to access unauthorized systems, networks, or data",
-      "l4": "Do not submit offensive, fraudulent, or malicious content via the forms",
+      "l4": "Do not submit offensive, fraudulent, or malicious content through the forms",
       "l5": "Do not use automated tools (bots, scrapers) to extract content from the Site",
       "l6": "Do not attempt to interfere with the normal operation of the Site through denial-of-service attacks or other similar techniques"
     },
@@ -425,12 +425,12 @@ export const EN = {
       "p1": "EchoPoint reserves the right to modify these Terms of Service at any time. Any modifications will take effect upon their publication on the Site with a new update date. Your continued use of the Site following such changes constitutes your acceptance of the new terms."
     },
     "s8": {
-      "title": "8. Applicable Law and Jurisdiction",
+      "title": "8. Governing Law and Jurisdiction",
       "p1": "These Terms of Service are governed by and construed in accordance with the laws in force in the United Mexican States. For the resolution of any dispute arising from the use of the Site, the parties submit to the jurisdiction of the competent courts of Mexico City, expressly waiving any other jurisdiction to which they might be entitled by reason of their present or future domicile."
     },
     "s9": {
       "title": "9. Contact",
-      "p1": "If you have any questions about these Terms of Service, please contact us at:"
+      "p1": "If you have any questions about these Terms of Service, you can contact us at:"
     }
   }
 };

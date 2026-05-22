@@ -12,19 +12,7 @@ import {
   Layers, 
   PieChart, 
   Bot, 
-  Briefcase, 
-  Gauge, 
-  Coins, 
-  ShoppingCart, 
-  Settings, 
-  TrendingUp, 
-  LineChart, 
-  Handshake, 
-  Target, 
-  Globe, 
-  Lightbulb, 
-  Brain,
-  ChevronRight
+  Briefcase
 } from "lucide-react";
 import { 
   MotionReveal, 
@@ -32,6 +20,149 @@ import {
   MotionStaggerItem 
 } from "@/components/common/MotionReveal";
 import styles from "./ServiciosView.module.css";
+import ServiceCard, { type ServiceItem } from "./ServiceCard";
+
+const statsTranslations: Record<string, Record<string, string>> = {
+  ES: {
+    "Tiempo ahorrado": "Tiempo ahorrado",
+    "Time-to-value": "Time-to-value",
+    "Precisión": "Precisión",
+    "Implementación": "Implementación",
+    "ROI 18m": "ROI 18m",
+    "Setup": "Setup",
+    "Reducción costo": "Reducción costo",
+    "Despliegue": "Despliegue",
+    "Plan completo": "Plan completo",
+    "Equipo Echo": "Equipo Echo",
+    "Mejora forecast": "Mejora forecast",
+    "Producción": "Producción",
+    "Tareas auto.": "Tareas auto.",
+    "MVP": "MVP",
+    "Llamadas": "Llamadas",
+    "Horizon": "Horizonte",
+    "Entrega": "Entrega",
+    "Partners /trim": "Socios /trim",
+    "Activación": "Activación",
+    "Pipeline": "Pipeline",
+    "Arranque": "Arranque",
+    "Mercados/yr": "Mercados/año",
+    "Plan": "Plan",
+    "Idea→MVP": "Idea→MVP",
+    "Survival": "Supervivencia",
+    "Cadencia": "Cadencia",
+    "Cobertura": "Cobertura",
+    "sem": "sem",
+    "yr": "a",
+    "/y": "/a",
+    "sectores": "sectores"
+  },
+  EN: {
+    "Tiempo ahorrado": "Time saved",
+    "Time-to-value": "Time-to-value",
+    "Precisión": "Accuracy",
+    "Implementación": "Implementation",
+    "ROI 18m": "18m ROI",
+    "Setup": "Setup",
+    "Reducción costo": "Cost reduction",
+    "Despliegue": "Deployment",
+    "Plan completo": "Full plan",
+    "Equipo Echo": "Echo team",
+    "Mejora forecast": "Forecast improvement",
+    "Producción": "Production",
+    "Tareas auto.": "Auto tasks",
+    "MVP": "MVP",
+    "Llamadas": "Calls",
+    "Horizon": "Horizon",
+    "Entrega": "Delivery",
+    "Partners /trim": "Partners /qtr",
+    "Activación": "Activation",
+    "Pipeline": "Pipeline",
+    "Arranque": "Start-up",
+    "Mercados/yr": "Markets/yr",
+    "Plan": "Plan",
+    "Idea→MVP": "Idea→MVP",
+    "Survival": "Survival",
+    "Cadencia": "Cadence",
+    "Cobertura": "Coverage",
+    "sem": "wks",
+    "yr": "yr",
+    "/y": "/yr",
+    "sectores": "sectors"
+  },
+  FR: {
+    "Tiempo ahorrado": "Temps gagné",
+    "Time-to-value": "Time-to-value",
+    "Precisión": "Précision",
+    "Implementación": "Implémentation",
+    "ROI 18m": "ROI 18m",
+    "Setup": "Configuration",
+    "Reducción costo": "Réduction coût",
+    "Despliegue": "Déploiement",
+    "Plan completo": "Plan complet",
+    "Equipo Echo": "Équipe Echo",
+    "Mejora forecast": "Amélioration prévision",
+    "Producción": "Production",
+    "Tareas auto.": "Tâches auto.",
+    "MVP": "MVP",
+    "Llamadas": "Appels",
+    "Horizon": "Horizon",
+    "Entrega": "Livraison",
+    "Partners /trim": "Partenaires /trim",
+    "Activación": "Activation",
+    "Pipeline": "Pipeline",
+    "Arranque": "Démarrage",
+    "Mercados/yr": "Marchés/an",
+    "Plan": "Plan",
+    "Idea→MVP": "Idée→MVP",
+    "Survival": "Survie",
+    "Cadencia": "Cadence",
+    "Cobertura": "Couverture",
+    "sem": "sem",
+    "yr": "an",
+    "/y": "/an",
+    "sectores": "secteurs"
+  },
+  PT: {
+    "Tiempo ahorrado": "Tempo economizado",
+    "Time-to-value": "Time-to-value",
+    "Precisión": "Precisão",
+    "Implementación": "Implementação",
+    "ROI 18m": "ROI 18m",
+    "Setup": "Setup",
+    "Reducción de costo": "Redução de custo",
+    "Despliegue": "Implantação",
+    "Plan completo": "Plano completo",
+    "Equipo Echo": "Equipe Echo",
+    "Mejora forecast": "Melhoria forecast",
+    "Producción": "Produção",
+    "Tareas auto.": "Tarefas auto.",
+    "MVP": "MVP",
+    "Llamadas": "Chamadas",
+    "Horizon": "Horizonte",
+    "Entrega": "Entrega",
+    "Partners /trim": "Parceiros /trim",
+    "Activación": "Ativação",
+    "Pipeline": "Pipeline",
+    "Arranque": "Inicialização",
+    "Mercados/yr": "Mercados/ano",
+    "Plan": "Plano",
+    "Idea→MVP": "Ideia→MVP",
+    "Survival": "Sobrevivência",
+    "Cadencia": "Cadência",
+    "Cobertura": "Cobertura",
+    "sem": "sem",
+    "yr": "ano",
+    "/y": "/ano",
+    "sectores": "setores"
+  }
+};
+
+const detailsTranslation: Record<string, string> = {
+  ES: "Detalles",
+  EN: "Details",
+  FR: "Détails",
+  PT: "Detalhes"
+};
 
 type CategoryFilter = "all" | "pbi" | "consulting" | "ai";
 
@@ -51,6 +182,254 @@ function ServiciosContent() {
   const showConsulting = activeFilter === "all" || activeFilter === "consulting";
   const showAi = activeFilter === "all" || activeFilter === "ai";
 
+  const pbiItems: ServiceItem[] = [
+    {
+      id: "bi-1",
+      cat: "bi",
+      viz: "bi",
+      badge: `BI · 01`,
+      title: t('pbi.p1.title'),
+      desc: t('pbi.p1.desc'),
+      stats: [
+        { v: "40", u: "%", k: statsTranslations[lang]?.["Tiempo ahorrado"] || "Tiempo ahorrado" },
+        { v: "4", u: statsTranslations[lang]?.["sem"] || "sem", k: statsTranslations[lang]?.["Time-to-value"] || "Time-to-value" }
+      ],
+      primaryCta: t('pbi.cta'),
+      secondaryCta: detailsTranslation[lang] || "Detalles",
+      primaryCtaUrl: getLocalizedPath(lang, '/contacto'),
+      secondaryCtaUrl: getLocalizedPath(lang, `/servicios/${t('pbi.p1.slug')}`)
+    },
+    {
+      id: "bi-2",
+      cat: "bi",
+      viz: "bi",
+      badge: `BI · 02`,
+      title: t('pbi.p2.title'),
+      desc: t('pbi.p2.desc'),
+      stats: [
+        { v: "99.9", u: "%", k: statsTranslations[lang]?.["Precisión"] || "Precisión" },
+        { v: "6", u: statsTranslations[lang]?.["sem"] || "sem", k: statsTranslations[lang]?.["Implementación"] || "Implementación" }
+      ],
+      primaryCta: t('pbi.cta'),
+      secondaryCta: detailsTranslation[lang] || "Detalles",
+      primaryCtaUrl: getLocalizedPath(lang, '/contacto'),
+      secondaryCtaUrl: getLocalizedPath(lang, `/servicios/${t('pbi.p2.slug')}`)
+    },
+    {
+      id: "bi-3",
+      cat: "bi",
+      viz: "sales",
+      badge: `BI · 03`,
+      title: t('pbi.p3.title'),
+      desc: t('pbi.p3.desc'),
+      stats: [
+        { v: "3.2", u: "×", k: statsTranslations[lang]?.["ROI 18m"] || "ROI 18m" },
+        { v: "5", u: statsTranslations[lang]?.["sem"] || "sem", k: statsTranslations[lang]?.["Setup"] || "Setup" }
+      ],
+      primaryCta: t('pbi.cta'),
+      secondaryCta: detailsTranslation[lang] || "Detalles",
+      primaryCtaUrl: getLocalizedPath(lang, '/contacto'),
+      secondaryCtaUrl: getLocalizedPath(lang, `/servicios/${t('pbi.p3.slug')}`)
+    },
+    {
+      id: "bi-4",
+      cat: "bi",
+      viz: "ops",
+      badge: `BI · 04`,
+      title: t('pbi.p4.title'),
+      desc: t('pbi.p4.desc'),
+      stats: [
+        { v: "22", u: "%", k: statsTranslations[lang]?.["Reducción costo"] || "Reducción costo" },
+        { v: "8", u: statsTranslations[lang]?.["sem"] || "sem", k: statsTranslations[lang]?.["Despliegue"] || "Despliegue" }
+      ],
+      primaryCta: t('pbi.cta'),
+      secondaryCta: detailsTranslation[lang] || "Detalles",
+      primaryCtaUrl: getLocalizedPath(lang, '/contacto'),
+      secondaryCtaUrl: getLocalizedPath(lang, `/servicios/${t('pbi.p4.slug')}`)
+    },
+    {
+      id: "bi-5",
+      cat: "bi",
+      viz: "data",
+      badge: `BI · 05`,
+      title: t('pbi.p5.title'),
+      desc: t('pbi.p5.desc'),
+      stats: [
+        { v: "12", u: statsTranslations[lang]?.["sem"] || "sem", k: statsTranslations[lang]?.["Plan completo"] || "Plan completo" },
+        { v: "5", u: "FTE", k: statsTranslations[lang]?.["Equipo Echo"] || "Equipo Echo" }
+      ],
+      primaryCta: t('pbi.cta'),
+      secondaryCta: detailsTranslation[lang] || "Detalles",
+      primaryCtaUrl: getLocalizedPath(lang, '/contacto'),
+      secondaryCtaUrl: getLocalizedPath(lang, `/servicios/${t('pbi.p5.slug')}`)
+    }
+  ];
+
+  const aiItems: ServiceItem[] = [
+    {
+      id: "ai-1",
+      cat: "ai",
+      viz: "ai",
+      badge: `${lang === 'EN' || lang === 'FR' ? 'AI' : 'IA'} · 01`,
+      title: t('pbi.p6.title'),
+      desc: t('pbi.p6.desc'),
+      stats: [
+        { v: "31", u: "%", k: statsTranslations[lang]?.["Mejora forecast"] || "Mejora forecast" },
+        { v: "10", u: statsTranslations[lang]?.["sem"] || "sem", k: statsTranslations[lang]?.["Producción"] || "Producción" }
+      ],
+      primaryCta: t('pbi.cta'),
+      secondaryCta: detailsTranslation[lang] || "Detalles",
+      primaryCtaUrl: getLocalizedPath(lang, '/contacto'),
+      secondaryCtaUrl: getLocalizedPath(lang, `/servicios/${t('pbi.p6.slug')}`)
+    },
+    {
+      id: "ai-2",
+      cat: "ai",
+      viz: "agents",
+      badge: `${lang === 'EN' || lang === 'FR' ? 'AI' : 'IA'} · 02`,
+      title: t('pbi.p7.title'),
+      desc: t('pbi.p7.desc'),
+      stats: [
+        { v: "60", u: "%", k: statsTranslations[lang]?.["Tareas auto."] || "Tareas auto." },
+        { v: "8", u: statsTranslations[lang]?.["sem"] || "sem", k: statsTranslations[lang]?.["MVP"] || "MVP" }
+      ],
+      primaryCta: t('pbi.cta'),
+      secondaryCta: detailsTranslation[lang] || "Detalles",
+      primaryCtaUrl: getLocalizedPath(lang, '/contacto'),
+      secondaryCtaUrl: getLocalizedPath(lang, `/servicios/${t('pbi.p7.slug')}`)
+    },
+    {
+      id: "ai-3",
+      cat: "ai",
+      viz: "vision",
+      badge: `${lang === 'EN' || lang === 'FR' ? 'AI' : 'IA'} · 03`,
+      title: t('pbi.p8.title'),
+      desc: t('pbi.p8.desc'),
+      stats: [
+        { v: "96", u: "%", k: statsTranslations[lang]?.["Precisión"] || "Precisión" },
+        { v: "12", u: statsTranslations[lang]?.["sem"] || "sem", k: statsTranslations[lang]?.["Producción"] || "Producción" }
+      ],
+      primaryCta: t('pbi.cta'),
+      secondaryCta: detailsTranslation[lang] || "Detalles",
+      primaryCtaUrl: getLocalizedPath(lang, '/contacto'),
+      secondaryCtaUrl: getLocalizedPath(lang, `/servicios/${t('pbi.p8.slug')}`)
+    },
+    {
+      id: "ai-4",
+      cat: "ai",
+      viz: "voice",
+      badge: `${lang === 'EN' || lang === 'FR' ? 'AI' : 'IA'} · 04`,
+      title: t('pbi.p9.title'),
+      desc: t('pbi.p9.desc'),
+      stats: [
+        { v: "5", u: "K/d", k: statsTranslations[lang]?.["Llamadas"] || "Llamadas" },
+        { v: "6", u: statsTranslations[lang]?.["sem"] || "sem", k: statsTranslations[lang]?.["Setup"] || "Setup" }
+      ],
+      primaryCta: t('pbi.cta'),
+      secondaryCta: detailsTranslation[lang] || "Detalles",
+      primaryCtaUrl: getLocalizedPath(lang, '/contacto'),
+      secondaryCtaUrl: getLocalizedPath(lang, `/servicios/${t('pbi.p9.slug')}`)
+    }
+  ];
+
+  const growthItems: ServiceItem[] = [
+    {
+      id: "gr-1",
+      cat: "growth",
+      viz: "growth",
+      badge: `GR · 01`,
+      title: t('services.s1.title'),
+      desc: t('services.s1.i1'),
+      stats: [
+        { v: "5", u: statsTranslations[lang]?.["yr"] || "yr", k: statsTranslations[lang]?.["Horizon"] || "Horizon" },
+        { v: "4", u: statsTranslations[lang]?.["sem"] || "sem", k: statsTranslations[lang]?.["Entrega"] || "Entrega" }
+      ],
+      primaryCta: t('services.cta'),
+      secondaryCta: detailsTranslation[lang] || "Detalles",
+      primaryCtaUrl: getLocalizedPath(lang, '/contacto'),
+      secondaryCtaUrl: getLocalizedPath(lang, `/servicios/${t('services.s1.slug')}`)
+    },
+    {
+      id: "gr-2",
+      cat: "growth",
+      viz: "alliances",
+      badge: `GR · 02`,
+      title: t('services.s2.title'),
+      desc: t('services.s2.i1'),
+      stats: [
+        { v: "12", u: "+", k: statsTranslations[lang]?.["Partners /trim"] || "Partners /trim" },
+        { v: "6", u: statsTranslations[lang]?.["sem"] || "sem", k: statsTranslations[lang]?.["Activación"] || "Activación" }
+      ],
+      primaryCta: t('services.cta'),
+      secondaryCta: detailsTranslation[lang] || "Detalles",
+      primaryCtaUrl: getLocalizedPath(lang, '/contacto'),
+      secondaryCtaUrl: getLocalizedPath(lang, `/servicios/${t('services.s2.slug')}`)
+    },
+    {
+      id: "gr-3",
+      cat: "growth",
+      viz: "sales",
+      badge: `GR · 03`,
+      title: t('services.s3.title'),
+      desc: t('services.s3.i1'),
+      stats: [
+        { v: "2.4", u: "×", k: statsTranslations[lang]?.["Pipeline"] || "Pipeline" },
+        { v: "4", u: statsTranslations[lang]?.["sem"] || "sem", k: statsTranslations[lang]?.["Arranque"] || "Arranque" }
+      ],
+      primaryCta: t('services.cta'),
+      secondaryCta: detailsTranslation[lang] || "Detalles",
+      primaryCtaUrl: getLocalizedPath(lang, '/contacto'),
+      secondaryCtaUrl: getLocalizedPath(lang, `/servicios/${t('services.s3.slug')}`)
+    },
+    {
+      id: "gr-4",
+      cat: "growth",
+      viz: "global",
+      badge: `GR · 04`,
+      title: t('services.s4.title'),
+      desc: t('services.s4.i1'),
+      stats: [
+        { v: "3", u: "+", k: statsTranslations[lang]?.["Mercados/yr"] || "Mercados/yr" },
+        { v: "10", u: statsTranslations[lang]?.["sem"] || "sem", k: statsTranslations[lang]?.["Plan"] || "Plan" }
+      ],
+      primaryCta: t('services.cta'),
+      secondaryCta: detailsTranslation[lang] || "Detalles",
+      primaryCtaUrl: getLocalizedPath(lang, '/contacto'),
+      secondaryCtaUrl: getLocalizedPath(lang, `/servicios/${t('services.s4.slug')}`)
+    },
+    {
+      id: "gr-5",
+      cat: "growth",
+      viz: "product",
+      badge: `GR · 05`,
+      title: t('services.s5.title'),
+      desc: t('services.s5.i1'),
+      stats: [
+        { v: "6", u: statsTranslations[lang]?.["sem"] || "sem", k: statsTranslations[lang]?.["Idea→MVP"] || "Idea→MVP" },
+        { v: "82", u: "%", k: statsTranslations[lang]?.["Survival"] || "Survival" }
+      ],
+      primaryCta: t('services.cta'),
+      secondaryCta: detailsTranslation[lang] || "Detalles",
+      primaryCtaUrl: getLocalizedPath(lang, '/contacto'),
+      secondaryCtaUrl: getLocalizedPath(lang, `/servicios/${t('services.s5.slug')}`)
+    },
+    {
+      id: "gr-6",
+      cat: "growth",
+      viz: "radar",
+      badge: `GR · 06`,
+      title: t('services.s6.title'),
+      desc: t('services.s6.i1'),
+      stats: [
+        { v: "Q", u: statsTranslations[lang]?.["/y"] || "/y", k: statsTranslations[lang]?.["Cadencia"] || "Cadencia" },
+        { v: "4", u: statsTranslations[lang]?.["sectores"] || "sectores", k: statsTranslations[lang]?.["Cobertura"] || "Cobertura" }
+      ],
+      primaryCta: t('services.cta'),
+      secondaryCta: detailsTranslation[lang] || "Detalles",
+      primaryCtaUrl: getLocalizedPath(lang, '/contacto'),
+      secondaryCtaUrl: getLocalizedPath(lang, `/servicios/${t('services.s6.slug')}`)
+    }
+  ];
 
   return (
     <>
@@ -91,7 +470,7 @@ function ServiciosContent() {
                     aria-pressed={activeFilter === "pbi"}
                   >
                     <PieChart size={16} />
-                    Power BI
+                    BI
                   </button>
                 </li>
                 <li>
@@ -132,36 +511,11 @@ function ServiciosContent() {
                 </MotionReveal>
 
                 <MotionStagger className={styles.pbiGrid}>
-                  <MotionStaggerItem className={styles.pbiCard}>
-                    <div className={styles.pbiIcon}><Gauge size={20} /></div>
-                    <h3>{t('pbi.p1.title')}</h3>
-                    <p>{t('pbi.p1.desc')}</p>
-                    <Link href={getLocalizedPath(lang, `/servicios/${t('pbi.p1.slug')}`)} className={styles.pbiCta}>{t('pbi.cta')} <ChevronRight size={14} style={{ display: 'inline-block', verticalAlign: 'middle', marginLeft: '4px' }} /></Link>
-                  </MotionStaggerItem>
-                  <MotionStaggerItem className={styles.pbiCard}>
-                    <div className={`${styles.pbiIcon} ${styles.pbiIconBlue}`}><Coins size={20} /></div>
-                    <h3>{t('pbi.p2.title')}</h3>
-                    <p>{t('pbi.p2.desc')}</p>
-                    <Link href={getLocalizedPath(lang, `/servicios/${t('pbi.p2.slug')}`)} className={styles.pbiCta}>{t('pbi.cta')} <ChevronRight size={14} style={{ display: 'inline-block', verticalAlign: 'middle', marginLeft: '4px' }} /></Link>
-                  </MotionStaggerItem>
-                  <MotionStaggerItem className={styles.pbiCard}>
-                    <div className={styles.pbiIcon}><ShoppingCart size={20} /></div>
-                    <h3>{t('pbi.p3.title')}</h3>
-                    <p>{t('pbi.p3.desc')}</p>
-                    <Link href={getLocalizedPath(lang, `/servicios/${t('pbi.p3.slug')}`)} className={styles.pbiCta}>{t('pbi.cta')} <ChevronRight size={14} style={{ display: 'inline-block', verticalAlign: 'middle', marginLeft: '4px' }} /></Link>
-                  </MotionStaggerItem>
-                  <MotionStaggerItem className={styles.pbiCard}>
-                    <div className={`${styles.pbiIcon} ${styles.pbiIconAmber}`}><Settings size={20} /></div>
-                    <h3>{t('pbi.p4.title')}</h3>
-                    <p>{t('pbi.p4.desc')}</p>
-                    <Link href={getLocalizedPath(lang, `/servicios/${t('pbi.p4.slug')}`)} className={styles.pbiCta}>{t('pbi.cta')} <ChevronRight size={14} style={{ display: 'inline-block', verticalAlign: 'middle', marginLeft: '4px' }} /></Link>
-                  </MotionStaggerItem>
-                  <MotionStaggerItem className={styles.pbiCard}>
-                    <div className={styles.pbiIcon}><TrendingUp size={20} /></div>
-                    <h3>{t('pbi.p5.title')}</h3>
-                    <p>{t('pbi.p5.desc')}</p>
-                    <Link href={getLocalizedPath(lang, `/servicios/${t('pbi.p5.slug')}`)} className={styles.pbiCta}>{t('pbi.cta')} <ChevronRight size={14} style={{ display: 'inline-block', verticalAlign: 'middle', marginLeft: '4px' }} /></Link>
-                  </MotionStaggerItem>
+                  {pbiItems.map((item) => (
+                    <MotionStaggerItem key={item.id} style={{ height: "100%" }}>
+                      <ServiceCard item={item} />
+                    </MotionStaggerItem>
+                  ))}
                 </MotionStagger>
               </div>
             )}
@@ -177,30 +531,11 @@ function ServiciosContent() {
                 </MotionReveal>
 
                 <MotionStagger className={styles.pbiGrid}>
-                  <MotionStaggerItem className={styles.pbiCard}>
-                    <div className={`${styles.pbiIcon} ${styles.pbiIconBlue}`}><LineChart size={20} /></div>
-                    <h3>{t('pbi.p6.title')}</h3>
-                    <p>{t('pbi.p6.desc')}</p>
-                    <Link href={getLocalizedPath(lang, `/servicios/${t('pbi.p6.slug')}`)} className={styles.pbiCta}>{t('pbi.cta')} <ChevronRight size={14} style={{ display: 'inline-block', verticalAlign: 'middle', marginLeft: '4px' }} /></Link>
-                  </MotionStaggerItem>
-                  <MotionStaggerItem className={styles.pbiCard}>
-                    <div className={`${styles.pbiIcon} ${styles.pbiIconAmber}`}><Bot size={20} /></div>
-                    <h3>{t('pbi.p7.title')}</h3>
-                    <p>{t('pbi.p7.desc')}</p>
-                    <Link href={getLocalizedPath(lang, `/servicios/${t('pbi.p7.slug')}`)} className={styles.pbiCta}>{t('pbi.cta')} <ChevronRight size={14} style={{ display: 'inline-block', verticalAlign: 'middle', marginLeft: '4px' }} /></Link>
-                  </MotionStaggerItem>
-                  <MotionStaggerItem className={styles.pbiCard}>
-                    <div className={styles.pbiIcon}><TrendingUp size={20} /></div>
-                    <h3>{t('pbi.p8.title')}</h3>
-                    <p>{t('pbi.p8.desc')}</p>
-                    <Link href={getLocalizedPath(lang, `/servicios/${t('pbi.p8.slug')}`)} className={styles.pbiCta}>{t('pbi.cta')} <ChevronRight size={14} style={{ display: 'inline-block', verticalAlign: 'middle', marginLeft: '4px' }} /></Link>
-                  </MotionStaggerItem>
-                  <MotionStaggerItem className={styles.pbiCard}>
-                    <div className={`${styles.pbiIcon} ${styles.pbiIconBlue}`}><Brain size={20} /></div>
-                    <h3>{t('pbi.p9.title')}</h3>
-                    <p>{t('pbi.p9.desc')}</p>
-                    <Link href={getLocalizedPath(lang, `/servicios/${t('pbi.p9.slug')}`)} className={styles.pbiCta}>{t('pbi.cta')} <ChevronRight size={14} style={{ display: 'inline-block', verticalAlign: 'middle', marginLeft: '4px' }} /></Link>
-                  </MotionStaggerItem>
+                  {aiItems.map((item) => (
+                    <MotionStaggerItem key={item.id} style={{ height: "100%" }}>
+                      <ServiceCard item={item} />
+                    </MotionStaggerItem>
+                  ))}
                 </MotionStagger>
               </div>
             )}
@@ -216,42 +551,11 @@ function ServiciosContent() {
                 </MotionReveal>
 
                 <MotionStagger className={styles.pbiGrid}>
-                  <MotionStaggerItem className={styles.pbiCard}>
-                    <div className={styles.pbiIcon}><LineChart size={20} /></div>
-                    <h3>{t('services.s1.title')}</h3>
-                    <p>{t('services.s1.i1')}</p>
-                    <Link href={getLocalizedPath(lang, `/servicios/${t('services.s1.slug')}`)} className={styles.pbiCta}>{t('services.cta')} <ChevronRight size={14} style={{ display: 'inline-block', verticalAlign: 'middle', marginLeft: '4px' }} /></Link>
-                  </MotionStaggerItem>
-                  <MotionStaggerItem className={styles.pbiCard}>
-                    <div className={`${styles.pbiIcon} ${styles.pbiIconAmber}`}><Handshake size={20} /></div>
-                    <h3>{t('services.s2.title')}</h3>
-                    <p>{t('services.s2.i1')}</p>
-                    <Link href={getLocalizedPath(lang, `/servicios/${t('services.s2.slug')}`)} className={styles.pbiCta}>{t('services.cta')} <ChevronRight size={14} style={{ display: 'inline-block', verticalAlign: 'middle', marginLeft: '4px' }} /></Link>
-                  </MotionStaggerItem>
-                  <MotionStaggerItem className={styles.pbiCard}>
-                    <div className={styles.pbiIcon}><Target size={20} /></div>
-                    <h3>{t('services.s3.title')}</h3>
-                    <p>{t('services.s3.i1')}</p>
-                    <Link href={getLocalizedPath(lang, `/servicios/${t('services.s3.slug')}`)} className={styles.pbiCta}>{t('services.cta')} <ChevronRight size={14} style={{ display: 'inline-block', verticalAlign: 'middle', marginLeft: '4px' }} /></Link>
-                  </MotionStaggerItem>
-                  <MotionStaggerItem className={styles.pbiCard}>
-                    <div className={`${styles.pbiIcon} ${styles.pbiIconAmber}`}><Globe size={20} /></div>
-                    <h3>{t('services.s4.title')}</h3>
-                    <p>{t('services.s4.i1')}</p>
-                    <Link href={getLocalizedPath(lang, `/servicios/${t('services.s4.slug')}`)} className={styles.pbiCta}>{t('services.cta')} <ChevronRight size={14} style={{ display: 'inline-block', verticalAlign: 'middle', marginLeft: '4px' }} /></Link>
-                  </MotionStaggerItem>
-                  <MotionStaggerItem className={styles.pbiCard}>
-                    <div className={styles.pbiIcon}><Lightbulb size={20} /></div>
-                    <h3>{t('services.s5.title')}</h3>
-                    <p>{t('services.s5.i1')}</p>
-                    <Link href={getLocalizedPath(lang, `/servicios/${t('services.s5.slug')}`)} className={styles.pbiCta}>{t('services.cta')} <ChevronRight size={14} style={{ display: 'inline-block', verticalAlign: 'middle', marginLeft: '4px' }} /></Link>
-                  </MotionStaggerItem>
-                  <MotionStaggerItem className={styles.pbiCard}>
-                    <div className={`${styles.pbiIcon} ${styles.pbiIconAmber}`}><Brain size={20} /></div>
-                    <h3>{t('services.s6.title')}</h3>
-                    <p>{t('services.s6.i1')}</p>
-                    <Link href={getLocalizedPath(lang, `/servicios/${t('services.s6.slug')}`)} className={styles.pbiCta}>{t('services.cta')} <ChevronRight size={14} style={{ display: 'inline-block', verticalAlign: 'middle', marginLeft: '4px' }} /></Link>
-                  </MotionStaggerItem>
+                  {growthItems.map((item) => (
+                    <MotionStaggerItem key={item.id} style={{ height: "100%" }}>
+                      <ServiceCard item={item} />
+                    </MotionStaggerItem>
+                  ))}
                 </MotionStagger>
               </div>
             )}

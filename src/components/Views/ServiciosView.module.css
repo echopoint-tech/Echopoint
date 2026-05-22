@@ -121,6 +121,15 @@
     color: var(--tech-cyan);
 }
 
+.pbiCatItemActive:hover {
+    background: rgba(56, 189, 248, 0.12);
+    color: var(--tech-cyan);
+}
+
+.pbiCatItemActive:hover i {
+    color: var(--tech-cyan);
+}
+
 .pbiSectionBlock {
     padding-bottom: 3rem;
     border-bottom: 1px solid var(--border-glass);
