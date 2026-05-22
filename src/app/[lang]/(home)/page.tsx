@@ -6,17 +6,14 @@ import NeuralCanvas from "@/components/NeuralCanvas/NeuralCanvasLoader";
 import { getDictionary } from "@/i18n/dictionaries";
 import { getLocalizedPath, buildPageAlternates } from "@/i18n/routing";
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCheckCircle,
-  faArrowRight,
-  faChartLine,
-  faBullseye,
-  faLightbulb,
-  faGaugeHigh,
-  faCartShopping,
-  faBrain
-} from "@fortawesome/free-solid-svg-icons";
+import { 
+  Gauge, 
+  Brain, 
+  LineChart, 
+  CheckCircle2, 
+  ArrowRight 
+} from "lucide-react";
+import { MotionReveal } from "@/components/common/MotionReveal";
 import LeadMagnetForm from "@/components/LeadMagnetForm";
 import SectionSnap from "@/components/SectionSnap/SectionSnap";
 import Button from "@/components/common/Button/Button";
@@ -87,56 +84,59 @@ export default async function Home({
         {/* Popular Services Section */}
         <section id="popular-services" className={`section ${styles.popularServicesSection}`}>
           <div className="container">
-            <div className="section-header reveal" style={{ marginBottom: '0' }}>
+            <MotionReveal className="section-header" style={{ marginBottom: '0' }}>
               <span className="subtitle">{t('popularServices.subtitle')}</span>
               <h2>{t('popularServices.title')}</h2>
-            </div>
-            <AutoCarousel className={styles.servicesPreviewGrid}>
-              {([
-                { sKey: 'title', section: 'pbi', icon: faGaugeHigh, cta: 'pbi.cta', anchor: 'power-bi' },
-                { sKey: 'p6', section: 'pbi', icon: faBrain, cta: 'pbi.cta', anchor: 'ia' },
-                { sKey: 's1', section: 'services', icon: faChartLine, cta: 'services.cta', anchor: 'estrategia' },
-              ] as const).map(({ sKey, section, icon, cta, anchor }, i) => {
-                const titleKey = sKey === 'title' ? `${section}.${sKey}` : `${section}.${sKey}.title`;
-                const descKey = sKey === 'title' ? `${section}.desc` : `${section}.${sKey}.longDesc`;
-                return (
-                  <div key={sKey} className={`${styles.servicePreviewCard} reveal reveal-delay-${i + 1}`}>
-                    <div className={styles.servicePreviewIcon}>
-                      <FontAwesomeIcon icon={icon} />
+            </MotionReveal>
+            
+            <MotionReveal delay={0.15}>
+              <AutoCarousel className={styles.servicesPreviewGrid}>
+                {([
+                  { sKey: 'title', section: 'pbi', icon: Gauge, cta: 'pbi.cta', anchor: 'power-bi' },
+                  { sKey: 'p6', section: 'pbi', icon: Brain, cta: 'pbi.cta', anchor: 'ia' },
+                  { sKey: 's1', section: 'services', icon: LineChart, cta: 'services.cta', anchor: 'estrategia' },
+                ] as const).map(({ sKey, section, icon: IconComponent, cta, anchor }, i) => {
+                  const titleKey = sKey === 'title' ? `${section}.${sKey}` : `${section}.${sKey}.title`;
+                  const descKey = sKey === 'title' ? `${section}.desc` : `${section}.${sKey}.longDesc`;
+                  return (
+                    <div key={sKey} className={styles.servicePreviewCard}>
+                      <div className={styles.servicePreviewIcon}>
+                        <IconComponent size={24} />
+                      </div>
+                      <h3 dangerouslySetInnerHTML={{ 
+                        __html: t(titleKey).includes('<span') 
+                          ? t(titleKey) 
+                          : t(titleKey).split(' ').length > 1 
+                            ? t(titleKey).substring(0, t(titleKey).lastIndexOf(' ')) + ' <span class="text-accent">' + t(titleKey).split(' ').pop() + '</span>'
+                            : t(titleKey)
+                      }}></h3>
+                      <p>{t(descKey)}</p>
+                      <ul className={styles.servicePreviewBullets}>
+                        {sKey === 'title' ? (
+                          <>
+                            <li><span className={styles.bulletIcon}><CheckCircle2 size={12} /></span>{t('pbi.p1.title')}</li>
+                            <li><span className={styles.bulletIcon}><CheckCircle2 size={12} /></span>{t('pbi.p2.title')}</li>
+                            <li><span className={styles.bulletIcon}><CheckCircle2 size={12} /></span>{t('pbi.p3.title')}</li>
+                          </>
+                        ) : (
+                          <>
+                            <li><span className={styles.bulletIcon}><CheckCircle2 size={12} /></span>{t(`${section}.${sKey}.i1`)}</li>
+                            <li><span className={styles.bulletIcon}><CheckCircle2 size={12} /></span>{t(`${section}.${sKey}.i2`)}</li>
+                            <li><span className={styles.bulletIcon}><CheckCircle2 size={12} /></span>{t(`${section}.${sKey}.i3`)}</li>
+                          </>
+                        )}
+                      </ul>
+                      <Link 
+                        href={`${getLocalizedPath(lang, "/servicios")}?cat=${sKey === 'title' ? 'pbi' : sKey === 'p6' ? 'ai' : 'consulting'}`}
+                        className={styles.servicePreviewAction}
+                      >
+                        {t('popularServices.viewAll')} <ArrowRight size={14} style={{ marginLeft: '4px', display: 'inline-block', verticalAlign: 'middle' }} />
+                      </Link>
                     </div>
-                    <h3 dangerouslySetInnerHTML={{ 
-                      __html: t(titleKey).includes('<span') 
-                        ? t(titleKey) 
-                        : t(titleKey).split(' ').length > 1 
-                          ? t(titleKey).substring(0, t(titleKey).lastIndexOf(' ')) + ' <span class="text-accent">' + t(titleKey).split(' ').pop() + '</span>'
-                          : t(titleKey)
-                    }}></h3>
-                    <p>{t(descKey)}</p>
-                    <ul className={styles.servicePreviewBullets}>
-                      {sKey === 'title' ? (
-                        <>
-                          <li><span className={styles.bulletIcon}><FontAwesomeIcon icon={faCheckCircle} /></span>{t('pbi.p1.title')}</li>
-                          <li><span className={styles.bulletIcon}><FontAwesomeIcon icon={faCheckCircle} /></span>{t('pbi.p2.title')}</li>
-                          <li><span className={styles.bulletIcon}><FontAwesomeIcon icon={faCheckCircle} /></span>{t('pbi.p3.title')}</li>
-                        </>
-                      ) : (
-                        <>
-                          <li><span className={styles.bulletIcon}><FontAwesomeIcon icon={faCheckCircle} /></span>{t(`${section}.${sKey}.i1`)}</li>
-                          <li><span className={styles.bulletIcon}><FontAwesomeIcon icon={faCheckCircle} /></span>{t(`${section}.${sKey}.i2`)}</li>
-                          <li><span className={styles.bulletIcon}><FontAwesomeIcon icon={faCheckCircle} /></span>{t(`${section}.${sKey}.i3`)}</li>
-                        </>
-                      )}
-                    </ul>
-                    <Link 
-                      href={`${getLocalizedPath(lang, "/servicios")}?cat=${sKey === 'title' ? 'pbi' : sKey === 'p6' ? 'ai' : 'consulting'}`}
-                      className={styles.servicePreviewAction}
-                    >
-                      {t('popularServices.viewAll')} <FontAwesomeIcon icon={faArrowRight} />
-                    </Link>
-                  </div>
-                );
-              })}
-            </AutoCarousel>
+                  );
+                })}
+              </AutoCarousel>
+            </MotionReveal>
             <div className={styles.popularServicesCta}>
               <Button href={getLocalizedPath(lang, "/servicios")} title={t('popularServices.cta')} variant="primary">{t('popularServices.cta')}</Button>
             </div>
@@ -144,16 +144,16 @@ export default async function Home({
         </section>
 
         {/* Video Manifiesto Section */}
-        <section className={`section ${styles.manifestoSection} reveal`}>
+        <section className={`section ${styles.manifestoSection}`}>
           <div className="container">
             <div className={styles.manifestoWrapper}>
-              <div className="manifesto-content reveal reveal-delay-1">
+              <MotionReveal className="manifesto-content" yOffset={20}>
                 <span className="subtitle">{t('manifesto.subtitle')}</span>
                 <h2 dangerouslySetInnerHTML={{__html: t('manifesto.title')}}></h2>
                 <p>{t('manifesto.desc')}</p>
                 <p className="legal-note" style={{fontSize: '0.75rem', color: 'var(--text-secondary)', marginTop: '-1rem', marginBottom: '2rem'}}>{t('manifesto.legal')}</p>
-              </div>
-              <div className={`${styles.manifestoImageContainer} reveal reveal-delay-2`}>
+              </MotionReveal>
+              <MotionReveal delay={0.15} className={styles.manifestoImageContainer} yOffset={20}>
                 <picture>
                   <source
                     media="(max-width: 768px)"
@@ -173,7 +173,7 @@ export default async function Home({
                     decoding="async"
                   />
                 </picture>
-              </div>
+              </MotionReveal>
             </div>
           </div>
         </section>

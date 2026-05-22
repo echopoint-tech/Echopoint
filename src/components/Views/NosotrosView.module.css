@@ -99,7 +99,7 @@
 }
 
 .shadowPremium {
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 40px rgba(0, 240, 255, 0.1);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -114,29 +114,29 @@
     position: relative;
     width: 100%;
     aspect-ratio: 3/4;
-    border-radius: 20px;
+    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
-    border: 1px solid rgba(255,255,255,0.1);
-    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.5s ease, border-color 0.5s ease;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease, border-color 0.4s ease;
     cursor: pointer;
 }
 
 .teamMemberPremium:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 25px 50px rgba(0, 240, 255, 0.15);
-    border-color: rgba(0, 240, 255, 0.4);
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(56, 189, 248, 0.15);
+    border-color: rgba(56, 189, 248, 0.35);
 }
 
 .memberBg {
     object-fit: cover;
-    transition: transform 0.7s ease;
+    transition: transform 0.6s ease;
     z-index: 1;
 }
 
 .teamMemberPremium:hover .memberBg {
-    transform: scale(1.05);
-    filter: brightness(0.7);
+    transform: scale(1.03);
+    filter: brightness(0.75);
 }
 
 .memberOverlay {
@@ -221,7 +221,7 @@
     background: rgba(15, 23, 42, 0.4);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 16px;
+    border-radius: 8px;
     padding: 2.5rem;
     transition: var(--transition-smooth);
     position: relative;
@@ -229,21 +229,23 @@
 }
 
 .aboutIcon {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     margin-bottom: 1.5rem;
     color: var(--tech-cyan);
-    background: rgba(6, 182, 212, 0.1);
-    width: 60px;
-    height: 60px;
+    background: rgba(56, 189, 248, 0.08);
+    border: 1px solid rgba(56, 189, 248, 0.15);
+    width: 56px;
+    height: 56px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 12px;
+    border-radius: 6px;
 }
 
 .aboutCard:nth-child(2) .aboutIcon {
     color: var(--human-blue);
-    background: rgba(var(--human-blue-rgb), 0.1);
+    background: rgba(var(--human-blue-rgb), 0.08);
+    border-color: rgba(var(--human-blue-rgb), 0.15);
 }
 
 .aboutCard h3 {

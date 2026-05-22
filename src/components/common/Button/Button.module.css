@@ -2,13 +2,13 @@
 .btn {
     display: inline-block;
     padding: 0.8rem 2rem;
-    border-radius: 50px;
+    border-radius: 6px;
     font-weight: 600;
     font-family: var(--font-display);
     cursor: pointer;
     text-align: center;
     border: 1px solid transparent;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease, border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
     text-decoration: none;
     color: inherit;
 }
@@ -17,7 +17,7 @@
     position: relative;
     background: var(--tech-cyan);
     color: var(--bg-dark);
-    box-shadow: 0 4px 15px rgba(6, 182, 212, 0.2);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.15);
     overflow: hidden;
 }
 
@@ -28,7 +28,7 @@
     left: -100%;
     width: 50%;
     height: 200%;
-    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3), transparent);
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
     transform: rotate(30deg);
     transition: 0s;
 }
@@ -39,9 +39,9 @@
 }
 
 .btnPrimary:hover {
-    transform: translateY(-3px) scale(1.02);
-    filter: brightness(1.1);
-    box-shadow: 0 12px 30px rgba(6, 182, 212, 0.5);
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+    box-shadow: 0 6px 18px rgba(56, 189, 248, 0.3);
 }
 
 .btnSecondary {
@@ -52,7 +52,7 @@
 
 .btnSecondary:hover {
     border-color: var(--tech-cyan);
-    background: rgba(6, 182, 212, 0.05);
+    background: rgba(56, 189, 248, 0.05);
     color: var(--tech-cyan);
     transform: translateY(-2px);
 }

@@ -1,27 +1,30 @@
 "use client";
 
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faArrowLeft,
-  faBagShopping,
-  faBoltLightning,
-  faChartLine,
-  faChessKnight,
-  faCircleCheck,
-  faDatabase,
-  faEarthAmericas,
-  faGears,
-  faHandshake,
-  faLightbulb,
-  faMagnifyingGlassChart,
-  faMicrochip,
-  faMobileScreenButton,
-  faMoneyBillTrendUp,
-  faRocket,
-  faShieldHalved,
-  faVial,
-} from "@fortawesome/free-solid-svg-icons";
+import { 
+  ArrowLeft,
+  ShoppingBag,
+  Zap,
+  LineChart,
+  Compass,
+  CheckCircle2,
+  Database,
+  Globe,
+  Settings,
+  Handshake,
+  Lightbulb,
+  TrendingUp,
+  Cpu,
+  Smartphone,
+  FlaskConical,
+  Rocket,
+  Shield
+} from "lucide-react";
+import { 
+  MotionReveal, 
+  MotionStagger, 
+  MotionStaggerItem 
+} from "@/components/common/MotionReveal";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AnimationObserver from "@/components/AnimationObserver";
@@ -57,23 +60,23 @@ export default function ServiceDetailClient({ lang, slug }: ServiceDetailClientP
   }
 
   const getIcon = (text: string) => {
-    if (!text) return faCircleCheck;
+    if (!text) return CheckCircle2;
     const t = text.toLowerCase();
-    if (t.includes("kpi") || t.includes("métrica") || t.includes("metrica")) return faChartLine;
-    if (t.includes("datos") || t.includes("data") || t.includes("base de datos") || t.includes("big data")) return faDatabase;
-    if (t.includes("mercado") || t.includes("investigación") || t.includes("investigacion")) return faMagnifyingGlassChart;
-    if (t.includes("estrategia") || t.includes("plan") || t.includes("hoja de ruta")) return faChessKnight;
-    if (t.includes("venta") || t.includes("comercial") || t.includes("pipeline") || t.includes("mql")) return faBagShopping;
-    if (t.includes("internacional") || t.includes("global") || t.includes("país") || t.includes("pais") || t.includes("localización")) return faEarthAmericas;
-    if (t.includes("seguro") || t.includes("seguridad") || t.includes("privacidad") || t.includes("cumplimiento")) return faShieldHalved;
-    if (t.includes("móvil") || t.includes("movil") || t.includes("acceso")) return faMobileScreenButton;
-    if (t.includes("alerta") || t.includes("inteligente") || t.includes("desviación")) return faBoltLightning;
-    if (t.includes("validación") || t.includes("validacion") || t.includes("test") || t.includes("mvp")) return faVial;
-    if (t.includes("alianza") || t.includes("socio") || t.includes("partner") || t.includes("joint venture")) return faHandshake;
-    if (t.includes("innovación") || t.includes("producto") || t.includes("desarrollo")) return faLightbulb;
-    if (t.includes("operaciones") || t.includes("proceso") || t.includes("logística") || t.includes("logistica")) return faGears;
-    if (t.includes("financiero") || t.includes("caja") || t.includes("p&l") || t.includes("rentabilidad")) return faMoneyBillTrendUp;
-    return faCircleCheck;
+    if (t.includes("kpi") || t.includes("métrica") || t.includes("metrica")) return LineChart;
+    if (t.includes("datos") || t.includes("data") || t.includes("base de datos") || t.includes("big data")) return Database;
+    if (t.includes("mercado") || t.includes("investigación") || t.includes("investigacion")) return TrendingUp;
+    if (t.includes("estrategia") || t.includes("plan") || t.includes("hoja de ruta")) return Compass;
+    if (t.includes("venta") || t.includes("comercial") || t.includes("pipeline") || t.includes("mql")) return ShoppingBag;
+    if (t.includes("internacional") || t.includes("global") || t.includes("país") || t.includes("pais") || t.includes("localización")) return Globe;
+    if (t.includes("seguro") || t.includes("seguridad") || t.includes("privacidad") || t.includes("cumplimiento")) return Shield;
+    if (t.includes("móvil") || t.includes("movil") || t.includes("acceso")) return Smartphone;
+    if (t.includes("alerta") || t.includes("inteligente") || t.includes("desviación")) return Zap;
+    if (t.includes("validación") || t.includes("validacion") || t.includes("test") || t.includes("mvp")) return FlaskConical;
+    if (t.includes("alianza") || t.includes("socio") || t.includes("partner") || t.includes("joint venture")) return Handshake;
+    if (t.includes("innovación") || t.includes("producto") || t.includes("desarrollo")) return Lightbulb;
+    if (t.includes("operaciones") || t.includes("proceso") || t.includes("logística") || t.includes("logistica")) return Settings;
+    if (t.includes("financiero") || t.includes("caja") || t.includes("p&l") || t.includes("rentabilidad")) return TrendingUp;
+    return CheckCircle2;
   };
 
   return (
@@ -82,11 +85,11 @@ export default function ServiceDetailClient({ lang, slug }: ServiceDetailClientP
       <Navbar />
 
       <main id="main-content" className="svc-detail-page">
-        <section className={`${styles.svcHeroDetail} fade-in-up`}>
+        <section className={styles.svcHeroDetail}>
           <div className={`container ${styles.svcHeroGrid}`}>
-            <div className={styles.svcHeroText}>
+            <MotionReveal className={styles.svcHeroText} yOffset={20}>
               <Link href={`/${lang.toLowerCase()}/servicios`} title={t('nav.backToServices')} className={styles.backLink}>
-                <FontAwesomeIcon icon={faArrowLeft} /> {t('nav.backToServices')}
+                <ArrowLeft size={16} style={{ display: 'inline-block', verticalAlign: 'middle', marginRight: '4px' }} /> {t('nav.backToServices')}
               </Link>
               <span className="subtitle">{service.title}</span>
               <h1 dangerouslySetInnerHTML={{ __html: service.heroTitle }}></h1>
@@ -95,48 +98,52 @@ export default function ServiceDetailClient({ lang, slug }: ServiceDetailClientP
               <div className={styles.svcFeaturesList}>
                 <h3>{t('pbi.common.featuresTitle')}</h3>
                 <ul>
-                  <li><FontAwesomeIcon icon={getIcon(service.i1)} /> {service.i1}</li>
-                  <li><FontAwesomeIcon icon={getIcon(service.i2)} /> {service.i2}</li>
-                  <li><FontAwesomeIcon icon={getIcon(service.i3)} /> {service.i3}</li>
-                  <li><FontAwesomeIcon icon={getIcon(service.i4)} /> {service.i4}</li>
-                  {service.i5 && <li><FontAwesomeIcon icon={getIcon(service.i5)} /> {service.i5}</li>}
+                  {[service.i1, service.i2, service.i3, service.i4, service.i5].filter(Boolean).map((feat, i) => {
+                    const Icon = getIcon(feat!);
+                    return (
+                      <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
+                        <Icon size={16} className="text-accent" style={{ flexShrink: 0, marginTop: '3px' }} />
+                        <span>{feat}</span>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
-            </div>
+            </MotionReveal>
 
-            <div className={styles.svcHeroForm}>
+            <MotionReveal className={styles.svcHeroForm} delay={0.15} yOffset={20}>
               <div className={styles.formCard}>
                 <h3>{t('pbi.common.formTitle')}</h3>
                 <p>{t('pbi.common.formDesc')} <strong dangerouslySetInnerHTML={{ __html: service.title }}></strong>.</p>
                 <ContactForm isCompact />
               </div>
-            </div>
+            </MotionReveal>
           </div>
         </section>
 
-        <section className={`section container fade-in-up ${styles.whySection}`}>
-          <div className="section-header">
+        <section className={`section container ${styles.whySection}`}>
+          <MotionReveal className="section-header">
             <h2>{t('pbi.common.whyTitle')}</h2>
             <p>{t('pbi.common.whyDesc')}</p>
-          </div>
+          </MotionReveal>
           
-          <div className={styles.servicesGrid} style={{marginTop: '3rem'}}>
-             <div className={`${styles.serviceCard} ${styles.noClick} ${styles.centeredCard}`}>
-               <div className={styles.iconBox}><FontAwesomeIcon icon={faRocket} /></div>
+          <MotionStagger className={styles.servicesGrid} style={{marginTop: '3rem'}}>
+             <MotionStaggerItem className={`${styles.serviceCard} ${styles.noClick} ${styles.centeredCard}`}>
+                <div className={styles.iconBox}><Rocket size={24} /></div>
                 <h3>{t('pbi.common.card1Title')}</h3>
                 <p>{t('pbi.common.card1Desc')}</p>
-             </div>
-             <div className={`${styles.serviceCard} ${styles.noClick} ${styles.centeredCard}`}>
-               <div className={styles.iconBox}><FontAwesomeIcon icon={faMicrochip} /></div>
+             </MotionStaggerItem>
+             <MotionStaggerItem className={`${styles.serviceCard} ${styles.noClick} ${styles.centeredCard}`}>
+                <div className={styles.iconBox}><Cpu size={24} /></div>
                 <h3>{t('pbi.common.card2Title')}</h3>
                 <p>{t('pbi.common.card2Desc')}</p>
-             </div>
-             <div className={`${styles.serviceCard} ${styles.noClick} ${styles.centeredCard}`}>
-               <div className={styles.iconBox}><FontAwesomeIcon icon={faShieldHalved} /></div>
+             </MotionStaggerItem>
+             <MotionStaggerItem className={`${styles.serviceCard} ${styles.noClick} ${styles.centeredCard}`}>
+                <div className={styles.iconBox}><Shield size={24} /></div>
                 <h3>{t('pbi.common.card3Title')}</h3>
                 <p>{t('pbi.common.card3Desc')}</p>
-             </div>
-          </div>
+             </MotionStaggerItem>
+          </MotionStagger>
         </section>
       </main>
 

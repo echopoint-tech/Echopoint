@@ -4,6 +4,24 @@
     background: linear-gradient(180deg, rgba(6, 182, 212, 0.1) 0%, rgba(10, 10, 10, 0) 100%);
     border-bottom: 1px solid var(--border-glass);
     margin-bottom: 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.svcHero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/Fondo para secciones.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.012;
+    pointer-events: none;
+    z-index: -1;
 }
 
 .svcHero h1 {
@@ -60,15 +78,15 @@
 .pbiCatItem {
     width: 100%;
     text-align: left;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid transparent;
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid rgba(255, 255, 255, 0.03);
     padding: 0.8rem 1.2rem;
     color: var(--text-secondary);
     font-size: 0.95rem;
     font-weight: 500;
     cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    border-radius: 12px;
+    transition: all 0.2s ease;
+    border-radius: 6px;
     display: flex;
     align-items: center;
     gap: 0.8rem;
@@ -81,9 +99,9 @@
 }
 
 .pbiCatItem:hover {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.04);
     color: var(--text-primary);
-    transform: translateX(5px);
+    transform: translateX(3px);
 }
 
 .pbiCatItem:hover i {
@@ -92,11 +110,10 @@
 }
 
 .pbiCatItemActive {
-    background: linear-gradient(90deg, rgba(6, 182, 212, 0.1) 0%, rgba(6, 182, 212, 0.02) 100%);
+    background: rgba(56, 189, 248, 0.08);
     color: var(--tech-cyan);
     font-weight: 600;
-    border-color: rgba(6, 182, 212, 0.3);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-color: rgba(56, 189, 248, 0.3);
 }
 
 .pbiCatItemActive i {
@@ -147,32 +164,20 @@
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border: 1px solid rgba(255, 255, 255, 0.08);
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 24px;
-    padding: 2.2rem;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    padding: 2rem;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     position: relative;
     overflow: hidden;
 }
 
 .pbiCard::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 150px;
-    height: 150px;
-    background: radial-gradient(circle, rgba(6, 182, 212, 0.12) 0%, transparent 70%);
-    border-radius: 50%;
-    filter: blur(15px);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    pointer-events: none;
-    z-index: 0;
+    display: none;
 }
 
 .pbiCard > * {
@@ -181,47 +186,46 @@
 }
 
 .pbiCard:hover {
-    transform: translateY(-6px);
-    border-color: rgba(6, 182, 212, 0.3);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25), 0 0 20px rgba(6, 182, 212, 0.1);
-}
-
-.pbiCard:hover::after {
-    opacity: 1;
+    transform: translateY(-4px);
+    border-color: rgba(56, 189, 248, 0.3);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
 }
 
 .pbiIcon {
-    width: 48px;
-    height: 48px;
-    background: linear-gradient(135deg, rgba(6, 182, 212, 0.2), rgba(6, 182, 212, 0.05));
-    border: 1px solid rgba(6, 182, 212, 0.3);
-    border-radius: 14px;
+    width: 44px;
+    height: 44px;
+    background: rgba(56, 189, 248, 0.08);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    border-radius: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--tech-cyan);
     font-size: 1.2rem;
-    box-shadow: 0 6px 12px rgba(6, 182, 212, 0.1), inset 0 2px 4px rgba(255, 255, 255, 0.1);
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .pbiCard:hover .pbiIcon {
-    transform: scale(1.1) rotate(-5deg);
+    transform: scale(1.05);
+    background: rgba(56, 189, 248, 0.12);
+    border-color: rgba(56, 189, 248, 0.4);
 }
 
 .pbiIconBlue {
-    background: rgba(var(--human-blue-rgb), 0.1);
+    background: rgba(var(--human-blue-rgb), 0.08);
+    border-color: rgba(var(--human-blue-rgb), 0.2);
     color: var(--human-blue);
 }
 
 .pbiIconAmber {
-    background: rgba(var(--human-blue-rgb), 0.1);
+    background: rgba(var(--human-blue-rgb), 0.08);
+    border-color: rgba(var(--human-blue-rgb), 0.2);
     color: var(--human-blue);
 }
 
 .pbiCard h4 {
     font-family: var(--font-display);
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     font-weight: 600;
     color: var(--text-primary);
     margin: 0.2rem 0 0;
@@ -229,14 +233,14 @@
 
 .pbiCard h3 {
     font-family: var(--font-display);
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     font-weight: 600;
     color: var(--text-primary);
     margin: 0.2rem 0 0;
 }
 
 .pbiCard p {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     color: var(--text-secondary);
     line-height: 1.5;
     margin: 0;
@@ -244,27 +248,28 @@
 }
 
 .pbiCta {
-    font-size: 0.82rem;
+    font-size: 0.8rem;
     font-weight: 700;
-    color: var(--tech-cyan);
+    color: var(--text-primary);
     text-transform: uppercase;
     letter-spacing: 0.5px;
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
     margin-top: 0.4rem;
-    transition: var(--transition-fast);
-    padding: 0.4rem 0.8rem;
-    background: rgba(6, 182, 212, 0.1);
-    border-radius: 16px;
+    transition: all 0.2s ease;
+    padding: 0.5rem 1.2rem;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
     width: fit-content;
 }
 
 .pbiCta:hover {
-    color: white;
-    background: var(--tech-cyan);
-    gap: 0.7rem;
-    box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);
+    color: var(--tech-cyan);
+    border-color: var(--tech-cyan);
+    background: rgba(56, 189, 248, 0.05);
+    gap: 0.6rem;
 }
 
 @media (max-width: 1024px) {
@@ -314,13 +319,13 @@
         font-size: 0.85rem;
         border-left: none;
         border: 1px solid rgba(255, 255, 255, 0.05);
-        border-radius: 20px;
+        border-radius: 6px;
     }
 
     .pbiCatItemActive {
-        border: 1px solid rgba(6, 182, 212, 0.4);
-        background: rgba(6, 182, 212, 0.1);
-        border-radius: 20px;
+        border: 1px solid rgba(56, 189, 248, 0.4);
+        background: rgba(56, 189, 248, 0.08);
+        border-radius: 6px;
     }
 
     .pbiGrid {

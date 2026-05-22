@@ -3,10 +3,10 @@
     background: rgba(15, 23, 42, 0.4);
     backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.08);
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 24px;
-    padding: 2.7rem;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    padding: 2.5rem;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
 }
 
 .formGroup {
@@ -47,13 +47,13 @@
 .formGroup input,
 .formGroup textarea {
     width: 100%;
-    padding: 1rem 1.25rem 1rem 3.2rem;
+    padding: 0.8rem 1.25rem 0.8rem 3rem;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 14px;
+    border-radius: 6px;
     color: var(--text-primary);
     font-family: var(--font-main);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.2s ease;
     font-size: 0.95rem;
 }
 
@@ -67,7 +67,7 @@
     outline: none;
     background: rgba(255, 255, 255, 0.05);
     border-color: var(--tech-cyan);
-    box-shadow: 0 0 0 4px rgba(6, 182, 212, 0.1);
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.15);
 }
 
 .formGroup input:focus+.fieldIcon,
@@ -110,7 +110,7 @@
 .formStatus {
     margin-top: 1.5rem;
     padding: 1.25rem;
-    border-radius: 14px;
+    border-radius: 6px;
     display: flex;
     align-items: center;
     gap: 1rem;
