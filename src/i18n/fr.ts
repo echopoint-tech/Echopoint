@@ -322,7 +322,12 @@ export const FR = {
     "title": "Echopoint AI - Conseil stratégique en gestion d'entreprise",
     "description": "Echopoint allie l'intuition humaine à la puissance de l'IA pour élaborer des stratégies B2B transformatrices. Conseil en gestion d'entreprise, analyse prédictive et expansion internationale.",
     "siteName": "Echopoint AI",
-    "orgDescription": "Conseil stratégique en entreprise alliant intelligence artificielle et créativité humaine pour des stratégies B2B transformatrices."
+    "orgDescription": "Conseil stratégique en entreprise alliant intelligence artificielle et créativité humaine pour des stratégies B2B transformatrices.",
+    "keywords": [
+      "conseil en entreprise", "stratégie B2B", "intelligence artificielle",
+      "croissance des entreprises", "expansion internationale", "analyse prédictive",
+      "Echopoint AI", "Solutions BI", "BI"
+    ]
   },
   "privacy": {
     "lastUpdated": "11 mai 2026",

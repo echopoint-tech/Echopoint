@@ -236,7 +236,12 @@ export const ES = {
     title: "Echopoint AI - Consultoría Empresarial Estratégica",
     description: "Echopoint fusiona intuición humana y potencia de IA para estrategias B2B transformadoras. Consultoría empresarial, análisis predictivo y expansión internacional.",
     siteName: "Echopoint AI",
-    orgDescription: "Consultoría empresarial estratégica que fusiona inteligencia artificial y creatividad humana para estrategias B2B transformadoras."
+    orgDescription: "Consultoría empresarial estratégica que fusiona inteligencia artificial y creatividad humana para estrategias B2B transformadoras.",
+    keywords: [
+      "consultoría empresarial", "estrategia B2B", "inteligencia artificial",
+      "crecimiento empresarial", "expansión internacional", "análisis predictivo",
+      "Echopoint AI", "Soluciones BI", "BI"
+    ]
   },
   privacy: {
     lastUpdated: "11 de mayo de 2026",

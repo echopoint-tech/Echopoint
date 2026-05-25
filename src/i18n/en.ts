@@ -322,7 +322,12 @@ export const EN = {
     "title": "Echopoint AI - Strategic Business Consulting",
     "description": "Echopoint combines human intuition with the power of AI to deliver transformative B2B strategies. Business consulting, predictive analytics, and international expansion.",
     "siteName": "Echopoint AI",
-    "orgDescription": "Strategic business consulting that combines artificial intelligence and human creativity to deliver transformative B2B strategies."
+    "orgDescription": "Strategic business consulting that combines artificial intelligence and human creativity to deliver transformative B2B strategies.",
+    "keywords": [
+      "business consulting", "B2B strategy", "artificial intelligence",
+      "business growth", "international expansion", "predictive analytics",
+      "Echopoint AI", "BI Solutions", "BI"
+    ]
   },
   "privacy": {
     "lastUpdated": "May 11, 2026",

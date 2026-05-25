@@ -20,10 +20,9 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       template: `%s | ${dictionary.metadata.siteName}`,
     },
     description: dictionary.metadata.description,
-    keywords: [
-      "consultoría empresarial", "estrategia B2B", "inteligencia artificial",
-      "crecimiento empresarial", "expansión internacional", "análisis predictivo", "Echopoint AI"
-    ],
+    keywords: dictionary.metadata.keywords,
+    authors: [{ name: "Echopoint AI", url: baseUrl }],
+    other: { publisher: "Echopoint AI" },
     metadataBase: new URL(baseUrl),
     openGraph: {
       title: dictionary.metadata.title,

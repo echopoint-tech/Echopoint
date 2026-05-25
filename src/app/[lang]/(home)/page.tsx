@@ -126,9 +126,10 @@ export default async function Home({
                           </>
                         )}
                       </ul>
-                      <Link 
+                      <Link
                         href={`${getLocalizedPath(lang, "/servicios")}?cat=${sKey === 'title' ? 'pbi' : sKey === 'p6' ? 'ai' : 'consulting'}`}
                         className={styles.servicePreviewAction}
+                        title={`${t('popularServices.viewAll')}: ${t(titleKey).replace(/<[^>]*>/g, '')}`}
                       >
                         {t('popularServices.viewAll')} <ArrowRight size={14} style={{ marginLeft: '4px', display: 'inline-block', verticalAlign: 'middle' }} />
                       </Link>

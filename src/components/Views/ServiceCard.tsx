@@ -32,7 +32,7 @@ export default function ServiceCard({ item }: { item: ServiceItem }) {
       <p className={styles.desc}>{item.desc}</p>
       <div className={styles.cta}>
         {item.secondaryCtaUrl ? (
-          <Link href={item.secondaryCtaUrl} className={styles.btnSecondary}>
+          <Link href={item.secondaryCtaUrl} className={styles.btnSecondary} title={item.title}>
             {item.secondaryCta ?? 'Detalles'}
             <Arrow />
           </Link>
