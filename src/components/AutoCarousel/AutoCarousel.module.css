@@ -1,135 +1,123 @@
 .carouselWrapper {
-    position: relative;
-    width: 100%;
+  width: 100%;
 }
 
-.carouselContainer {
-    display: flex;
-    gap: 2rem;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    padding-top: 4.0rem;
-    /* Space for the floating icon */
-    margin-top: -2.5rem;
-    /* Pull cards up close to title */
-    padding-bottom: 0;
-    -webkit-overflow-scrolling: touch;
-
-    scrollbar-width: none;
-    /* Firefox */
-    -ms-overflow-style: none;
-    /* IE/Edge */
+.carouselInner {
+  position: relative;
+  padding: 0 60px;
 }
 
-.carouselContainer::-webkit-scrollbar {
-    display: none;
-    /* Safari/Chrome */
+.track {
+  position: relative;
+  overflow: hidden;
 }
 
-@media (min-width: 768px) {
-    .carouselContainer {
-        gap: 3rem;
-    }
+.slides {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.32, 0.72, 0, 1);
+  will-change: transform;
 }
 
-.carouselItem {
-    min-width: 100%;
-    flex: 0 0 100%;
-    scroll-snap-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
+.slide {
+  flex: 0 0 100%;
 }
 
-.carouselItem>* {
-    width: 100%;
-    /* Removido max-width para que se alinee con los márgenes de la página */
-    margin: 0 auto;
+.navBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 5;
+  transition: border-color 0.25s, color 0.25s;
+  flex-shrink: 0;
 }
 
-.arrowButton {
-    position: absolute;
-    top: calc(50% + 0.5rem);
-    /* compensar la diferencia (padding-top 1rem, padding-bottom 0) */
-    transform: translateY(-50%);
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background: rgba(15, 23, 42, 0.8);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 10;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(8px);
+.navBtn svg {
+  width: 14px;
+  height: 14px;
 }
 
-.arrowButton:hover {
-    background: var(--tech-cyan, #06b6d4);
-    border-color: var(--tech-cyan, #06b6d4);
-    transform: translateY(-50%) scale(1.05);
+.navBtn:hover {
+  border-color: var(--tech-cyan, #4eaac0);
+  color: var(--tech-cyan, #4eaac0);
 }
 
-.arrowLeft {
-    left: -0.5rem;
+.prev {
+  left: 0;
 }
 
-.arrowRight {
-    right: -0.5rem;
+.next {
+  right: 0;
 }
 
-@media (min-width: 768px) {
-
-    /* En tablets las flechas se asoman un poco hacia afuera */
-    .arrowLeft {
-        left: -1.5rem;
-    }
-
-    .arrowRight {
-        right: -1.5rem;
-    }
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 36px;
 }
 
-@media (min-width: 1280px) {
+.counter {
+  font-size: 11px;
+  color: #525c6d;
+  letter-spacing: 2.5px;
+}
 
-    /* En pantallas grandes (donde hay espacio exterior), las sacamos completamente de la tarjeta */
-    .arrowLeft {
-        left: -4rem;
-    }
-
-    .arrowRight {
-        right: -4rem;
-    }
+.counter b {
+  color: var(--text-primary, #e7ebf1);
+  font-weight: 500;
 }
 
 .dots {
-    display: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-@media (max-width: 768px) {
-    .arrowButton {
-        display: none;
-    }
-    .dots {
-        display: flex;
-        justify-content: center;
-        gap: 0.5rem;
-        margin-top: 1rem;
-    }
-    .dot {
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.25);
-        transition: background 0.3s ease, transform 0.3s ease;
-    }
-    .dotActive {
-        background: var(--tech-cyan, #06b6d4);
-        transform: scale(1.25);
-    }
+.dot {
+  width: 24px;
+  height: 14px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 6px 0;
+  position: relative;
+  transition: width 0.3s;
+}
+
+.dot::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 1px;
+  transition: background-color 0.3s;
+}
+
+.dotActive {
+  width: 40px;
+}
+
+.dotActive::after {
+  background-color: var(--tech-cyan, #4eaac0);
+}
+
+@media (max-width: 880px) {
+  .carouselInner {
+    padding: 0;
+  }
+
+  .navBtn {
+    display: none;
+  }
 }

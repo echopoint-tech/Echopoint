@@ -445,250 +445,287 @@
     }
 }
 
-.servicesPreviewGrid {
-    position: relative;
-    width: 100%;
-}
-
-@media (min-width: 768px) {
-    .servicesPreviewGrid {
-        /* Removido el grid-template-columns para mantener el flex (carousel) */
-        gap: 3rem;
-    }
-}
-
-.servicePreviewCard {
-    background: linear-gradient(145deg, rgba(30, 41, 59, 0.5) 0%, rgba(15, 23, 42, 0.8) 100%);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+/* ========== Diagonal Card ========== */
+.diagCard {
+    background: var(--bg-card, #10151d);
     border: 1px solid rgba(255, 255, 255, 0.08);
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 8px;
-    padding: 2.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 480px;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.diagCardLeft {
+    padding: 56px 48px 40px;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
-    will-change: transform;
-    height: 100%;
-    min-height: 280px;
-    max-width: 900px;
-    margin: 0 auto;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.05);
     position: relative;
+    z-index: 2;
 }
 
-.servicePreviewCard::after {
-    display: none;
+.diagCardIndex {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Sora', sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    margin-bottom: 28px;
 }
 
-.servicePreviewCard>* {
+.diagCardNum {
+    color: var(--tech-cyan);
+}
+
+.diagCardBar {
+    display: inline-block;
+    width: 24px;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.35;
+}
+
+.diagCardTitle {
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+    font-size: 34px !important;
+    line-height: 1.08 !important;
+    margin: 0 0 18px !important;
+    letter-spacing: -0.02em !important;
+    color: var(--text-primary) !important;
+}
+
+.diagCardDesc {
+    color: var(--text-secondary);
+    font-size: 15px;
+    line-height: 1.65;
+    max-width: 44ch;
+    font-weight: 400;
+    margin: 0 0 28px;
+}
+
+.diagRule {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.08);
+    width: 56px;
+    margin: 0 0 22px;
+}
+
+.diagBullets {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px;
+    display: grid;
+    gap: 14px;
+}
+
+.diagBullets li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    color: var(--text-primary);
+    font-size: 14.5px;
+    font-weight: 400;
+}
+
+.diagBullets li::before {
+    content: "";
+    flex: none;
+    width: 6px;
+    height: 6px;
+    margin-top: 8px;
+    background: var(--tech-cyan);
+    transform: rotate(45deg);
+}
+
+.diagInnerCta {
+    margin-top: auto;
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 0;
+    background: transparent;
+    color: var(--text-primary);
+    font-family: 'Sora', sans-serif;
+    font-weight: 500;
+    font-size: 13.5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: 1px solid var(--tech-cyan);
+    transition: color 0.25s, gap 0.25s;
+}
+
+.diagInnerCta:hover {
+    color: var(--tech-cyan);
+    gap: 18px;
+}
+
+.diagInnerCta svg {
+    width: 14px;
+    height: 10px;
+    flex-shrink: 0;
+}
+
+/* Right panel */
+.diagCardRight {
     position: relative;
+    overflow: hidden;
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.diagMask {
+    position: absolute;
+    inset: 0 0 0 -60px;
+    clip-path: polygon(18% 0, 100% 0, 100% 100%, 0 100%);
+    background: var(--bg-dark, #0b0f15);
+}
+
+.diagMask::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(
+        135deg,
+        transparent calc(18% - 0.5px),
+        var(--tech-cyan) 18%,
+        transparent calc(18% + 1px)
+    );
+    opacity: 0.35;
+}
+
+.diagVisual {
+    position: absolute;
+    inset: 0;
+    padding: 56px 40px 40px 96px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     z-index: 1;
 }
 
-@media (min-width: 768px) {
-    .servicePreviewCard {
-        padding: 2.5rem;
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        grid-template-rows: auto auto 1fr auto;
-        row-gap: 1.2rem;
-        column-gap: 3rem;
-        align-items: flex-start;
-    }
-
-    .servicePreviewIcon {
-        grid-column: 1 / -1;
-        justify-self: start;
-        margin-bottom: 0.5rem;
-    }
-
-    .servicePreviewCard>h3 {
-        grid-column: 1 / -1;
-        text-align: left;
-        margin-bottom: 0;
-    }
-
-    .servicePreviewCard>p {
-        grid-column: 1 / 2;
-        margin: 0;
-        padding-right: 1rem;
-    }
-
-    .servicePreviewBullets {
-        grid-column: 2 / 3;
-        grid-row: 3;
-        margin: 0;
-        padding-left: 0;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        position: relative;
-    }
-
-    .servicePreviewBullets::before {
-        content: '';
-        position: absolute;
-        left: -1.5rem;
-        top: 0;
-        height: 100%;
-        width: 1px;
-        background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.1), transparent);
-    }
-
-    .servicePreviewAction {
-        grid-column: 1 / -1;
-        justify-self: start;
-        margin-top: 1rem;
-    }
+.diagVisual svg {
+    width: 100%;
+    height: 100%;
+    max-height: 360px;
+    display: block;
 }
 
-@media (max-width: 767px) {
-    .servicePreviewCard {
-        max-width: 100%;
-        padding: 2rem;
-    }
+/* KPI badge */
+.diagKpi {
+    position: absolute;
+    top: 28px;
+    right: 28px;
+    z-index: 3;
+    background: var(--bg-card, #10151d);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 14px 18px;
+    border-radius: 2px;
+    min-width: 132px;
 }
 
-@media (hover: hover) {
-    .servicePreviewCard:hover {
-        border-color: rgba(56, 189, 248, 0.35);
-        transform: translateY(-4px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
-    }
-
-    .servicePreviewCard:hover .servicePreviewIcon {
-        transform: scale(1.05);
-        background: rgba(56, 189, 248, 0.12);
-        border-color: rgba(56, 189, 248, 0.4);
-    }
-}
-
-.servicePreviewIcon {
-    width: 48px;
-    height: 48px;
-    border-radius: 6px;
-    background: rgba(56, 189, 248, 0.08);
-    border: 1px solid rgba(56, 189, 248, 0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--tech-cyan);
-    font-size: 1.4rem;
-    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
-    z-index: 10;
-}
-
-.servicePreviewCard h3 {
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: var(--text-primary);
-    margin: 0;
-}
-
-.servicePreviewCard>p {
-    font-size: 1rem;
-    color: var(--text-secondary);
-    line-height: 1.6;
-    margin: 0;
-    font-weight: 400;
-}
-
-.servicePreviewBullets {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    margin-top: auto;
-}
-
-.servicePreviewBullets li {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.75rem;
-    font-size: 0.95rem;
-    color: var(--text-primary);
-    line-height: 1.5;
-    font-weight: 400;
-}
-
-.bulletIcon {
-    color: var(--tech-cyan);
-    flex-shrink: 0;
-    margin-top: 3px;
-    font-size: 0.8rem;
-    background: rgba(56, 189, 248, 0.15);
-    border-radius: 50%;
-    width: 18px;
-    height: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.servicePreviewAction {
-    margin-top: 1.25rem;
-    font-size: 0.85rem;
+.diagKpiNum {
+    font-family: 'Sora', sans-serif;
     font-weight: 600;
+    font-size: 26px;
+    line-height: 1;
     color: var(--text-primary);
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    width: fit-content;
-    padding: 0.6rem 1.2rem;
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 6px;
+    letter-spacing: -0.01em;
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
 }
 
-.servicePreviewAction:hover {
+.diagKpiNum small {
     color: var(--tech-cyan);
-    border-color: var(--tech-cyan);
-    background: rgba(56, 189, 248, 0.05);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
 }
 
-/* Snap mode: compact Popular Services so all cards fit in one viewport slide */
-:global(html[data-snap="true"]) .servicesPreviewGrid {
-    margin-top: 0rem;
-    gap: 0.8rem;
+.diagKpiRule {
+    height: 1px;
+    width: 24px;
+    background: var(--tech-cyan);
+    margin: 8px 0 0;
 }
 
-:global(html[data-snap="true"]) .servicePreviewCard {
-    padding: 1.5rem;
-    row-gap: 0.6rem;
-}
-
-:global(html[data-snap="true"]) .servicePreviewIcon {
-    width: 36px;
-    height: 36px;
-    font-size: 1.1rem;
-    border-radius: 4px;
-    margin-bottom: 0.2rem;
-}
-
-:global(html[data-snap="true"]) .servicePreviewCard h3 {
-    font-size: 1.2rem;
-}
-
-:global(html[data-snap="true"]) .servicePreviewCard>p {
-    font-size: 0.9rem;
-    line-height: 1.4;
+.diagKpiLabel {
+    margin-top: 8px;
+    font-size: 10.5px;
     color: var(--text-secondary);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-family: 'Sora', sans-serif;
+    font-weight: 400;
 }
 
-:global(html[data-snap="true"]) .servicePreviewBullets {
-    gap: 0.4rem;
-}
+/* Mobile */
+@media (max-width: 880px) {
+    .diagCard {
+        grid-template-columns: 1fr;
+        min-height: 0;
+    }
 
-:global(html[data-snap="true"]) .servicePreviewBullets li {
-    font-size: 0.9rem;
-    gap: 0.5rem;
+    .diagCardLeft {
+        padding: 36px 28px 28px;
+        order: 2;
+    }
+
+    .diagCardTitle {
+        font-size: 28px !important;
+    }
+
+    .diagCardRight {
+        min-height: 240px;
+        order: 1;
+        border-left: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .diagMask {
+        inset: 0;
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    }
+
+    .diagMask::before {
+        background: linear-gradient(
+            180deg,
+            transparent calc(80% - 0.5px),
+            var(--tech-cyan) 80%,
+            transparent calc(80% + 1px)
+        );
+    }
+
+    .diagVisual {
+        padding: 28px;
+    }
+
+    .diagVisual svg {
+        max-height: 200px;
+    }
+
+    .diagKpi {
+        top: 18px;
+        right: 18px;
+        padding: 10px 14px;
+        min-width: 0;
+    }
+
+    .diagKpiNum {
+        font-size: 20px;
+    }
+
+    .diagKpiLabel {
+        font-size: 9.5px;
+    }
 }
 
 @keyframes heroFadeUp {
@@ -698,11 +735,61 @@
     }
 }
 
-:global(html[data-snap="true"]) .servicePreviewAction {
-    margin-top: 0.5rem;
-    font-size: 0.8rem;
-    padding: 0.4rem 0.8rem;
-}
-
 
 /* manifesto-content and magnet-content typography moved to globals.css */
+
+/* Snap mode: compact diagCard so it fits in one viewport slide */
+:global(html[data-snap="true"]) .popularServicesSection .diagCard {
+    min-height: 0;
+}
+
+:global(html[data-snap="true"]) .diagCardLeft {
+    padding: 28px 36px 24px;
+}
+
+:global(html[data-snap="true"]) .diagCardIndex {
+    margin-bottom: 14px;
+}
+
+:global(html[data-snap="true"]) .diagCardTitle {
+    font-size: 24px !important;
+    margin-bottom: 10px !important;
+}
+
+:global(html[data-snap="true"]) .diagCardDesc {
+    font-size: 13.5px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+:global(html[data-snap="true"]) .diagRule {
+    margin-bottom: 14px;
+}
+
+:global(html[data-snap="true"]) .diagBullets {
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+:global(html[data-snap="true"]) .diagBullets li {
+    font-size: 13.5px;
+}
+
+:global(html[data-snap="true"]) .diagKpi {
+    top: 16px;
+    right: 16px;
+    padding: 10px 14px;
+    min-width: 0;
+}
+
+:global(html[data-snap="true"]) .diagKpiNum {
+    font-size: 20px;
+}
+
+:global(html[data-snap="true"]) .diagKpiLabel {
+    font-size: 9.5px;
+}
+
+:global(html[data-snap="true"]) .diagVisual {
+    padding: 40px 32px 32px 72px;
+}
