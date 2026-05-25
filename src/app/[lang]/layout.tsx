@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     },
     description: dictionary.metadata.description,
     keywords: dictionary.metadata.keywords,
-    authors: [{ name: "Echopoint AI", url: baseUrl }],
+    authors: [{ name: "Echopoint AI" }],
     other: { publisher: "Echopoint AI" },
     metadataBase: new URL(baseUrl),
     openGraph: {
