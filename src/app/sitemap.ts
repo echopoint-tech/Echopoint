@@ -4,7 +4,7 @@ import { getLocalizedPath } from '@/i18n/routing';
 
 export const dynamic = 'force-static';
 
-const SITE_UPDATED = new Date('2026-03-15');
+const SITE_UPDATED = new Date('2026-05-26');
 
 const BLOG_DATE_MAP: Record<string, number> = {
   'Ene': 0, 'Feb': 1, 'Mar': 2, 'Abr': 3, 'May': 4, 'Jun': 5,

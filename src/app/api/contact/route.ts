@@ -35,7 +35,7 @@ function escapeHtml(str: string): string {
 export async function POST(request: Request) {
   // CSRF: only accept requests from the same origin
   const origin = request.headers.get("origin");
-  const allowedOrigin = process.env.NEXT_PUBLIC_SITE_URL ?? "https://echopointmx.com";
+  const allowedOrigin = process.env.NEXT_PUBLIC_SITE_URL ?? "https://echopoint-intsolutions.com";
   if (!origin || origin !== allowedOrigin) {
     return NextResponse.json({ error: "Forbidden" }, { status: 403 });
   }

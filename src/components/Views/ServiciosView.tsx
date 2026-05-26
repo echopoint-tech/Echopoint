@@ -7,7 +7,6 @@ import AnimationObserver from "@/components/AnimationObserver";
 import { useLanguage } from "@/context/LanguageContext";
 import { getLocalizedPath } from "@/i18n/routing";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
 import { 
   Layers, 
   PieChart, 
@@ -168,15 +167,15 @@ type CategoryFilter = "all" | "pbi" | "consulting" | "ai";
 
 function ServiciosContent() {
   const { t, lang } = useLanguage();
-  const searchParams = useSearchParams();
-  const catParam = searchParams.get('cat');
   const [activeFilter, setActiveFilter] = useState<CategoryFilter>("all");
 
   useEffect(() => {
+    const match = window.location.hash.match(/^#cat=(.+)/);
+    const catParam = match ? match[1] : null;
     if (catParam === 'pbi' || catParam === 'consulting' || catParam === 'ai') {
       setActiveFilter(catParam as CategoryFilter);
     }
-  }, [catParam]);
+  }, []);
 
   const showPbi = activeFilter === "all" || activeFilter === "pbi";
   const showConsulting = activeFilter === "all" || activeFilter === "consulting";

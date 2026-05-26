@@ -11,7 +11,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://echopointmx.com";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://echopoint-intsolutions.com";
   const dictionary = getDictionary(lang.toLowerCase());
 
   return {
@@ -61,7 +61,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   };
 }
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://echopointmx.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://echopoint-intsolutions.com";
 const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "contacto@echopointmx.com";
 const CONTACT_PHONE = process.env.NEXT_PUBLIC_CONTACT_PHONE ?? "+52-55-25056854";
 

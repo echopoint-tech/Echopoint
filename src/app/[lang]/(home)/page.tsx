@@ -113,7 +113,7 @@ export default async function Home({
                       <li>{t('pbi.p2.title')}</li>
                       <li>{t('pbi.p3.title')}</li>
                     </ul>
-                    <Link href={`${getLocalizedPath(lang, '/servicios')}?cat=pbi`} className={styles.diagInnerCta}>
+                    <Link href={`${getLocalizedPath(lang, '/servicios')}#cat=pbi`} className={styles.diagInnerCta}>
                       {t('popularServices.viewAll')}
                       <svg viewBox="0 0 24 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                         <line x1="2" y1="8" x2="22" y2="8" /><polyline points="16 2 22 8 16 14" />
@@ -191,7 +191,7 @@ export default async function Home({
                       <li>{t('pbi.p6.i2')}</li>
                       <li>{t('pbi.p6.i3')}</li>
                     </ul>
-                    <Link href={`${getLocalizedPath(lang, '/servicios')}?cat=ai`} className={styles.diagInnerCta}>
+                    <Link href={`${getLocalizedPath(lang, '/servicios')}#cat=ai`} className={styles.diagInnerCta}>
                       {t('popularServices.viewAll')}
                       <svg viewBox="0 0 24 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                         <line x1="2" y1="8" x2="22" y2="8" /><polyline points="16 2 22 8 16 14" />
@@ -282,7 +282,7 @@ export default async function Home({
                       <li>{t('services.s1.i2')}</li>
                       <li>{t('services.s1.i3')}</li>
                     </ul>
-                    <Link href={`${getLocalizedPath(lang, '/servicios')}?cat=consulting`} className={styles.diagInnerCta}>
+                    <Link href={`${getLocalizedPath(lang, '/servicios')}#cat=consulting`} className={styles.diagInnerCta}>
                       {t('popularServices.viewAll')}
                       <svg viewBox="0 0 24 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                         <line x1="2" y1="8" x2="22" y2="8" /><polyline points="16 2 22 8 16 14" />

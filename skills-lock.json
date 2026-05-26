@@ -6,6 +6,12 @@
       "sourceType": "github",
       "skillPath": "skills/find-skills/SKILL.md",
       "computedHash": "9e1c8b3103f92fa8092568a44fe64858de7c5c9dc65ce4bea8f168080e889cfd"
+    },
+    "indexing": {
+      "source": "kostja94/marketing-skills",
+      "sourceType": "github",
+      "skillPath": "skills/seo/technical/indexing/SKILL.md",
+      "computedHash": "ea355895fa304ed041e48cdd17fbc11625caa381e5de59561b34c2380b8fff38"
     }
   }
 }
