@@ -1,2 +1,8 @@
 https://www.echopoint-intsolutions.com/* https://echopoint-intsolutions.com/:splat 301
 / /es/ 301
+/servicios/ /es/servicios/ 301
+/servicios/:slug/ /es/servicios/:slug/ 301
+/nosotros/ /es/nosotros/ 301
+/contacto/ /es/contacto/ 301
+/blog/ /es/blog/ 301
+/blog/:slug/ /es/blog/:slug/ 301
