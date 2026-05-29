@@ -334,6 +334,92 @@ export default async function Home({
                   </div>
                 </article>
 
+                {/* Slide 4 — Plataforma SaaS */}
+                <article className={styles.diagCard}>
+                  <div className={styles.diagCardLeft}>
+                    <div className={styles.diagCardIndex}>
+                      <span className={styles.diagCardNum}>04</span>
+                      <span className={styles.diagCardBar}></span>
+                      <span>SaaS Platform</span>
+                    </div>
+                    <h2
+                      className={styles.diagCardTitle}
+                      dangerouslySetInnerHTML={{
+                        __html: (() => {
+                          const raw = t('saas.title');
+                          if (raw.includes('<span')) return raw;
+                          const parts = raw.split(' ');
+                          return parts.length > 1
+                            ? parts.slice(0, -1).join(' ') + ' <span class="text-accent">' + parts[parts.length - 1] + '</span>'
+                            : raw;
+                        })()
+                      }}
+                    />
+                    <p className={styles.diagCardDesc}>{t('saas.desc')}</p>
+                    <div className={styles.diagRule}></div>
+                    <ul className={styles.diagBullets}>
+                      <li>{t('saas.platform.i1')}</li>
+                      <li>{t('saas.platform.i2')}</li>
+                      <li>{t('saas.platform.i3')}</li>
+                    </ul>
+                    <Link href={`${getLocalizedPath(lang, '/servicios')}#cat=saas`} className={styles.diagInnerCta}>
+                      {t('popularServices.viewAll')}
+                      <svg viewBox="0 0 24 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <line x1="2" y1="8" x2="22" y2="8" /><polyline points="16 2 22 8 16 14" />
+                      </svg>
+                    </Link>
+                  </div>
+                  <div className={styles.diagCardRight}>
+                    <div className={styles.diagKpi}>
+                      <div className={styles.diagKpiNum}>24<small>h</small></div>
+                      <div className={styles.diagKpiRule}></div>
+                      <div className={styles.diagKpiLabel}>Despliegue rápido</div>
+                    </div>
+                    <div className={styles.diagMask}></div>
+                    <div className={styles.diagVisual}>
+                      <svg viewBox="0 0 380 320" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <rect x="20" y="20" width="340" height="280" stroke="#1d2532" strokeWidth="1" fill="none" />
+                        <text x="36" y="48" fontFamily="Sora,sans-serif" fontSize="9" fill="#e7ebf1" fontWeight="500" letterSpacing="1">platform_engine_v1.0</text>
+                        <text x="36" y="62" fontFamily="Sora,sans-serif" fontSize="9" fill="#525c6d" letterSpacing="1">MULTI-TENANT TRADING NODE · SECURE</text>
+                        <line x1="20" y1="76" x2="360" y2="76" stroke="#1d2532" strokeWidth="1" />
+                        
+                        <text x="36" y="100" fontFamily="Sora,sans-serif" fontSize="9" fill="#525c6d" letterSpacing="1">ORDER STATUS</text>
+                        <text x="36" y="122" fontFamily="Sora,sans-serif" fontSize="18" fontWeight="600" fill="#e7ebf1">BUY BTC</text>
+                        <line x1="148" y1="86" x2="148" y2="138" stroke="#1d2532" strokeWidth="1" />
+                        <text x="160" y="100" fontFamily="Sora,sans-serif" fontSize="9" fill="#525c6d" letterSpacing="1">LATENCY</text>
+                        <text x="160" y="122" fontFamily="Sora,sans-serif" fontSize="18" fontWeight="600" fill="#4eaac0">120ms</text>
+                        <line x1="252" y1="86" x2="252" y2="138" stroke="#1d2532" strokeWidth="1" />
+                        <text x="264" y="100" fontFamily="Sora,sans-serif" fontSize="9" fill="#525c6d" letterSpacing="1">INFRA</text>
+                        <text x="264" y="122" fontFamily="Sora,sans-serif" fontSize="18" fontWeight="600" fill="#e7ebf1">ACTIVE</text>
+                        
+                        <line x1="20" y1="148" x2="360" y2="148" stroke="#1d2532" strokeWidth="1" />
+                        
+                        <line x1="80" y1="180" x2="80" y2="240" stroke="#525c6d" strokeWidth="1" />
+                        <rect x="74" y="190" width="12" height="30" fill="#2bb673" />
+                        
+                        <line x1="140" y1="170" x2="140" y2="230" stroke="#525c6d" strokeWidth="1" />
+                        <rect x="134" y="180" width="12" height="40" fill="#e5484d" />
+                        
+                        <line x1="200" y1="160" x2="200" y2="250" stroke="#525c6d" strokeWidth="1" />
+                        <rect x="194" y="170" width="12" height="60" fill="#2bb673" />
+                        
+                        <line x1="260" y1="150" x2="260" y2="220" stroke="#525c6d" strokeWidth="1" />
+                        <rect x="254" y="160" width="12" height="40" fill="#2bb673" />
+                        
+                        <line x1="320" y1="140" x2="320" y2="210" stroke="#525c6d" strokeWidth="1" />
+                        <rect x="314" y="150" width="12" height="30" fill="#e5484d" />
+                        
+                        <line x1="20" y1="270" x2="360" y2="270" stroke="#1d2532" strokeWidth="1" />
+                        <text x="80" y="286" fontFamily="Sora,sans-serif" fontSize="9" fill="#525c6d" textAnchor="middle">USDT</text>
+                        <text x="140" y="286" fontFamily="Sora,sans-serif" fontSize="9" fill="#525c6d" textAnchor="middle">BTC</text>
+                        <text x="200" y="286" fontFamily="Sora,sans-serif" fontSize="9" fill="#525c6d" textAnchor="middle">ETH</text>
+                        <text x="260" y="286" fontFamily="Sora,sans-serif" fontSize="9" fill="#525c6d" textAnchor="middle">EUR</text>
+                        <text x="320" y="286" fontFamily="Sora,sans-serif" fontSize="9" fill="#525c6d" textAnchor="middle">USD</text>
+                      </svg>
+                    </div>
+                  </div>
+                </article>
+
               </AutoCarousel>
             </MotionReveal>
 

@@ -437,5 +437,22 @@ export const FR = {
       "title": "9. Contact",
       "p1": "Si vous avez des questions concernant les présentes Conditions d'utilisation, vous pouvez nous contacter à l'adresse suivante :"
     }
+  },
+  "saas": {
+    "title": "Plateforme <span class=\"text-accent\">SaaS Broker</span>",
+    "navTitle": "Plateforme SaaS",
+    "desc": "Votre propre plateforme de trading en marque blanche. Multi-tenant, sécurisée et prête en quelques minutes.",
+    "cta": "Demander une Démo",
+    "platform": {
+      "slug": "plataforma-saas",
+      "title": "Plateforme SaaS Broker",
+      "heroTitle": "Lancez votre Broker avec une Technologie de Pointe",
+      "longDesc": "Nous proposons une solution complète en marque blanche qui vous permet de gérer votre propre courtier. Avec une infrastructure multi-tenant isolée, un terminal de trading professionnel et un puissant CRM d'administration. Le tout intégré dans un seul produit prêt à fonctionner.",
+      "i1": "Personnalisation totale : Votre marque, vos couleurs et votre domaine.",
+      "i2": "Terminal de trading : Graphiques TradingView et prix en temps réel.",
+      "i3": "CRM complet : Gestion des leads, pools de vente et tunnel de conversion.",
+      "i4": "KYC & Paiements : Flux de validation et intégration SPEI/USDT.",
+      "i5": "Infrastructure : Isolation totale des données par sous-domaine."
+    }
   }
 };

@@ -47,13 +47,14 @@ export default function ServiceDetailClient({ lang, slug }: ServiceDetailClientP
 
   const servicesData = Object.values(dictionary.services) as unknown[];
   const pbiData = Object.values(dictionary.pbi) as unknown[];
+  const saasData = dictionary.saas ? (Object.values(dictionary.saas) as unknown[]) : [];
 
   const findBySlug = (entries: unknown[]): ServiceEntry | undefined =>
     entries.find((v): v is ServiceEntry =>
       v !== null && typeof v === 'object' && 'slug' in v && (v as ServiceEntry).slug === slug
     );
 
-  let service = findBySlug(servicesData) ?? findBySlug(pbiData);
+  let service = findBySlug(servicesData) ?? findBySlug(pbiData) ?? findBySlug(saasData);
 
   if (!service) {
     return null;
@@ -62,6 +63,9 @@ export default function ServiceDetailClient({ lang, slug }: ServiceDetailClientP
   const getIcon = (text: string) => {
     if (!text) return CheckCircle2;
     const t = text.toLowerCase();
+    if (t.includes("marca") || t.includes("logotipo") || t.includes("personalización") || t.includes("dominio")) return Settings;
+    if (t.includes("gráfico") || t.includes("terminal") || t.includes("trading") || t.includes("posición") || t.includes("órdenes")) return LineChart;
+    if (t.includes("crm") || t.includes("agente") || t.includes("lead")) return Handshake;
     if (t.includes("kpi") || t.includes("métrica") || t.includes("metrica")) return LineChart;
     if (t.includes("datos") || t.includes("data") || t.includes("base de datos") || t.includes("big data")) return Database;
     if (t.includes("mercado") || t.includes("investigación") || t.includes("investigacion")) return TrendingUp;

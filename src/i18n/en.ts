@@ -437,5 +437,22 @@ export const EN = {
       "title": "9. Contact",
       "p1": "If you have any questions about these Terms of Service, you can contact us at:"
     }
+  },
+  "saas": {
+    "title": "Broker <span class=\"text-accent\">SaaS Platform</span>",
+    "navTitle": "SaaS Platform",
+    "desc": "Your own white-label trading platform. Multi-tenant, secure, and ready in minutes.",
+    "cta": "Request Demo",
+    "platform": {
+      "slug": "plataforma-saas",
+      "title": "Broker SaaS Platform",
+      "heroTitle": "Launch your Broker with Cutting-Edge Tech",
+      "longDesc": "We offer a comprehensive white-label solution that lets you run your own broker. With isolated multi-tenant infrastructure, a professional trading terminal, and a powerful admin CRM. All integrated in a single product ready to operate.",
+      "i1": "Total branding: Your brand, your colors, and your domain.",
+      "i2": "Trading terminal: TradingView charts and real-time prices.",
+      "i3": "Complete CRM: Lead management, sales pools, and conversion funnel.",
+      "i4": "KYC & Payments: Validation flow and SPEI/USDT integration.",
+      "i5": "Infrastructure: Total data isolation per subdomain."
+    }
   }
 };

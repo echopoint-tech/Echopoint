@@ -6,7 +6,7 @@ import * as Viz from './Visualizations';
 
 export type ServiceItem = {
   id: string;
-  cat: 'bi' | 'ai' | 'growth';
+  cat: 'bi' | 'ai' | 'growth' | 'saas';
   viz: keyof typeof Viz;
   badge: string;       // e.g. "BI · 01"
   title: string;       // e.g. "Dashboards Ejecutivos"

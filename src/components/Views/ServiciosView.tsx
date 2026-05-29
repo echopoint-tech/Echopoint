@@ -11,7 +11,8 @@ import {
   Layers, 
   PieChart, 
   Bot, 
-  Briefcase
+  Briefcase,
+  Cloud
 } from "lucide-react";
 import { 
   MotionReveal, 
@@ -163,7 +164,7 @@ const detailsTranslation: Record<string, string> = {
   PT: "Detalhes"
 };
 
-type CategoryFilter = "all" | "pbi" | "consulting" | "ai";
+type CategoryFilter = "all" | "pbi" | "consulting" | "ai" | "saas";
 
 function ServiciosContent() {
   const { t, lang } = useLanguage();
@@ -172,7 +173,7 @@ function ServiciosContent() {
   useEffect(() => {
     const match = window.location.hash.match(/^#cat=(.+)/);
     const catParam = match ? match[1] : null;
-    if (catParam === 'pbi' || catParam === 'consulting' || catParam === 'ai') {
+    if (catParam === 'pbi' || catParam === 'consulting' || catParam === 'ai' || catParam === 'saas') {
       setActiveFilter(catParam as CategoryFilter);
     }
   }, []);
@@ -180,6 +181,7 @@ function ServiciosContent() {
   const showPbi = activeFilter === "all" || activeFilter === "pbi";
   const showConsulting = activeFilter === "all" || activeFilter === "consulting";
   const showAi = activeFilter === "all" || activeFilter === "ai";
+  const showSaas = activeFilter === "all" || activeFilter === "saas";
 
   const pbiItems: ServiceItem[] = [
     {
@@ -430,6 +432,25 @@ function ServiciosContent() {
     }
   ];
 
+  const saasItems: ServiceItem[] = [
+    {
+      id: "saas-platform",
+      cat: "saas",
+      viz: "global",
+      badge: `SaaS · 01`,
+      title: t('saas.platform.title'),
+      desc: t('saas.platform.longDesc'),
+      stats: [
+        { v: "24", u: "h", k: statsTranslations[lang]?.["Despliegue"] || "Despliegue" },
+        { v: "120", u: "ms", k: statsTranslations[lang]?.["Time-to-value"] || "Time-to-value" }
+      ],
+      primaryCta: t('saas.cta'),
+      secondaryCta: detailsTranslation[lang] || "Detalles",
+      primaryCtaUrl: getLocalizedPath(lang, '/contacto'),
+      secondaryCtaUrl: getLocalizedPath(lang, `/servicios/${t('saas.platform.slug')}`)
+    }
+  ];
+
   return (
     <>
       <AnimationObserver />
@@ -492,6 +513,16 @@ function ServiciosContent() {
                     {t('services.navTitle')}
                   </button>
                 </li>
+                <li>
+                  <button
+                    className={`${styles.pbiCatItem} ${activeFilter === "saas" ? styles.pbiCatItemActive : ""}`}
+                    onClick={() => setActiveFilter("saas")}
+                    aria-pressed={activeFilter === "saas"}
+                  >
+                    <Cloud size={16} />
+                    {t('saas.navTitle')}
+                  </button>
+                </li>
               </ul>
             </nav>
           </aside>
@@ -551,6 +582,26 @@ function ServiciosContent() {
 
                 <MotionStagger className={styles.pbiGrid}>
                   {growthItems.map((item) => (
+                    <MotionStaggerItem key={item.id} style={{ height: "100%" }}>
+                      <ServiceCard item={item} />
+                    </MotionStaggerItem>
+                  ))}
+                </MotionStagger>
+              </div>
+            )}
+
+            {/* Section: SaaS */}
+            {showSaas && (
+              <div className={styles.pbiSectionBlock} style={{marginTop: (showPbi || showAi || showConsulting) ? '3rem' : '0'}}>
+                <MotionReveal>
+                  <div className={styles.pbiSectionTitle}>
+                    <h2 dangerouslySetInnerHTML={{ __html: t('saas.title') }}></h2>
+                    <p>{t('saas.desc')}</p>
+                  </div>
+                </MotionReveal>
+
+                <MotionStagger className={styles.pbiGrid}>
+                  {saasItems.map((item) => (
                     <MotionStaggerItem key={item.id} style={{ height: "100%" }}>
                       <ServiceCard item={item} />
                     </MotionStaggerItem>

@@ -8,7 +8,8 @@ export async function generateStaticParams() {
   const dict = dictionaries.ES;
   const slugs = [
     ...Object.values(dict.services).map((s: any) => s?.slug),
-    ...Object.values(dict.pbi).map((p: any) => p?.slug)
+    ...Object.values(dict.pbi).map((p: any) => p?.slug),
+    ...Object.values(dict.saas || {}).map((s: any) => s?.slug)
   ].filter(Boolean);
 
   return slugs.map(slug => ({ lang, slug }));
