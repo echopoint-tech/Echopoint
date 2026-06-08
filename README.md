@@ -1,15 +1,9 @@
-# EchoPoint — echopointmx.com
+# EchoPoint
 
 Sitio web corporativo B2B de EchoPoint. Next.js 16 con exportación estática desplegado en Cloudflare Pages.
 
 ## Requisitos
 
-Crea un archivo `.env.local` en la raíz con las siguientes variables:
-
-```env
-RESEND_API_KEY=...          # Para envío de formularios de contacto
-DEEPL_API_KEY=...           # Para el script de traducción automática
-```
 
 ## Comandos
 
